@@ -1,10 +1,8 @@
-<h1 align="center" id="title">Lary</h1>
-
-<p id="description">A utility-first style library for React Native on top of Dripsy.</p>
+# Lary
+> If you are too lazy, use lary ;)
 <br>
-If you are too lazy, use lary ;)
+<i id="description">A utility-first style library for React Native on top of Dripsy.</i>
 <br><br>
-
 Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
 
 <h2>🧐 Features</h2>
@@ -16,10 +14,16 @@ Here're some of the project's best features:
 *   Overload the default Lary's theme configuration with your own one
 *   Support media queries
 
+<h2>🔗 Deps</h2>
+
+Dependencies required in this project:
+
+*   React
+*   React-Native
   
 <h2>💻 Built with</h2>
 
-Technologies used in the project:
+Technologies used in this project:
 
 *   Dripsy
 *   React-Native
