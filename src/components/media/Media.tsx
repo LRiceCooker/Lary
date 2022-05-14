@@ -1,3 +1,4 @@
+import React from "react"
 import useBreakPoints from "../../hooks/useBreakPoints"
 
 const Media = ({passedProps, children}: {passedProps: any, children: JSX.Element}) => {

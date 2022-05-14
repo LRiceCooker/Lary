@@ -1,4 +1,4 @@
-import React$1, { createContext, useContext, useMemo, useState, useRef, useEffect, forwardRef, useCallback } from 'react';
+import React, { createContext, useContext, useMemo, useState, useRef, useEffect, forwardRef, useCallback } from 'react';
 import { Dimensions, Platform, StyleSheet, View as View$2, Pressable, Text as Text$1, Image, PixelRatio, Linking, ScrollView, TextInput, FlatList, ActivityIndicator, SafeAreaView, useWindowDimensions } from 'react-native';
 
 function ownKeys(object, enumerableOnly) {
@@ -287,7 +287,7 @@ var useCreateBreakpointIndex = function useCreateBreakpointIndex() {
 function BreakpointIndexProvider(_ref2) {
   var children = _ref2.children;
   var breakpointIndex = useCreateBreakpointIndex();
-  return /*#__PURE__*/React$1.createElement(BreakpointIndexContext.Provider, {
+  return /*#__PURE__*/React.createElement(BreakpointIndexContext.Provider, {
     value: breakpointIndex
   }, children);
 }
@@ -905,7 +905,7 @@ function createThemedComponent(Component) {
       baseStyle = _ref.defaultStyle,
       options = _objectWithoutProperties(_ref, _excluded$2);
 
-  var WrappedComponent = /*#__PURE__*/React$1.forwardRef(function Wrapped(prop, ref) {
+  var WrappedComponent = /*#__PURE__*/React.forwardRef(function Wrapped(prop, ref) {
     var _sx = prop.sx,
         SuperComponent = prop.as,
         variant = prop.variant,
@@ -945,7 +945,7 @@ function createThemedComponent(Component) {
         styles = _useStableMemo.styles;
 
     var TheComponent = SuperComponent || Component;
-    return /*#__PURE__*/React$1.createElement(TheComponent, _extends({}, props, {
+    return /*#__PURE__*/React.createElement(TheComponent, _extends({}, props, {
       ref: ref,
       style: styles
     }));
@@ -1030,7 +1030,7 @@ function createHeadingComponent(level) {
     "default": {}
   });
   return /*#__PURE__*/forwardRef(function (props, ref) {
-    return /*#__PURE__*/React$1.createElement(Text, Object.assign({}, nativeProps, {
+    return /*#__PURE__*/React.createElement(Text, Object.assign({}, nativeProps, {
       accessibilityRole: "header"
     }, props, {
       style: [styles$1["h".concat(level)], props.style],
@@ -1100,7 +1100,7 @@ var A = /*#__PURE__*/forwardRef(function (_ref, ref) {
       }
     }
   });
-  return /*#__PURE__*/React$1.createElement(Text, Object.assign({
+  return /*#__PURE__*/React.createElement(Text, Object.assign({
     accessibilityRole: "link"
   }, props, nativeProps, {
     ref: ref
@@ -1112,7 +1112,7 @@ var View = View$2;
 function createView$1() {
   var nativeProps = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return /*#__PURE__*/forwardRef(function (props, ref) {
-    return /*#__PURE__*/React$1.createElement(View, Object.assign({}, nativeProps, props, {
+    return /*#__PURE__*/React.createElement(View, Object.assign({}, nativeProps, props, {
       ref: ref
     }));
   });
@@ -1157,7 +1157,7 @@ var P = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var style = _ref.style,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/React$1.createElement(Text, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
     style: [styles.p, style],
     ref: ref
   }));
@@ -1235,7 +1235,7 @@ StyleSheet.create({
 function createView() {
   var nativeProps = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return /*#__PURE__*/forwardRef(function (props, ref) {
-    return /*#__PURE__*/React$1.createElement(View, Object.assign({}, nativeProps, props, {
+    return /*#__PURE__*/React.createElement(View, Object.assign({}, nativeProps, props, {
       ref: ref
     }));
   });
@@ -1341,7 +1341,7 @@ function Indicator(props) {
     color = colors[color];
   }
 
-  return /*#__PURE__*/React$1.createElement(ActivityIndicator, _extends({}, props, {
+  return /*#__PURE__*/React.createElement(ActivityIndicator, _extends({}, props, {
     color: color
   }));
 }
@@ -1409,12 +1409,12 @@ function DripsyProvider(p) {
   }, [theme]);
 
   if (!ready) {
-    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, ssrPlaceholder);
+    return /*#__PURE__*/React.createElement(React.Fragment, null, ssrPlaceholder);
   }
 
-  return /*#__PURE__*/React$1.createElement(DripsyThemeContext.Provider, {
+  return /*#__PURE__*/React.createElement(DripsyThemeContext.Provider, {
     value: context
-  }, /*#__PURE__*/React$1.createElement(BreakpointIndexProvider, null, children));
+  }, /*#__PURE__*/React.createElement(BreakpointIndexProvider, null, children));
 }
 
 StyleSheet.create({
@@ -2364,7 +2364,7 @@ var themeOverLoader = function (laryProps) {
  * @returns {JSX.Element}
  */
 var LaryProvider = function (props) {
-    return (React$1.createElement(DripsyProvider, { theme: themeOverLoader(props) }, props.children));
+    return (React.createElement(DripsyProvider, { theme: themeOverLoader(props) }, props.children));
 };
 
 var stylesPropsToInject = [
@@ -2471,7 +2471,7 @@ var Style = function (_a) {
     var style = _a.style, children = _a.children;
     var sx = useSx();
     return (style ?
-        React$1.cloneElement(children, { style: sx(style) })
+        React.cloneElement(children, { style: sx(style) })
         :
             children);
 };
@@ -2734,9 +2734,9 @@ function laryfy(component) {
     var laryfiedComponent = function (props) {
         var styles = themeVariantsNamesGenerator(props);
         var children = (props === null || props === void 0 ? void 0 : props.children) || null;
-        return (React$1.createElement(Media, { passedProps: props },
-            React$1.createElement(Style, { style: styleSheetCompiler(props) },
-                React$1.createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children))));
+        return (React.createElement(Media, { passedProps: props },
+            React.createElement(Style, { style: styleSheetCompiler(props) },
+                React.createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children))));
     };
     return laryfiedComponent;
 }
@@ -2767,9 +2767,9 @@ function laryfy(component) {
  */
 var Container = function (props) {
     var styles = themeVariantsNamesGenerator(props);
-    return (React$1.createElement(Media, { passedProps: props },
-        React$1.createElement(Style, { style: props.style },
-            React$1.createElement(View$1, { variants: styles }, props.children))));
+    return (React.createElement(Media, { passedProps: props },
+        React.createElement(Style, { style: props.style },
+            React.createElement(View$1, { variants: styles }, props.children))));
 };
 
 /**
@@ -2790,9 +2790,9 @@ var Container = function (props) {
  */
 var Element = function (props) {
     var styles = themeVariantsNamesGenerator(props);
-    return (React$1.createElement(Media, { passedProps: props },
-        React$1.createElement(Style, { style: styleSheetCompiler(props) },
-            React$1.createElement(View$1, { variants: styles }, props.children))));
+    return (React.createElement(Media, { passedProps: props },
+        React.createElement(Style, { style: styleSheetCompiler(props) },
+            React.createElement(View$1, { variants: styles }, props.children))));
 };
 
 export { Container, Element, LaryProvider, laryfy };

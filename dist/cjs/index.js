@@ -2,12 +2,12 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var React$1 = require('react');
+var React = require('react');
 var reactNative = require('react-native');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
@@ -189,15 +189,15 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
-var DripsyThemeContext = /*#__PURE__*/React$1.createContext(null);
+var DripsyThemeContext = /*#__PURE__*/React.createContext(null);
 
 var useDripsyTheme = function useDripsyTheme() {
-  return React$1.useContext(DripsyThemeContext);
+  return React.useContext(DripsyThemeContext);
 };
 
-var BreakpointIndexContext = /*#__PURE__*/React$1.createContext(0);
+var BreakpointIndexContext = /*#__PURE__*/React.createContext(0);
 var useBreakpointIndex = function useBreakpointIndex() {
-  return React$1.useContext(BreakpointIndexContext);
+  return React.useContext(BreakpointIndexContext);
 };
 
 var getBreakpointIndex = function getBreakpointIndex(_ref) {
@@ -228,7 +228,7 @@ var useBreakpoints = function useBreakpoints() {
     }
   }
 
-  return React$1.useMemo(function () {
+  return React.useMemo(function () {
     return (breakpoints || defaultBreakpoints).map(function (breakpoint) {
       if (typeof breakpoint === 'string') {
         if (breakpoint.endsWith('px')) {
@@ -249,7 +249,7 @@ var defaultBreakpoints = [576, 768, 992, 1200];
 var useCreateBreakpointIndex = function useCreateBreakpointIndex() {
   var breakpoints = useBreakpoints();
 
-  var _useState = React$1.useState(function () {
+  var _useState = React.useState(function () {
     return getBreakpointIndex({
       width: reactNative.Dimensions.get('window').width,
       breakpoints: breakpoints
@@ -259,11 +259,11 @@ var useCreateBreakpointIndex = function useCreateBreakpointIndex() {
       index = _useState2[0],
       setIndex = _useState2[1];
 
-  var indexRef = React$1.useRef(index);
-  React$1.useEffect(function () {
+  var indexRef = React.useRef(index);
+  React.useEffect(function () {
     indexRef.current = index;
   }, [index]);
-  React$1.useEffect(function () {
+  React.useEffect(function () {
     var onChange = function onChange(_ref) {
       var width = _ref.window.width;
       var breakpointIndex = getBreakpointIndex({
@@ -901,7 +901,7 @@ function i(t) {
 }
 
 function useStableMemo(factory, deps) {
-  return React$1.useMemo(factory, [i(deps)]);
+  return React.useMemo(factory, [i(deps)]);
 }
 
 var _excluded$2 = ["defaultStyle"],
@@ -1037,7 +1037,7 @@ function createHeadingComponent(level) {
     },
     "default": {}
   });
-  return /*#__PURE__*/React$1.forwardRef(function (props, ref) {
+  return /*#__PURE__*/React.forwardRef(function (props, ref) {
     return /*#__PURE__*/React__default["default"].createElement(Text, Object.assign({}, nativeProps, {
       accessibilityRole: "header"
     }, props, {
@@ -1088,7 +1088,7 @@ var styles$1 = reactNative.StyleSheet.create({
 });
 
 var _excluded$1 = ["href", "target"];
-var A = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
+var A = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var href = _ref.href,
       target = _ref.target,
       props = _objectWithoutProperties(_ref, _excluded$1);
@@ -1119,7 +1119,7 @@ var View = reactNative.View;
 
 function createView$1() {
   var nativeProps = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return /*#__PURE__*/React$1.forwardRef(function (props, ref) {
+  return /*#__PURE__*/React.forwardRef(function (props, ref) {
     return /*#__PURE__*/React__default["default"].createElement(View, Object.assign({}, nativeProps, props, {
       ref: ref
     }));
@@ -1161,7 +1161,7 @@ createView$1(reactNative.Platform.select({
 }));
 
 var _excluded = ["style"];
-var P = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
+var P = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var style = _ref.style,
       props = _objectWithoutProperties(_ref, _excluded);
 
@@ -1242,7 +1242,7 @@ reactNative.StyleSheet.create({
 
 function createView() {
   var nativeProps = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return /*#__PURE__*/React$1.forwardRef(function (props, ref) {
+  return /*#__PURE__*/React.forwardRef(function (props, ref) {
     return /*#__PURE__*/React__default["default"].createElement(View, Object.assign({}, nativeProps, props, {
       ref: ref
     }));
@@ -1312,8 +1312,8 @@ function useSx() {
       theme = _useDripsyTheme.theme;
 
   var breakpoint = useBreakpointIndex();
-  var cache = React$1.useRef({});
-  return React$1.useCallback(function (sx) {
+  var cache = React.useRef({});
+  return React.useCallback(function (sx) {
     var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         themeKey = _ref.themeKey;
 
@@ -1372,7 +1372,7 @@ var useIsSSRReady = function useIsSSRReady(_ref) {
   var _ref$ssr = _ref.ssr,
       ssr = _ref$ssr === void 0 ? false : _ref$ssr;
 
-  var _useState = React$1.useState(function () {
+  var _useState = React.useState(function () {
     if (reactNative.Platform.OS !== 'web') {
       return true;
     }
@@ -1387,8 +1387,8 @@ var useIsSSRReady = function useIsSSRReady(_ref) {
       ready = _useState2[0],
       setReady = _useState2[1];
 
-  var isSSR = React$1.useRef(ssr);
-  React$1.useEffect(function () {
+  var isSSR = React.useRef(ssr);
+  React.useEffect(function () {
     if (isSSR.current) {
       setReady(true);
     }
@@ -1410,7 +1410,7 @@ function DripsyProvider(p) {
   }),
       ready = _useIsSSRReady.ready;
 
-  var context = React$1.useMemo(function () {
+  var context = React.useMemo(function () {
     return {
       theme: theme
     };
@@ -2468,7 +2468,7 @@ var Media = function (_a) {
     var passedProps = _a.passedProps, children = _a.children;
     var _b = useBreakPoints(), isXl = _b[0], isLg = _b[1], isMd = _b[2], isSm = _b[3];
     return ((!passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm) ? children :
-        React.createElement(React.Fragment, null,
+        React__default["default"].createElement(React__default["default"].Fragment, null,
             (passedProps.xl) ? (isXl) ? children : null : null,
             (passedProps.lg) ? (isLg) ? children : null : null,
             (passedProps.md) ? (isMd) ? children : null : null,
