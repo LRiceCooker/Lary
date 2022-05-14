@@ -4,8 +4,6 @@
 <br>
 If you are too lazy, use lary ;)
 <br><br>
-
-  
   
 <h2>🧐 Features</h2>
 
@@ -17,13 +15,12 @@ Here're some of the project's best features:
 *   Support media queries
 
   
-  
 <h2>💻 Built with</h2>
 
 Technologies used in the project:
 
 *   Dripsy
-*   Native-Base
+*   React-Native
 
 <h2>🛡️ License:</h2>
 

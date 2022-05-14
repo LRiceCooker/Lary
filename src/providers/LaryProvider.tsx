@@ -1,5 +1,4 @@
 import React from "react"
-import { Provider as PaperProvider } from 'react-native-paper';
 import {DripsyProvider} from 'dripsy'
 import LaryProviderPropsType from "../types/provider/LaryProviderPropsType";
 import themeOverLoader from "../utils/helpers/themeOverLoader";
@@ -153,10 +152,8 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
 
 const LaryProvider = (props: LaryProviderPropsType) => {
     return (
-        <DripsyProvider theme={themeOverLoader(props) as unknown}>
-            <PaperProvider>
-                {props.children}
-            </PaperProvider>
+        <DripsyProvider theme={themeOverLoader(props) as unknown }>
+            {props.children}
         </DripsyProvider>
     )
 }
