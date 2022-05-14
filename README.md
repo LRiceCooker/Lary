@@ -10,7 +10,7 @@ Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md"
 Here're some of the project's best features:
 
 *   Boolean props for load style on your component
-*   Laryfy components from your favorite library sutch as react-native-paper
+*   Laryfy components from your favorite library sutch as <a href='https://github.com/callstack/react-native-paper' target='_blank'>react-native-paper</a>
 *   Overload the default Lary's theme configuration with your own one
 *   Support media queries
 
