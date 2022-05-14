@@ -4,7 +4,9 @@
 <br>
 If you are too lazy, use lary ;)
 <br><br>
-  
+
+Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
+
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
