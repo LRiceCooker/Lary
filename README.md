@@ -1,7 +1,7 @@
 # Lary
 > If you are too lazy, use lary ;)
 <br>
-<i id="description">A utility-first style library for React Native on top of Dripsy.</i>
+<i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i>
 <br><br>
 Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
 
@@ -18,15 +18,15 @@ Here're some of the project's best features:
 
 Dependencies required in this project:
 
-*   React
-*   React-Native
+*   <a href='https://github.com/facebook/react' target='_blank'>React</a>
+*   <a href='https://github.com/facebook/react-native' target='_blank'>React-Native</a>
   
 <h2>💻 Built with</h2>
 
 Technologies used in this project:
 
-*   Dripsy
-*   React-Native
+*   <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>
+*   <a href='https://github.com/facebook/react-native' target='_blank'>React-Native</a>
 
 <h2>🛡️ License:</h2>
 
