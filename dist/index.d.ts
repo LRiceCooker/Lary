@@ -481,7 +481,11 @@ interface positionPropsType {
     top?: Sx['top'];
 }
 
-interface themePropsType extends colorPropsType, spacingPropsType, shapePropsType, layoutPropsType, positionPropsType {
+interface typographyPropsType {
+    bold?: Boolean;
+}
+
+interface themePropsType extends colorPropsType, spacingPropsType, shapePropsType, layoutPropsType, positionPropsType, typographyPropsType {
     style?: SxProp;
 }
 
