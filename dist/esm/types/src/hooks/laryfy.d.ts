@@ -29,6 +29,8 @@ import { themePropsType } from '../types/theme';
  * @property bdMuted To set the border color to muted.
  * @property bdDanger To set the border color to danger.
  * @property bdDark To set the border color to dark.
+ * @property bdSuccess To set the border color to success.
+ * @property bdWhite To set the border color to white.
  * @property borderColor To set the border color.
  * @property inInfo To set the color to info.
  * @property inSuccess To set the color to success.
@@ -39,6 +41,8 @@ import { themePropsType } from '../types/theme';
  * @property inMuted To set the color to muted.
  * @property inDanger To set the color to danger.
  * @property inDark To set the color to dark.
+ * @property inSuccess To set the color to success.
+ * @property inWite To set the color to white.
  * @property color To set the color.
  * @property bgInfo To set the background color to info.
  * @property bgSuccess To set the background color to success.
@@ -49,6 +53,8 @@ import { themePropsType } from '../types/theme';
  * @property bgMuted To set the background color to muted.
  * @property bgDanger To set the background color to danger.
  * @property bgDark To set the background color to dark.
+ * @property bgSuccess To set the background color to success.
+ * @property bgWhite To set the background color to white.
  * @property backgroundColor To set the background color.
  * @property alignCenter To set the alignement to center.
  * @property alignLeft To set the alignement to left.

@@ -48,6 +48,8 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | bdMuted | <p>To set the border color to muted.</p> |
 | bdDanger | <p>To set the border color to danger.</p> |
 | bdDark | <p>To set the border color to dark.</p> |
+| bdSuccess | <p>To set the border color to success.</p> |
+| bdWhite | <p>To set the border color to white.</p> |
 | borderColor | <p>To set the border color.</p> |
 | inInfo | <p>To set the color to info.</p> |
 | inSuccess | <p>To set the color to success.</p> |
@@ -58,6 +60,8 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | inMuted | <p>To set the color to muted.</p> |
 | inDanger | <p>To set the color to danger.</p> |
 | inDark | <p>To set the color to dark.</p> |
+| inSuccess | <p>To set the color to success.</p> |
+| inWite | <p>To set the color to white.</p> |
 | color | <p>To set the color.</p> |
 | bgInfo | <p>To set the background color to info.</p> |
 | bgSuccess | <p>To set the background color to success.</p> |
@@ -68,6 +72,8 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | bgMuted | <p>To set the background color to muted.</p> |
 | bgDanger | <p>To set the background color to danger.</p> |
 | bgDark | <p>To set the background color to dark.</p> |
+| bgSuccess | <p>To set the background color to success.</p> |
+| bgWhite | <p>To set the background color to white.</p> |
 | backgroundColor | <p>To set the background color.</p> |
 | alignCenter | <p>To set the alignement to center.</p> |
 | alignLeft | <p>To set the alignement to left.</p> |

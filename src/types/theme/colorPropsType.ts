@@ -25,6 +25,12 @@ export default interface colorPropsType {
     bdDanger? : boolean;
     bgDanger? : boolean;
     inDanger? : boolean;
+    bdSuccess? : boolean;
+    bgSuccess? : boolean;
+    inSuccess? : boolean;
+    bdWhite? : boolean;
+    bgWhite? : boolean;
+    inWhite? : boolean;
     backgroundColor? : Sx['backgroundColor']
     borderColor? : Sx['borderColor']
     color? : Sx['color']

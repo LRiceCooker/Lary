@@ -1834,6 +1834,24 @@ var color = {
     inDanger: {
         color: COLOR.DANGER,
     },
+    bdSuccess: {
+        borderColor: COLOR.SUCCESS,
+    },
+    bgSuccess: {
+        backgroundColor: COLOR.SUCCESS,
+    },
+    inSuccess: {
+        color: COLOR.SUCCESS,
+    },
+    bdWhite: {
+        borderColor: COLOR.WHITE,
+    },
+    bgWhite: {
+        backgroundColor: COLOR.WHITE,
+    },
+    inWhite: {
+        color: COLOR.WHITE,
+    },
 };
 
 var position$1 = {
@@ -2505,6 +2523,8 @@ var Style = function (_a) {
  * @property bdMuted To set the border color to muted.
  * @property bdDanger To set the border color to danger.
  * @property bdDark To set the border color to dark.
+ * @property bdSuccess To set the border color to success.
+ * @property bdWhite To set the border color to white.
  * @property borderColor To set the border color.
  * @property inInfo To set the color to info.
  * @property inSuccess To set the color to success.
@@ -2515,6 +2535,8 @@ var Style = function (_a) {
  * @property inMuted To set the color to muted.
  * @property inDanger To set the color to danger.
  * @property inDark To set the color to dark.
+ * @property inSuccess To set the color to success.
+ * @property inWite To set the color to white.
  * @property color To set the color.
  * @property bgInfo To set the background color to info.
  * @property bgSuccess To set the background color to success.
@@ -2525,6 +2547,8 @@ var Style = function (_a) {
  * @property bgMuted To set the background color to muted.
  * @property bgDanger To set the background color to danger.
  * @property bgDark To set the background color to dark.
+ * @property bgSuccess To set the background color to success.
+ * @property bgWhite To set the background color to white.
  * @property backgroundColor To set the background color.
  * @property alignCenter To set the alignement to center.
  * @property alignLeft To set the alignement to left.
@@ -2732,6 +2756,7 @@ var Style = function (_a) {
 function laryfy(component) {
     var RawComponent = styled(component)();
     var laryfiedComponent = function (props) {
+        props = props ? props : {};
         var styles = themeVariantsNamesGenerator(props);
         var children = (props === null || props === void 0 ? void 0 : props.children) || null;
         return (React.createElement(Media, { passedProps: props },

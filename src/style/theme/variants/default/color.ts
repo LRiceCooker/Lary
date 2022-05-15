@@ -73,6 +73,24 @@ const color = {
     inDanger: {
         color: COLOR_PALETTE.DANGER,
     },
+    bdSuccess: {
+        borderColor: COLOR_PALETTE.SUCCESS,
+    },
+    bgSuccess: {
+        backgroundColor: COLOR_PALETTE.SUCCESS,
+    },
+    inSuccess: {
+        color: COLOR_PALETTE.SUCCESS,
+    },
+    bdWhite: {
+        borderColor: COLOR_PALETTE.WHITE,
+    },
+    bgWhite: {
+        backgroundColor: COLOR_PALETTE.WHITE,
+    },
+    inWhite: {
+        color: COLOR_PALETTE.WHITE,
+    },
 }
 
 export default color

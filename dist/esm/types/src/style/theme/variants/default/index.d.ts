@@ -536,5 +536,23 @@ declare const defaultStyles: {
     inDanger: {
         color: string;
     };
+    bdSuccess: {
+        borderColor: string;
+    };
+    bgSuccess: {
+        backgroundColor: string;
+    };
+    inSuccess: {
+        color: string;
+    };
+    bdWhite: {
+        borderColor: string;
+    };
+    bgWhite: {
+        backgroundColor: string;
+    };
+    inWhite: {
+        color: string;
+    };
 };
 export default defaultStyles;
