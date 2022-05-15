@@ -263,6 +263,7 @@ import { themePropsType } from '../types/theme';
  * @property borderRightWidth To set the borderRightWidth property.
  * @property borderBottomWidth To set the borderBottomWidth property.
  * @property borderWidth To set the borderWidth property.
+ * @property bold To set the fontWeight property to bold.
  * 
  * @returns {React.FunctionComponent}
  */

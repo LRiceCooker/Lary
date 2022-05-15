@@ -1,4 +1,7 @@
 declare const defaultStyles: {
+    bold: {
+        fontWeight: string;
+    };
     relative: {
         position: string;
     };

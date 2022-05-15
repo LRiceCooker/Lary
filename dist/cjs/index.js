@@ -2152,7 +2152,13 @@ var element = {
 
 var components = _assign(_assign({}, container), element);
 
-var defaultStyles = _assign(_assign(_assign(_assign(_assign({}, color), shape), spacing), layout), position);
+var typography = {
+    bold: {
+        fontWeight: 'bold'
+    }
+};
+
+var defaultStyles = _assign(_assign(_assign(_assign(_assign(_assign({}, color), shape), spacing), layout), position), typography);
 
 var variants = _assign({ layout: defaultStyles }, components);
 
@@ -2758,6 +2764,7 @@ var Style = function (_a) {
  * @property borderRightWidth To set the borderRightWidth property.
  * @property borderBottomWidth To set the borderBottomWidth property.
  * @property borderWidth To set the borderWidth property.
+ * @property bold To set the fontWeight property to bold.
  *
  * @returns {React.FunctionComponent}
  */

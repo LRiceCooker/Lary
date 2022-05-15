@@ -32,6 +32,9 @@ declare const variants: {
         justifyContent: string;
     };
     layout: {
+        bold: {
+            fontWeight: string;
+        };
         relative: {
             position: string;
         };
