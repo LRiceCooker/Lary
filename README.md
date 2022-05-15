@@ -2,7 +2,34 @@
 > If you are too lazy, use lary ;)
 <br>
 <i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i>
-<br><br>
+<br>
+
+```javascript
+const Title = laryfy<React.ComponentProps<typeof PaperTitle>>(PaperTitle)
+const Image = laryfy<React.ComponentProps<typeof NativeImage>>(NativeImage)
+const Button = laryfy<React.ComponentProps<typeof PaperButton>>(PaperButton)
+
+const Card = (): JSX.Element => {
+    return (
+        <Element m1 r4 bgWarning flexBasis={'30%'}>
+            <Container column widthFull>
+                <Image height={400} r4 source={{uri: 'https://img.freepik.com/free-vector/animal-doing-dabbing-movement_23-2147851266.jpg'}} />
+                <Container row m6>
+                    <Title f3 inWhite bold textCenter>Dabbing Unicorn</Title>
+                    <Title f1 inWhite bold textCenter>$5.6</Title>
+                    <Button f1 bgSecondary mode="contained" onPress={() => console.log('Pressed')}>
+                        Buy
+                    </Button>
+                </Container>
+            </Container>
+        </Element>
+    )
+}
+```
+
+<img src="https://i.ibb.co/NZh1HZ9/result.png"/>
+
+<br>
 Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
 
 <h2>🧐 Features</h2>
