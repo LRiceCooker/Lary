@@ -2,7 +2,9 @@
 > If you are too lazy, use lary ;)
 <br>
 <i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i>
-<br>
+<br><br>
+Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
+<br><br>
 
 ```javascript
 const Title = laryfy<React.ComponentProps<typeof PaperTitle>>(PaperTitle)
@@ -28,9 +30,6 @@ const Card = (): JSX.Element => {
 ```
 
 <img src="https://i.ibb.co/NZh1HZ9/result.png"/>
-
-<br>
-Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
 
 <h2>🧐 Features</h2>
 
