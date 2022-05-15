@@ -4,7 +4,8 @@
   "description": "A utility-first style library for React Native on top of Dripsy.",
   "scripts": {
     "build:doc": "jsdoc2md --files ./src/**/*.tsx ./src/**/**/*.tsx --configure ./jsdoc2md.json > ./doc/doc.md",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "RiceCooker",
@@ -28,6 +29,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@types/jsdoc-to-markdown": "^7.0.3",
     "@types/react-native": "^0.67.7",
+    "husky": "^8.0.1",
     "jsdoc-babel": "^0.5.0",
     "jsdoc-to-markdown": "^7.1.1",
     "rollup-plugin-commonjs": "^10.1.0",

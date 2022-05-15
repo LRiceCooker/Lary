@@ -1,14 +1,14 @@
 const COLOR = {
-    PRIMARY : '#5B4FF7',
-    SECONDARY: '#C4C4C4',
-    SUCCESS: '#4CD964',
-    DANGER: '#FF3B30',
-    WARNING: '#FF9500',
-    INFO: '#5B4FF7',
-    LIGHT: '#F3F3F3',
-    DARK: '#212121',
+    PRIMARY : '#407AA8',
+    SECONDARY: '#51ACF5',
+    SUCCESS: '#8AF494',
+    DANGER: '#A83B38',
+    WARNING: '#F46E6A',
+    INFO: '#BAA4F5',
+    LIGHT: '#F3F0C7',
+    DARK: '#131313',
     WHITE: '#FFFFFF',
-    MUTED: '#313131',
+    MUTED: '#303136',
 }
 
 export default COLOR
