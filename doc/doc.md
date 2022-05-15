@@ -276,6 +276,9 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | borderBottomWidth | <p>To set the borderBottomWidth property.</p> |
 | borderWidth | <p>To set the borderWidth property.</p> |
 | bold | <p>To set the fontWeight property to bold.</p> |
+| textCenter | <p>To set the textAlign property to center.</p> |
+| textRight | <p>To set the textAlign property to right.</p> |
+| textLeft | <p>To set the textAlign property to left.</p> |
 
 <a name="LaryProvider"></a>
 

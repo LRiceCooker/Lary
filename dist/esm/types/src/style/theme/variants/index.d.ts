@@ -35,6 +35,15 @@ declare const variants: {
         bold: {
             fontWeight: string;
         };
+        textCenter: {
+            textAlign: string;
+        };
+        textLeft: {
+            textAlign: string;
+        };
+        textRight: {
+            textAlign: string;
+        };
         relative: {
             position: string;
         };
