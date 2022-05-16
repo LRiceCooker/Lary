@@ -2,11 +2,29 @@ declare const layout: {
     alignCenter: {
         alignItems: string;
     };
-    alignRight: {
+    alignEnd: {
         alignItems: string;
     };
-    alignLeft: {
+    alignStart: {
         alignItems: string;
+    };
+    justifyCenter: {
+        justifyContent: string;
+    };
+    justifyEnd: {
+        justifyContent: string;
+    };
+    justifyStart: {
+        justifyContent: string;
+    };
+    justifyBetween: {
+        justifyContent: string;
+    };
+    justifyAround: {
+        justifyContent: string;
+    };
+    justifyEvenly: {
+        justifyContent: string;
     };
     f1: {
         flex: number;

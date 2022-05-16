@@ -3,11 +3,29 @@ const layout = {
     alignCenter : {
         alignItems: 'center',
     },
-    alignRight : {
+    alignEnd : {
         alignItems : 'flex-end'
     },
-    alignLeft : {
+    alignStart : {
         alignItems : 'flex-start'
+    },
+    justifyCenter : {
+        justifyContent: 'center',
+    },
+    justifyEnd : {
+        justifyContent : 'flex-end'
+    },
+    justifyStart : {
+        justifyContent : 'flex-start'
+    },
+    justifyBetween : {
+        justifyContent : 'space-between'
+    },
+    justifyAround : {
+        justifyContent : 'space-around'
+    },
+    justifyEvenly : {
+        justifyContent : 'space-around'
     },
     f1 : {
         flex: LAYOUT.FLEX[1],
