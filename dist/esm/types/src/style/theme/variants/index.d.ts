@@ -149,11 +149,29 @@ declare const variants: {
         alignCenter: {
             alignItems: string;
         };
-        alignRight: {
+        alignEnd: {
             alignItems: string;
         };
-        alignLeft: {
+        alignStart: {
             alignItems: string;
+        };
+        justifyCenter: {
+            justifyContents: string;
+        };
+        justifyEnd: {
+            justifyContents: string;
+        };
+        justifyStart: {
+            justifyContents: string;
+        };
+        justifyBetween: {
+            justifyContents: string;
+        };
+        justifyAround: {
+            justifyContents: string;
+        };
+        justifyEvenly: {
+            justifyContents: string;
         };
         f1: {
             flex: number;

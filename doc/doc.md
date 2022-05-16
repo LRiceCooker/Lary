@@ -45,7 +45,8 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | color | <p>To set the color.</p> |
 | bg(Success-Warning-Secondary-Light-Muted-Danger-Dark-Success-Info) | <p>To set the background color to the choosen one.</p> |
 | backgroundColor | <p>To set the background color.</p> |
-| align(Center-Left-Right) | <p>To set the alignement to the choosen one.</p> |
+| align(Center-Start-End) | <p>To set the alignement to the secondary axis.</p> |
+| justify(Center-Start-End-Between-Around-evenly) | <p>To set the alignement to the main axis.</p> |
 | xl | <p>Display itself in min 1280px device width.</p> |
 | lg | <p>Display itself in min 1024px and max 1979px device width.</p> |
 | md | <p>Display itself in min 768px and max 1023px device width.</p> |

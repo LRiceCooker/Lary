@@ -2,8 +2,14 @@ import { Sx } from "dripsy";
 
 export default interface layoutPropsType {
     alignCenter? : boolean;
-    alignLeft? : boolean;
-    alignRight? : boolean;
+    alignEnd? : boolean;
+    alignStart? : boolean;
+    justifyCenter? : boolean;
+    justifyEnd? : boolean;
+    justifyStart? : boolean;
+    justifyBetween? :boolean;
+    justifyAround? :boolean;
+    justifyEvenly? : boolean;
     xl? : boolean;
     lg? : boolean;
     md? : boolean;

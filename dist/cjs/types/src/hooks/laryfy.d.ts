@@ -26,7 +26,8 @@ import { themePropsType } from '../types/theme';
  * @property color To set the color.
  * @property bg(Success-Warning-Secondary-Light-Muted-Danger-Dark-Success-Info) To set the background color to the choosen one.
  * @property backgroundColor To set the background color.
- * @property align(Center-Left-Right) To set the alignement to the choosen one.
+ * @property align(Center-Start-End) To set the alignement to the secondary axis.
+ * @property justify(Center-Start-End-Between-Around-evenly) To set the alignement to the main axis.
  * @property xl Display itself in min 1280px device width.
  * @property lg Display itself in min 1024px and max 1979px device width.
  * @property md Display itself in min 768px and max 1023px device width.
