@@ -123,22 +123,22 @@ declare const defaultStyles: {
         alignItems: string;
     };
     justifyCenter: {
-        justifyContents: string;
+        alignContent: string;
     };
     justifyEnd: {
-        justifyContents: string;
+        alignContent: string;
     };
     justifyStart: {
-        justifyContents: string;
+        alignContent: string;
     };
     justifyBetween: {
-        justifyContents: string;
+        alignContent: string;
     };
     justifyAround: {
-        justifyContents: string;
+        alignContent: string;
     };
     justifyEvenly: {
-        justifyContents: string;
+        alignContent: string;
     };
     f1: {
         flex: number;

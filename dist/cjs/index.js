@@ -1701,22 +1701,22 @@ var layout = {
         alignItems: 'flex-start'
     },
     justifyCenter: {
-        justifyContents: 'center',
+        alignContent: 'center',
     },
     justifyEnd: {
-        justifyContents: 'flex-end'
+        alignContent: 'flex-end'
     },
     justifyStart: {
-        justifyContents: 'flex-start'
+        alignContent: 'flex-start'
     },
     justifyBetween: {
-        justifyContents: 'space-between'
+        alignContent: 'space-between'
     },
     justifyAround: {
-        justifyContents: 'space-around'
+        alignContent: 'space-around'
     },
     justifyEvenly: {
-        justifyContents: 'space-around'
+        alignContent: 'space-around'
     },
     f1: {
         flex: layout$1.FLEX[1],
