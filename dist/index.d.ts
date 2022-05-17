@@ -488,10 +488,10 @@ interface positionPropsType {
 }
 
 interface typographyPropsType {
-    bold?: Boolean;
-    textCenter?: Boolean;
-    textLeft?: Boolean;
-    textRight?: Boolean;
+    bold?: boolean;
+    textCenter?: boolean;
+    textLeft?: boolean;
+    textRight?: boolean;
 }
 
 interface themePropsType extends colorPropsType, spacingPropsType, shapePropsType, layoutPropsType, positionPropsType, typographyPropsType {

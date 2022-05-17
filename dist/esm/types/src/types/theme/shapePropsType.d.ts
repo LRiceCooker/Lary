@@ -1,4 +1,4 @@
-import { Sx } from "dripsy";
+import { Sx } from 'dripsy';
 export default interface shapePropsType {
     r1?: boolean;
     r2?: boolean;

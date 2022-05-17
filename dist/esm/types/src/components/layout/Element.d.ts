@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import elementPropsType from "../../types/layout/elementPropsType";
+import elementPropsType from '../../types/layout/elementPropsType';
 /**
  * @function Element
  *

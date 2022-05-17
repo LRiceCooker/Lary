@@ -1,13 +1,14 @@
-import {SxProp} from 'dripsy'
-import consts from '../../const'
-import { themePropsType } from '../../types/theme'
+import { SxProp } from 'dripsy';
+import consts from '../../const';
+import { themePropsType } from '../../types/theme';
 
-const styleSheetCompiler = (props: themePropsType) : SxProp  => {
-    let styles = {...props.style}
-    for(const propsToInject of consts.stylesPropsToInject){
-        if(propsToInject !== 'style') styles[propsToInject] = props[propsToInject]
-    }
-    return styles
-}
+const styleSheetCompiler = (props: themePropsType): SxProp => {
+  const styles = { ...props.style };
+  for (const propsToInject of consts.stylesPropsToInject) {
+    // @ts-expect-error - we know that key is a string and we are sure that it is in the theme
+    if (propsToInject !== 'style') styles[propsToInject] = props[propsToInject];
+  }
+  return styles;
+};
 
-export default styleSheetCompiler
+export default styleSheetCompiler;

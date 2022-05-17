@@ -1,16 +1,16 @@
-import React from "react"
-import {DripsyProvider} from 'dripsy'
-import LaryProviderPropsType from "../types/provider/LaryProviderPropsType";
-import themeOverLoader from "../utils/helpers/themeOverLoader";
+import React from 'react';
+import { DripsyProvider } from 'dripsy';
+import LaryProviderPropsType from '../types/provider/LaryProviderPropsType';
+import themeOverLoader from '../utils/helpers/themeOverLoader';
 
 /**
  * @function LaryProvider
- * 
+ *
  * @param props : LaryProviderPropsType
- * 
- * 
+ *
+ *
  * @description It must wrap all your app to use Lary's components. You can pass the theme configuration props to the provider, or use the default theme. You can use these props :
- * 
+ *
  * @exemple How to use it ⤵️
  * ```javascript
  * const MainProvider = ({ children }: { children: JSX.Element }) => {
@@ -21,14 +21,14 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
  *    )
  * }
  * ```
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * @exemple There is an exemple of the color configuration file ⤵️
  * ```javascript
  * const COLOR = {
@@ -46,7 +46,7 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
  *
  * export default COLOR
  * ```
- * @exemple There is an exemple of the layout configuration file ⤵️ 
+ * @exemple There is an exemple of the layout configuration file ⤵️
  *```javascript
  * const LAYOUT = {
  *   FLEX : {
@@ -70,10 +70,10 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
  *       '8' : '8%',
  *   }
  * }
- * 
+ *
  * export default LAYOUT
  * ```
- * @exemple There is an exemple of the shape configuration file ⤵️ 
+ * @exemple There is an exemple of the shape configuration file ⤵️
  * ```javascript
  * const SHAPE = {
  *   BORDER_RADIUS: {
@@ -107,10 +107,10 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
  *       '8' : '8%',
  *   },
  * }
- * 
+ *
  * export default SHAPE;
  * ```
- * @exemple There is an exemple of the spacing configuration file ⤵️ 
+ * @exemple There is an exemple of the spacing configuration file ⤵️
  * ```javascript
  * const SPACING = {
  *      '1' : '1%',
@@ -122,7 +122,7 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
  *      '7' : '7%',
  *      '8' : '8%',
  *  }
- * 
+ *
  *  export default SPACING
  * ```
  * @exemple There is an exemple of the position configuration file ⤵️
@@ -140,21 +140,19 @@ import themeOverLoader from "../utils/helpers/themeOverLoader";
  *
  *  export default POSITION
  * ```
- * 
+ *
  * @property color To overload colors theme configuration.
- * @property layout To overload layout theme configuration. 
+ * @property layout To overload layout theme configuration.
  * @property shape To overload shape theme configuration.
  * @property spacing To overload spacing theme configuration.
  * @property positions To overload positions theme configuration.
- * 
+ *
  * @returns {JSX.Element}
  */
 
 const LaryProvider = (props: LaryProviderPropsType) => {
-    return (
-        <DripsyProvider theme={themeOverLoader(props) as unknown }>
-            {props.children}
-        </DripsyProvider>
-    )
-}
+  return (
+    <DripsyProvider theme={themeOverLoader(props) as unknown}>{props.children}</DripsyProvider>
+  );
+};
 export default LaryProvider;

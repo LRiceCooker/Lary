@@ -1,4 +1,4 @@
-import { Sx } from "dripsy";
+import { Sx } from 'dripsy';
 export default interface spacingPropsType {
     m1?: boolean;
     m2?: boolean;

@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import LaryProviderPropsType from "../types/provider/LaryProviderPropsType";
+import LaryProviderPropsType from '../types/provider/LaryProviderPropsType';
 /**
  * @function LaryProvider
  *

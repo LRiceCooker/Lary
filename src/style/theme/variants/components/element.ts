@@ -1,7 +1,5 @@
 const element = {
-    element: {
-        
-    }
-}
+  element: {}
+};
 
-export default element
+export default element;

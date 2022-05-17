@@ -1,9 +1,9 @@
-import container from "./conatiner";
-import element from "./element";
+import container from './conatiner';
+import element from './element';
 
 const components = {
-    ...container,
-    ...element
-}
+  ...container,
+  ...element
+};
 
-export default components
+export default components;

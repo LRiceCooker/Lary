@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { themePropsType } from "../theme";
+import { themePropsType } from '../theme';
 export default interface containerPropsType extends themePropsType {
     container?: boolean;
     fullHeight?: boolean;

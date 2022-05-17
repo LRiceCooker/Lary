@@ -1,4 +1,4 @@
-import { Sx } from "dripsy";
+import { Sx } from 'dripsy';
 export default interface layoutPropsType {
     alignCenter?: boolean;
     alignEnd?: boolean;
