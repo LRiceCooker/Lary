@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import containerPropsType from "../../types/layout/containerPropsType";
+import containerPropsType from '../../types/layout/containerPropsType';
 /**
  * @function Container
  *

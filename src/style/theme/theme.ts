@@ -1,8 +1,8 @@
-import { makeTheme } from 'dripsy'
-import variants from './variants'
+import { makeTheme } from 'dripsy';
+import variants from './variants';
 
 const theme = makeTheme({
-    ...variants
-})
+  ...variants
+});
 
-export default theme
+export default theme;

@@ -1,2 +1,2 @@
-declare const useBreakPoints: () => Array<Boolean>;
+declare const useBreakPoints: () => Array<boolean>;
 export default useBreakPoints;

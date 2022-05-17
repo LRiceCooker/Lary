@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { SxProp } from "dripsy";
+import { SxProp } from 'dripsy';
 declare const Style: ({ style, children }: {
     style?: SxProp | undefined;
     children: JSX.Element;

@@ -1,6 +1,6 @@
 export default interface typographyPropsType {
-    bold?: Boolean
-    textCenter?: Boolean
-    textLeft?: Boolean
-    textRight?: Boolean
+  bold?: boolean;
+  textCenter?: boolean;
+  textLeft?: boolean;
+  textRight?: boolean;
 }

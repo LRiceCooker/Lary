@@ -1,3 +1,3 @@
-import themePropsType from './themePropsType'
+import themePropsType from './themePropsType';
 
-export {themePropsType}
+export { themePropsType };

@@ -1,18 +1,18 @@
 import React, { ComponentType } from 'react';
-import { styled } from 'dripsy'
-import themeVariantsNamesGenerator from '../utils/theme/themeVariantsNamesGenerator'
-import styleSheetCompiler from '../utils/helpers/styleSheetCompiler'
-import propsInjector from "../utils/helpers/propsInjector";
-import Media from '../components/media/Media'
-import Style from '../components/style/Style'
+import { styled } from 'dripsy';
+import themeVariantsNamesGenerator from '../utils/theme/themeVariantsNamesGenerator';
+import styleSheetCompiler from '../utils/helpers/styleSheetCompiler';
+import propsInjector from '../utils/helpers/propsInjector';
+import Media from '../components/media/Media';
+import Style from '../components/style/Style';
 import { themePropsType } from '../types/theme';
 
 /**
  * @function laryfy
  * @param component : ComponentType<unknown>
- * 
+ *
  * @description It takes a component and return it with all the Lary props. It apply also the global theme to the component.
- * 
+ *
  * @exemple How to use it ⤵️
  * ```javascript
  * import { TextInput } from 'react-native-paper';
@@ -26,7 +26,7 @@ import { themePropsType } from '../types/theme';
  *
  * //in this case, "bgSecondary", "relative", "f2" are the Lary's props. Others props are the props of the TextInput component.
  * ```
- * 
+ *
  * @property bd(Success-Warning-Secondary-Light-Muted-Danger-Dark-Success-Info) To set the border color to the choosen one.
  * @property borderColor To set the border color.
  * @property in(Success-Warning-Secondary-Light-Muted-Danger-Dark-Success-Info) To set the color to the choosen one.
@@ -108,30 +108,36 @@ import { themePropsType } from '../types/theme';
  * @property borderWidth To set the borderWidth property.
  * @property bold To set the fontWeight property to bold.
  * @property text(Center-Right-Left) To set the textAlign property to the choosen one.
- * 
+ *
  * @returns {React.FunctionComponent}
  */
 
-function laryfy<componentPropsType>(component: ComponentType<unknown>): (props?: componentPropsType & themePropsType) => JSX.Element {
-    const RawComponent = styled(component)()
+function laryfy<componentPropsType>(
+  component: ComponentType<unknown>
+): (props?: componentPropsType & themePropsType) => JSX.Element {
+  const RawComponent = styled(component)();
 
-    const laryfiedComponent = (props?: componentPropsType & themePropsType) => {
-        props = props ? props : {} as componentPropsType & themePropsType;
-        
-        const styles: React.ComponentProps<typeof RawComponent>['variants'] = themeVariantsNamesGenerator(props);
-        const children = (props as any)?.children || null;
-        return (
-            <Media passedProps={props}>
-                <Style style={styleSheetCompiler(props)}>
-                    <RawComponent variants={styles} {...propsInjector<componentPropsType, React.ComponentProps<typeof component>>(props)}>
-                        {children}
-                    </RawComponent>
-                </Style>
-            </Media>
-        )
-    }
+  const laryfiedComponent = (props?: componentPropsType & themePropsType) => {
+    props = props ? props : ({} as componentPropsType & themePropsType);
 
-    return laryfiedComponent
+    const styles: React.ComponentProps<typeof RawComponent>['variants'] =
+      themeVariantsNamesGenerator(props);
+    const children = (props as any)?.children || null;
+    return (
+      <Media passedProps={props}>
+        <Style style={styleSheetCompiler(props)}>
+          <RawComponent
+            variants={styles}
+            {...propsInjector<componentPropsType, React.ComponentProps<typeof component>>(props)}
+          >
+            {children}
+          </RawComponent>
+        </Style>
+      </Media>
+    );
+  };
+
+  return laryfiedComponent;
 }
 
 export default laryfy;

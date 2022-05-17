@@ -1,20 +1,20 @@
-import React from "react";
-import {View} from 'dripsy'
+import React from 'react';
+import { View } from 'dripsy';
 
-import containerPropsType from "../../types/layout/containerPropsType"
-import themeVariantsNamesGenerator from "../../utils/theme/themeVariantsNamesGenerator"
-import Media from '../media/Media'
-import Style from '../style/Style'
+import containerPropsType from '../../types/layout/containerPropsType';
+import themeVariantsNamesGenerator from '../../utils/theme/themeVariantsNamesGenerator';
+import Media from '../media/Media';
+import Style from '../style/Style';
 
 /**
  * @function Container
- * 
+ *
  * @param props : containerPropsType
- * 
+ *
  * @description Takes all Lary props and add to them the container props:
- * 
+ *
  * @exemple How to use it ⤵️
- * ```javascript 
+ * ```javascript
  * <Container row contentCenter m8 r8 p4>
  *     {children}
  * </Container>
@@ -26,18 +26,21 @@ import Style from '../style/Style'
  * @property contentCenter it's mean justifyContent: "center"
  * @property contentLeft it's mean justifyContent: "flex-start"
  * @property contentRight it's mean justifyContent: "flex-end"
- * 
- * 
+ *
+ *
  * @returns {JSX.Element}
  */
 
-const Container = (props : containerPropsType) => {
+const Container = (props: containerPropsType) => {
+  const styles: React.ComponentProps<typeof View>['variants'] = themeVariantsNamesGenerator(props);
 
-    const styles: React.ComponentProps<typeof View>['variants'] = themeVariantsNamesGenerator(props);
+  return (
+    <Media passedProps={props}>
+      <Style style={props.style}>
+        <View variants={styles}>{props.children}</View>
+      </Style>
+    </Media>
+  );
+};
 
-    return (
-        <Media passedProps={props}><Style style={props.style}><View variants={styles}>{props.children}</View></Style></Media>
-    )
-}
-
-export default Container
+export default Container;

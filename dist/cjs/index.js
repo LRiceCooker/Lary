@@ -1460,7 +1460,7 @@ var shape$1 = {
         '5': 25,
         '6': 30,
         '7': 35,
-        '8': 40,
+        '8': 40
     },
     BORDER_WIDTH: {
         '1': 1,
@@ -1470,7 +1470,7 @@ var shape$1 = {
         '5': 8,
         '6': 10,
         '7': 12,
-        '8': 14,
+        '8': 14
     },
     PADDING: {
         '1': '1%',
@@ -1480,178 +1480,178 @@ var shape$1 = {
         '5': '5%',
         '6': '6%',
         '7': '7%',
-        '8': '8%',
-    },
+        '8': '8%'
+    }
 };
 
 var shape = {
     r1: {
-        borderRadius: shape$1.BORDER_RADIUS[1],
+        borderRadius: shape$1.BORDER_RADIUS[1]
     },
     r2: {
-        borderRadius: shape$1.BORDER_RADIUS[2],
+        borderRadius: shape$1.BORDER_RADIUS[2]
     },
     r3: {
-        borderRadius: shape$1.BORDER_RADIUS[3],
+        borderRadius: shape$1.BORDER_RADIUS[3]
     },
     r4: {
-        borderRadius: shape$1.BORDER_RADIUS[4],
+        borderRadius: shape$1.BORDER_RADIUS[4]
     },
     r5: {
-        borderRadius: shape$1.BORDER_RADIUS[5],
+        borderRadius: shape$1.BORDER_RADIUS[5]
     },
     r6: {
-        borderRadius: shape$1.BORDER_RADIUS[6],
+        borderRadius: shape$1.BORDER_RADIUS[6]
     },
     r7: {
-        borderRadius: shape$1.BORDER_RADIUS[7],
+        borderRadius: shape$1.BORDER_RADIUS[7]
     },
     r8: {
-        borderRadius: shape$1.BORDER_RADIUS[8],
+        borderRadius: shape$1.BORDER_RADIUS[8]
     },
     p1: {
-        padding: shape$1.PADDING[1],
+        padding: shape$1.PADDING[1]
     },
     p2: {
-        padding: shape$1.PADDING[2],
+        padding: shape$1.PADDING[2]
     },
     p3: {
-        padding: shape$1.PADDING[3],
+        padding: shape$1.PADDING[3]
     },
     p4: {
-        padding: shape$1.PADDING[4],
+        padding: shape$1.PADDING[4]
     },
     p5: {
-        padding: shape$1.PADDING[5],
+        padding: shape$1.PADDING[5]
     },
     p6: {
-        padding: shape$1.PADDING[6],
+        padding: shape$1.PADDING[6]
     },
     p7: {
-        padding: shape$1.PADDING[7],
+        padding: shape$1.PADDING[7]
     },
     p8: {
-        padding: shape$1.PADDING[8],
+        padding: shape$1.PADDING[8]
     },
     pr1: {
-        paddingRight: shape$1.PADDING[1],
+        paddingRight: shape$1.PADDING[1]
     },
     pr2: {
-        paddingRight: shape$1.PADDING[2],
+        paddingRight: shape$1.PADDING[2]
     },
     pr3: {
-        paddingRight: shape$1.PADDING[3],
+        paddingRight: shape$1.PADDING[3]
     },
     pr4: {
-        paddingRight: shape$1.PADDING[4],
+        paddingRight: shape$1.PADDING[4]
     },
     pr5: {
-        paddingRight: shape$1.PADDING[5],
+        paddingRight: shape$1.PADDING[5]
     },
     pr6: {
-        paddingRight: shape$1.PADDING[6],
+        paddingRight: shape$1.PADDING[6]
     },
     pr7: {
-        paddingRight: shape$1.PADDING[7],
+        paddingRight: shape$1.PADDING[7]
     },
     pr8: {
-        paddingRight: shape$1.PADDING[8],
+        paddingRight: shape$1.PADDING[8]
     },
     pl1: {
-        paddingLeft: shape$1.PADDING[1],
+        paddingLeft: shape$1.PADDING[1]
     },
     pl2: {
-        paddingLeft: shape$1.PADDING[2],
+        paddingLeft: shape$1.PADDING[2]
     },
     pl3: {
-        paddingLeft: shape$1.PADDING[3],
+        paddingLeft: shape$1.PADDING[3]
     },
     pl4: {
-        paddingLeft: shape$1.PADDING[4],
+        paddingLeft: shape$1.PADDING[4]
     },
     pl5: {
-        paddingLeft: shape$1.PADDING[5],
+        paddingLeft: shape$1.PADDING[5]
     },
     pl6: {
-        paddingLeft: shape$1.PADDING[6],
+        paddingLeft: shape$1.PADDING[6]
     },
     pl7: {
-        paddingLeft: shape$1.PADDING[7],
+        paddingLeft: shape$1.PADDING[7]
     },
     pl8: {
-        paddingLeft: shape$1.PADDING[8],
+        paddingLeft: shape$1.PADDING[8]
     },
     pt1: {
-        paddingTop: shape$1.PADDING[1],
+        paddingTop: shape$1.PADDING[1]
     },
     pt2: {
-        paddingTop: shape$1.PADDING[2],
+        paddingTop: shape$1.PADDING[2]
     },
     pt3: {
-        paddingTop: shape$1.PADDING[3],
+        paddingTop: shape$1.PADDING[3]
     },
     pt4: {
-        paddingTop: shape$1.PADDING[4],
+        paddingTop: shape$1.PADDING[4]
     },
     pt5: {
-        paddingTop: shape$1.PADDING[5],
+        paddingTop: shape$1.PADDING[5]
     },
     pt6: {
-        paddingTop: shape$1.PADDING[6],
+        paddingTop: shape$1.PADDING[6]
     },
     pt7: {
-        paddingTop: shape$1.PADDING[7],
+        paddingTop: shape$1.PADDING[7]
     },
     pt8: {
-        paddingTop: shape$1.PADDING[8],
+        paddingTop: shape$1.PADDING[8]
     },
     pb1: {
-        paddingBottom: shape$1.PADDING[1],
+        paddingBottom: shape$1.PADDING[1]
     },
     pb2: {
-        paddingBottom: shape$1.PADDING[2],
+        paddingBottom: shape$1.PADDING[2]
     },
     pb3: {
-        paddingBottom: shape$1.PADDING[3],
+        paddingBottom: shape$1.PADDING[3]
     },
     pb4: {
-        paddingBottom: shape$1.PADDING[4],
+        paddingBottom: shape$1.PADDING[4]
     },
     pb5: {
-        paddingBottom: shape$1.PADDING[5],
+        paddingBottom: shape$1.PADDING[5]
     },
     pb6: {
-        paddingBottom: shape$1.PADDING[6],
+        paddingBottom: shape$1.PADDING[6]
     },
     pb7: {
-        paddingBottom: shape$1.PADDING[7],
+        paddingBottom: shape$1.PADDING[7]
     },
     pb8: {
-        paddingBottom: shape$1.PADDING[8],
+        paddingBottom: shape$1.PADDING[8]
     },
     b1: {
-        borderWidth: shape$1.BORDER_WIDTH[1],
+        borderWidth: shape$1.BORDER_WIDTH[1]
     },
     b2: {
-        borderWidth: shape$1.BORDER_WIDTH[2],
+        borderWidth: shape$1.BORDER_WIDTH[2]
     },
     b3: {
-        borderWidth: shape$1.BORDER_WIDTH[3],
+        borderWidth: shape$1.BORDER_WIDTH[3]
     },
     b4: {
-        borderWidth: shape$1.BORDER_WIDTH[4],
+        borderWidth: shape$1.BORDER_WIDTH[4]
     },
     b5: {
-        borderWidth: shape$1.BORDER_WIDTH[5],
+        borderWidth: shape$1.BORDER_WIDTH[5]
     },
     b6: {
-        borderWidth: shape$1.BORDER_WIDTH[6],
+        borderWidth: shape$1.BORDER_WIDTH[6]
     },
     b7: {
-        borderWidth: shape$1.BORDER_WIDTH[7],
+        borderWidth: shape$1.BORDER_WIDTH[7]
     },
     b8: {
-        borderWidth: shape$1.BORDER_WIDTH[8],
+        borderWidth: shape$1.BORDER_WIDTH[8]
     },
     widthFull: {
         width: '100%'
@@ -1676,7 +1676,7 @@ var layout$1 = {
         '5': 5,
         '6': 6,
         '7': 7,
-        '8': 8,
+        '8': 8
     },
     FLEX_BASIS: {
         '1': '1%',
@@ -1686,13 +1686,13 @@ var layout$1 = {
         '5': '5%',
         '6': '6%',
         '7': '7%',
-        '8': '8%',
+        '8': '8%'
     }
 };
 
 var layout = {
     alignCenter: {
-        alignItems: 'center',
+        alignItems: 'center'
     },
     alignEnd: {
         alignItems: 'flex-end'
@@ -1701,7 +1701,7 @@ var layout = {
         alignItems: 'flex-start'
     },
     justifyCenter: {
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     justifyEnd: {
         justifyContent: 'flex-end'
@@ -1719,52 +1719,52 @@ var layout = {
         justifyContent: 'space-around'
     },
     f1: {
-        flex: layout$1.FLEX[1],
+        flex: layout$1.FLEX[1]
     },
     f2: {
-        flex: layout$1.FLEX[2],
+        flex: layout$1.FLEX[2]
     },
     f3: {
-        flex: layout$1.FLEX[3],
+        flex: layout$1.FLEX[3]
     },
     f4: {
-        flex: layout$1.FLEX[4],
+        flex: layout$1.FLEX[4]
     },
     f5: {
-        flex: layout$1.FLEX[5],
+        flex: layout$1.FLEX[5]
     },
     f6: {
-        flex: layout$1.FLEX[6],
+        flex: layout$1.FLEX[6]
     },
     f7: {
-        flex: layout$1.FLEX[7],
+        flex: layout$1.FLEX[7]
     },
     f8: {
-        flex: layout$1.FLEX[8],
+        flex: layout$1.FLEX[8]
     },
     fb1: {
-        flexBasis: layout$1.FLEX_BASIS[1],
+        flexBasis: layout$1.FLEX_BASIS[1]
     },
     fb2: {
-        flexBasis: layout$1.FLEX_BASIS[2],
+        flexBasis: layout$1.FLEX_BASIS[2]
     },
     fb3: {
-        flexBasis: layout$1.FLEX_BASIS[3],
+        flexBasis: layout$1.FLEX_BASIS[3]
     },
     fb4: {
-        flexBasis: layout$1.FLEX_BASIS[4],
+        flexBasis: layout$1.FLEX_BASIS[4]
     },
     fb5: {
-        flexBasis: layout$1.FLEX_BASIS[5],
+        flexBasis: layout$1.FLEX_BASIS[5]
     },
     fb6: {
-        flexBasis: layout$1.FLEX_BASIS[6],
+        flexBasis: layout$1.FLEX_BASIS[6]
     },
     fb7: {
-        flexBasis: layout$1.FLEX_BASIS[7],
+        flexBasis: layout$1.FLEX_BASIS[7]
     },
     fb8: {
-        flexBasis: layout$1.FLEX_BASIS[8],
+        flexBasis: layout$1.FLEX_BASIS[8]
     },
     fbFull: {
         flexBasis: '100%'
@@ -1784,100 +1784,100 @@ var COLOR = {
     LIGHT: '#F3F0C7',
     DARK: '#131313',
     WHITE: '#FFFFFF',
-    MUTED: '#303136',
+    MUTED: '#303136'
 };
 
 var color = {
     bdInfo: {
-        borderColor: COLOR.INFO,
+        borderColor: COLOR.INFO
     },
     bgInfo: {
-        backgroundColor: COLOR.INFO,
+        backgroundColor: COLOR.INFO
     },
     inInfo: {
-        color: COLOR.INFO,
+        color: COLOR.INFO
     },
     bdWarning: {
-        borderColor: COLOR.WARNING,
+        borderColor: COLOR.WARNING
     },
     bgWarning: {
-        backgroundColor: COLOR.WARNING,
+        backgroundColor: COLOR.WARNING
     },
     inWarning: {
-        color: COLOR.WARNING,
+        color: COLOR.WARNING
     },
     bdPrimary: {
-        borderColor: COLOR.PRIMARY,
+        borderColor: COLOR.PRIMARY
     },
     bgPrimary: {
-        backgroundColor: COLOR.PRIMARY,
+        backgroundColor: COLOR.PRIMARY
     },
     inPrimary: {
-        color: COLOR.PRIMARY,
+        color: COLOR.PRIMARY
     },
     bdSecondary: {
-        borderColor: COLOR.SECONDARY,
+        borderColor: COLOR.SECONDARY
     },
     bgSecondary: {
-        backgroundColor: COLOR.SECONDARY,
+        backgroundColor: COLOR.SECONDARY
     },
     inSecondary: {
-        color: COLOR.SECONDARY,
+        color: COLOR.SECONDARY
     },
     bdLight: {
-        borderColor: COLOR.LIGHT,
+        borderColor: COLOR.LIGHT
     },
     bgLight: {
-        backgroundColor: COLOR.LIGHT,
+        backgroundColor: COLOR.LIGHT
     },
     inLight: {
-        color: COLOR.LIGHT,
+        color: COLOR.LIGHT
     },
     bdDark: {
-        borderColor: COLOR.DARK,
+        borderColor: COLOR.DARK
     },
     bgDark: {
-        backgroundColor: COLOR.DARK,
+        backgroundColor: COLOR.DARK
     },
     inDark: {
-        color: COLOR.DARK,
+        color: COLOR.DARK
     },
     bdMuted: {
-        borderColor: COLOR.MUTED,
+        borderColor: COLOR.MUTED
     },
     bgMuted: {
-        backgroundColor: COLOR.MUTED,
+        backgroundColor: COLOR.MUTED
     },
     inMuted: {
-        color: COLOR.MUTED,
+        color: COLOR.MUTED
     },
     bdDanger: {
-        borderColor: COLOR.DANGER,
+        borderColor: COLOR.DANGER
     },
     bgDanger: {
-        backgroundColor: COLOR.DANGER,
+        backgroundColor: COLOR.DANGER
     },
     inDanger: {
-        color: COLOR.DANGER,
+        color: COLOR.DANGER
     },
     bdSuccess: {
-        borderColor: COLOR.SUCCESS,
+        borderColor: COLOR.SUCCESS
     },
     bgSuccess: {
-        backgroundColor: COLOR.SUCCESS,
+        backgroundColor: COLOR.SUCCESS
     },
     inSuccess: {
-        color: COLOR.SUCCESS,
+        color: COLOR.SUCCESS
     },
     bdWhite: {
-        borderColor: COLOR.WHITE,
+        borderColor: COLOR.WHITE
     },
     bgWhite: {
-        backgroundColor: COLOR.WHITE,
+        backgroundColor: COLOR.WHITE
     },
     inWhite: {
-        color: COLOR.WHITE,
-    },
+        color: COLOR.WHITE
+    }
 };
 
 var position$1 = {
@@ -1888,7 +1888,7 @@ var position$1 = {
     '5': '5%',
     '6': '6%',
     '7': '7%',
-    '8': '8%',
+    '8': '8%'
 };
 
 var position = {
@@ -1899,100 +1899,100 @@ var position = {
         position: 'absolute'
     },
     top1: {
-        top: position$1[1],
+        top: position$1[1]
     },
     top2: {
-        top: position$1[2],
+        top: position$1[2]
     },
     top3: {
-        top: position$1[3],
+        top: position$1[3]
     },
     top4: {
-        top: position$1[4],
+        top: position$1[4]
     },
     top5: {
-        top: position$1[5],
+        top: position$1[5]
     },
     top6: {
-        top: position$1[6],
+        top: position$1[6]
     },
     top7: {
-        top: position$1[7],
+        top: position$1[7]
     },
     top8: {
-        top: position$1[8],
+        top: position$1[8]
     },
     bottom1: {
-        bottom: position$1[1],
+        bottom: position$1[1]
     },
     bottom2: {
-        bottom: position$1[2],
+        bottom: position$1[2]
     },
     bottom3: {
-        bottom: position$1[3],
+        bottom: position$1[3]
     },
     bottom4: {
-        bottom: position$1[4],
+        bottom: position$1[4]
     },
     bottom5: {
-        bottom: position$1[5],
+        bottom: position$1[5]
     },
     bottom6: {
-        bottom: position$1[6],
+        bottom: position$1[6]
     },
     bottom7: {
-        bottom: position$1[7],
+        bottom: position$1[7]
     },
     bottom8: {
-        bottom: position$1[8],
+        bottom: position$1[8]
     },
     left1: {
-        left: position$1[1],
+        left: position$1[1]
     },
     left2: {
-        left: position$1[2],
+        left: position$1[2]
     },
     left3: {
-        left: position$1[3],
+        left: position$1[3]
     },
     left4: {
-        left: position$1[4],
+        left: position$1[4]
     },
     left5: {
-        left: position$1[5],
+        left: position$1[5]
     },
     left6: {
-        left: position$1[6],
+        left: position$1[6]
     },
     left7: {
-        left: position$1[7],
+        left: position$1[7]
     },
     left8: {
-        left: position$1[8],
+        left: position$1[8]
     },
     right1: {
-        right: position$1[1],
+        right: position$1[1]
     },
     right2: {
-        right: position$1[2],
+        right: position$1[2]
     },
     right3: {
-        right: position$1[3],
+        right: position$1[3]
     },
     right4: {
-        right: position$1[4],
+        right: position$1[4]
     },
     right5: {
-        right: position$1[5],
+        right: position$1[5]
     },
     right6: {
-        right: position$1[6],
+        right: position$1[6]
     },
     right7: {
-        right: position$1[7],
+        right: position$1[7]
     },
     right8: {
-        right: position$1[8],
+        right: position$1[8]
     }
 };
 
@@ -2004,7 +2004,7 @@ var spacing$1 = {
     '5': '5%',
     '6': '6%',
     '7': '7%',
-    '8': '8%',
+    '8': '8%'
 };
 
 var spacing = {
@@ -2132,7 +2132,7 @@ var spacing = {
 
 var container = {
     container: {
-        display: 'flex',
+        display: 'flex'
     },
     fullHeight: {
         height: 'auto'
@@ -2205,7 +2205,13 @@ var themeOverLoader = function (laryProps) {
             if (key.indexOf('r') === 0)
                 overLoadedShape[key][styleAttribute] = laryProps.shape.BORDER_RADIUS[key.replace('r', '')];
             if (key.indexOf('p') === 0)
-                overLoadedShape[key][styleAttribute] = laryProps.shape.PADDING[key.replace('p', '').replace('pr', '').replace('pl', '').replace('pb', '').replace('pt', '')];
+                overLoadedShape[key][styleAttribute] =
+                    laryProps.shape.PADDING[key
+                        .replace('p', '')
+                        .replace('pr', '')
+                        .replace('pl', '')
+                        .replace('pb', '')
+                        .replace('pt', '')];
             if (key.indexOf('b') === 0)
                 overLoadedShape[key][styleAttribute] = laryProps.shape.BORDER_WIDTH[key.replace('b', '')];
         }
@@ -2266,10 +2272,20 @@ var themeOverLoader = function (laryProps) {
         for (var _d = 0, overLoadedSpacingKeys_1 = overLoadedSpacingKeys; _d < overLoadedSpacingKeys_1.length; _d++) {
             var key = overLoadedSpacingKeys_1[_d];
             var styleAttribute = Object.keys(overLoadedSpacing[key])[0];
-            overLoadedSpacing[key][styleAttribute] = laryProps.spacing[key.replace('m', '').replace('mt', '').replace('mr', '').replace('mb', '').replace('ml', '')];
+            overLoadedSpacing[key][styleAttribute] =
+                laryProps.spacing[key
+                    .replace('m', '')
+                    .replace('mt', '')
+                    .replace('mr', '')
+                    .replace('mb', '')
+                    .replace('ml', '')];
         }
     }
-    if (laryProps.shape || laryProps.layout || laryProps.color || laryProps.position || laryProps.spacing) {
+    if (laryProps.shape ||
+        laryProps.layout ||
+        laryProps.color ||
+        laryProps.position ||
+        laryProps.spacing) {
         var overLoadedVariants = _assign(_assign({}, components), { layout: _assign(_assign(_assign(_assign(_assign({}, overLoadedShape), overLoadedLayout), overLoadedColor), overLoadedPosition), overLoadedSpacing) });
         return makeTheme(overLoadedVariants);
     }
@@ -2462,13 +2478,7 @@ var stylesPropsToInject = [
     'color'
 ];
 
-var nonStyleProps = [
-    'children',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-];
+var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl'];
 
 var consts = {
     stylesPropsToInject: stylesPropsToInject,
@@ -2477,13 +2487,20 @@ var consts = {
 
 var themeVariantsNamesGenerator = function (props) {
     var themeKeys = Object.keys(theme);
-    return Object.keys(props).filter(function (prop) { return [].concat(consts.nonStyleProps).concat(consts.stylesPropsToInject).indexOf(prop) === -1; }).map(function (prop) { return themeKeys.indexOf(prop) !== -1 ? prop : "layout.".concat(prop); });
+    return Object.keys(props)
+        .filter(function (prop) {
+        return [].concat(consts.nonStyleProps).concat(consts.stylesPropsToInject).indexOf(prop) === -1;
+    })
+        .map(function (prop) {
+        return themeKeys.indexOf(prop) !== -1 ? prop : "layout.".concat(prop);
+    });
 };
 
 var styleSheetCompiler = function (props) {
     var styles = _assign({}, props.style);
     for (var _i = 0, _a = consts.stylesPropsToInject; _i < _a.length; _i++) {
         var propsToInject = _a[_i];
+        // @ts-expect-error - we know that key is a string and we are sure that it is in the theme
         if (propsToInject !== 'style')
             styles[propsToInject] = props[propsToInject];
     }
@@ -2492,18 +2509,27 @@ var styleSheetCompiler = function (props) {
 
 var propsInjector = function (props) {
     var propsToInject = {};
-    var themePropsNames = Object.keys(theme.layout).concat(nonStyleProps).concat(stylesPropsToInject);
+    // @ts-expect-error - layout is not undefined in the theme
+    var themePropsNames = Object.keys(theme.layout)
+        .concat(nonStyleProps)
+        .concat(stylesPropsToInject);
     Object.keys(props).forEach(function (key) {
+        // @ts-expect-error - we know that key is a string
         if (themePropsNames.indexOf(key) === -1)
             propsToInject[key] = props[key];
     });
     return propsToInject;
 };
 
-var width = reactNative.Dimensions.get("screen").width;
-reactNative.Dimensions.get("screen").height;
+var width = reactNative.Dimensions.get('screen').width;
+reactNative.Dimensions.get('screen').height;
 var responsiveWidth = function (nbr) {
-    return reactNative.Platform.OS === "web" ? nbr * Math.min(reactNative.Dimensions.get("window").width, reactNative.Dimensions.get("window").height) * reactNative.PixelRatio.get() / width : nbr;
+    return reactNative.Platform.OS === 'web'
+        ? (nbr *
+            Math.min(reactNative.Dimensions.get('window').width, reactNative.Dimensions.get('window').height) *
+            reactNative.PixelRatio.get()) /
+            width
+        : nbr;
 };
 
 var useBreakPoints = function () {
@@ -2518,21 +2544,17 @@ var useBreakPoints = function () {
 var Media = function (_a) {
     var passedProps = _a.passedProps, children = _a.children;
     var _b = useBreakPoints(), isXl = _b[0], isLg = _b[1], isMd = _b[2], isSm = _b[3];
-    return ((!passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm) ? children :
-        React__default["default"].createElement(React__default["default"].Fragment, null,
-            (passedProps.xl) ? (isXl) ? children : null : null,
-            (passedProps.lg) ? (isLg) ? children : null : null,
-            (passedProps.md) ? (isMd) ? children : null : null,
-            (passedProps.sm) ? (isSm) ? children : null : null));
+    return !passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm ? (children) : (React__default["default"].createElement(React__default["default"].Fragment, null,
+        passedProps.xl ? (isXl ? children : null) : null,
+        passedProps.lg ? (isLg ? children : null) : null,
+        passedProps.md ? (isMd ? children : null) : null,
+        passedProps.sm ? (isSm ? children : null) : null));
 };
 
 var Style = function (_a) {
     var style = _a.style, children = _a.children;
     var sx = useSx();
-    return (style ?
-        React__default["default"].cloneElement(children, { style: sx(style) })
-        :
-            children);
+    return style ? React__default["default"].cloneElement(children, { style: sx(style) }) : children;
 };
 
 /**
