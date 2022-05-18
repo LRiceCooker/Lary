@@ -1,9 +1,12 @@
 # Lary
 
+<i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i> 
+<br>
 > If you are too lazy, use lary ;)
-> <br> > <i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i> > <br><br>
-> Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
-> <br><br>
+
+<br>
+Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
+<br><br>
 
 ```javascript
 const Title = laryfy < React.ComponentProps < typeof PaperTitle >> PaperTitle;
