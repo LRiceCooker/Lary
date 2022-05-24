@@ -21,5 +21,5 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off'
   },
-  ignorePatterns: ['dist', '.eslintrc.js']
+  ignorePatterns: ['dist', '.eslintrc.js', 'playground.js']
 };

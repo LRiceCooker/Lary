@@ -1,7 +1,8 @@
 # Lary
 
-<i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i> 
+<i id="description">A utility-first style library for React Native on top of <a href='https://github.com/nandorojo/dripsy' target='_blank'>Dripsy</a>.</i>
 <br>
+
 > If you are too lazy, use lary ;)
 
 <br>
