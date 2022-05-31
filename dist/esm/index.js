@@ -2163,11 +2163,11 @@ var element = {
 var components = _assign(_assign({}, container), element);
 
 var FONT_SIZE = {
-    'xs': '0.75em',
-    'sm': '0.875em',
-    'base': '1em',
-    'lg': '1.125em',
-    'xl': '1.25em',
+    xs: '0.75em',
+    sm: '0.875em',
+    base: '1em',
+    lg: '1.125em',
+    xl: '1.25em',
     '2xl': '1.5em',
     '3xl': '2em',
     '4xl': '3em'
@@ -2181,7 +2181,7 @@ var typography = {
         fontStyle: 'italic'
     },
     underline: {
-        textDecorationLine: 'underline',
+        textDecorationLine: 'underline'
     },
     textXs: {
         fontSize: FONT_SIZE['xs']
@@ -2320,8 +2320,8 @@ var themeOverLoader = function (laryProps) {
         for (var _e = 0, overLoadedTypographyKeys_1 = overLoadedTypographyKeys; _e < overLoadedTypographyKeys_1.length; _e++) {
             var key = overLoadedTypographyKeys_1[_e];
             var styleAttribute = Object.keys(overLoadedTypography[key]);
-            var configKey = key.replace("text", "").toLowerCase();
-            console.log("key =>", configKey, "isExistOnConfig => ", !!laryProps.typography[key]);
+            var configKey = key.replace('text', '').toLowerCase();
+            console.log('key =>', configKey, 'isExistOnConfig => ', !!laryProps.typography[key]);
             if (laryProps.typography[configKey])
                 overLoadedTypography[key][styleAttribute] = laryProps.typography[configKey];
         }
