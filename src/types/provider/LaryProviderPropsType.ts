@@ -86,4 +86,14 @@ export default interface LaryProviderPropsType {
     WHITE: string;
     MUTED: string;
   };
+  typography?: {
+    xs: string | number;
+    sm: string | number;
+    base: string | number;
+    lg: string | number;
+    xl: string | number;
+    '2xl': string | number;
+    '3xl': string | number;
+    '4xl': string | number;
+  };
 }

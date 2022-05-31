@@ -8,6 +8,7 @@ import color from '../../style/theme/variants/default/color';
 import position from '../../style/theme/variants/default/position';
 import spacing from '../../style/theme/variants/default/spacing';
 import components from '../../style/theme/variants/components';
+import typography from '../../style/theme/variants/default/typography';
 import theme from '../../style/theme/theme';
 
 const themeOverLoader = (laryProps: LaryProviderPropsType): typeof theme => {
@@ -16,6 +17,7 @@ const themeOverLoader = (laryProps: LaryProviderPropsType): typeof theme => {
   const overLoadedColor = color;
   const overLoadedPosition = position;
   const overLoadedSpacing = spacing;
+  const overLoadedTypography = typography;
 
   if (laryProps.shape) {
     const overLoadedShapeKeys = Object.keys(overLoadedShape);
@@ -100,12 +102,24 @@ const themeOverLoader = (laryProps: LaryProviderPropsType): typeof theme => {
     }
   }
 
+  if (laryProps.typography) {
+    const overLoadedTypographyKeys = Object.keys(overLoadedTypography);
+    for (const key of overLoadedTypographyKeys) {
+      const styleAttribute = Object.keys(overLoadedTypography[key]);
+      const configKey = key.replace('text', '').toLowerCase();
+      console.log('key =>', configKey, 'isExistOnConfig => ', !!laryProps.typography[key]);
+      if (laryProps.typography[configKey])
+        overLoadedTypography[key][styleAttribute] = laryProps.typography[configKey];
+    }
+  }
+
   if (
     laryProps.shape ||
     laryProps.layout ||
     laryProps.color ||
     laryProps.position ||
-    laryProps.spacing
+    laryProps.spacing ||
+    laryProps.typography
   ) {
     const overLoadedVariants = {
       ...components,
@@ -114,7 +128,8 @@ const themeOverLoader = (laryProps: LaryProviderPropsType): typeof theme => {
         ...overLoadedLayout,
         ...overLoadedColor,
         ...overLoadedPosition,
-        ...overLoadedSpacing
+        ...overLoadedSpacing,
+        ...overLoadedTypography
       }
     };
     return makeTheme(overLoadedVariants);

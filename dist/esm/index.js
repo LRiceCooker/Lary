@@ -2162,9 +2162,50 @@ var element = {
 
 var components = _assign(_assign({}, container), element);
 
+var FONT_SIZE = {
+    'xs': '0.75em',
+    'sm': '0.875em',
+    'base': '1em',
+    'lg': '1.125em',
+    'xl': '1.25em',
+    '2xl': '1.5em',
+    '3xl': '2em',
+    '4xl': '3em'
+};
+
 var typography = {
     bold: {
         fontWeight: 'bold'
+    },
+    italic: {
+        fontStyle: 'italic'
+    },
+    underline: {
+        textDecorationLine: 'underline',
+    },
+    textXs: {
+        fontSize: FONT_SIZE['xs']
+    },
+    textSm: {
+        fontSize: FONT_SIZE['sm']
+    },
+    textBase: {
+        fontSize: FONT_SIZE['base']
+    },
+    textLg: {
+        fontSize: FONT_SIZE['lg']
+    },
+    textXl: {
+        fontSize: FONT_SIZE['xl']
+    },
+    text2xl: {
+        fontSize: FONT_SIZE['2xl']
+    },
+    text3xl: {
+        fontSize: FONT_SIZE['3xl']
+    },
+    text4xl: {
+        fontSize: FONT_SIZE['4xl']
     },
     textCenter: {
         textAlign: 'center'
@@ -2189,6 +2230,7 @@ var themeOverLoader = function (laryProps) {
     var overLoadedColor = color;
     var overLoadedPosition = position;
     var overLoadedSpacing = spacing;
+    var overLoadedTypography = typography;
     if (laryProps.shape) {
         var overLoadedShapeKeys = Object.keys(overLoadedShape);
         for (var _i = 0, overLoadedShapeKeys_1 = overLoadedShapeKeys; _i < overLoadedShapeKeys_1.length; _i++) {
@@ -2273,12 +2315,24 @@ var themeOverLoader = function (laryProps) {
                     .replace('ml', '')];
         }
     }
+    if (laryProps.typography) {
+        var overLoadedTypographyKeys = Object.keys(overLoadedTypography);
+        for (var _e = 0, overLoadedTypographyKeys_1 = overLoadedTypographyKeys; _e < overLoadedTypographyKeys_1.length; _e++) {
+            var key = overLoadedTypographyKeys_1[_e];
+            var styleAttribute = Object.keys(overLoadedTypography[key]);
+            var configKey = key.replace("text", "").toLowerCase();
+            console.log("key =>", configKey, "isExistOnConfig => ", !!laryProps.typography[key]);
+            if (laryProps.typography[configKey])
+                overLoadedTypography[key][styleAttribute] = laryProps.typography[configKey];
+        }
+    }
     if (laryProps.shape ||
         laryProps.layout ||
         laryProps.color ||
         laryProps.position ||
-        laryProps.spacing) {
-        var overLoadedVariants = _assign(_assign({}, components), { layout: _assign(_assign(_assign(_assign(_assign({}, overLoadedShape), overLoadedLayout), overLoadedColor), overLoadedPosition), overLoadedSpacing) });
+        laryProps.spacing ||
+        laryProps.typography) {
+        var overLoadedVariants = _assign(_assign({}, components), { layout: _assign(_assign(_assign(_assign(_assign(_assign({}, overLoadedShape), overLoadedLayout), overLoadedColor), overLoadedPosition), overLoadedSpacing), overLoadedTypography) });
         return makeTheme(overLoadedVariants);
     }
     return theme;
@@ -2650,6 +2704,9 @@ var Style = function (_a) {
  * @property borderWidth To set the borderWidth property.
  * @property bold To set the fontWeight property to bold.
  * @property text(Center-Right-Left) To set the textAlign property to the choosen one.
+ * @property italic To set the fontStyle property to italic.
+ * @property underline To set the textDecorationLine property to underline.
+ * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl) To set the fontSize property to defined one.
  *
  * @returns {React.FunctionComponent}
  */
