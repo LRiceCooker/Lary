@@ -90,6 +90,16 @@ interface LaryProviderPropsType {
         WHITE: string;
         MUTED: string;
     };
+    typography?: {
+        xs: string | number;
+        sm: string | number;
+        base: string | number;
+        lg: string | number;
+        xl: string | number;
+        '2xl': string | number;
+        '3xl': string | number;
+        '4xl': string | number;
+    };
 }
 
 /**
@@ -489,6 +499,16 @@ interface positionPropsType {
 
 interface typographyPropsType {
     bold?: boolean;
+    italic?: boolean;
+    underline?: boolean;
+    textXs?: boolean;
+    textSm?: boolean;
+    textBase?: boolean;
+    textLg?: boolean;
+    textXl?: boolean;
+    text2xl?: boolean;
+    text3xl?: boolean;
+    text4xl?: boolean;
     textCenter?: boolean;
     textLeft?: boolean;
     textRight?: boolean;
@@ -599,6 +619,9 @@ interface themePropsType extends colorPropsType, spacingPropsType, shapePropsTyp
  * @property borderWidth To set the borderWidth property.
  * @property bold To set the fontWeight property to bold.
  * @property text(Center-Right-Left) To set the textAlign property to the choosen one.
+ * @property italic To set the fontStyle property to italic.
+ * @property underline To set the textDecorationLine property to underline.
+ * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl) To set the fontSize property to defined one.
  *
  * @returns {React.FunctionComponent}
  */
