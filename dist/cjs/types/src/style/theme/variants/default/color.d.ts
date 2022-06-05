@@ -1,93 +1,94 @@
-declare const color: {
+import ThemeContextType from '../../../../types/provider/themeContextType';
+declare const color: (COLOR_PALETTE: ThemeContextType["color"]) => {
     bdInfo: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgInfo: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inInfo: {
-        color: string;
+        color: string | undefined;
     };
     bdWarning: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgWarning: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inWarning: {
-        color: string;
+        color: string | undefined;
     };
     bdPrimary: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgPrimary: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inPrimary: {
-        color: string;
+        color: string | undefined;
     };
     bdSecondary: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgSecondary: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inSecondary: {
-        color: string;
+        color: string | undefined;
     };
     bdLight: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgLight: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inLight: {
-        color: string;
+        color: string | undefined;
     };
     bdDark: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgDark: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inDark: {
-        color: string;
+        color: string | undefined;
     };
     bdMuted: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgMuted: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inMuted: {
-        color: string;
+        color: string | undefined;
     };
     bdDanger: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgDanger: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inDanger: {
-        color: string;
+        color: string | undefined;
     };
     bdSuccess: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgSuccess: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inSuccess: {
-        color: string;
+        color: string | undefined;
     };
     bdWhite: {
-        borderColor: string;
+        borderColor: string | undefined;
     };
     bgWhite: {
-        backgroundColor: string;
+        backgroundColor: string | undefined;
     };
     inWhite: {
-        color: string;
+        color: string | undefined;
     };
 };
 export default color;

@@ -1,5 +1,4 @@
-declare const _default: {
-    stylesPropsToInject: string[];
-    nonStyleProps: string[];
-};
-export default _default;
+import stylesPropsToInject from './stylesPropsToInject';
+import nonStyleProps from './nonStyleProps';
+import baseConfiguration from './baseConfiguration';
+export { stylesPropsToInject, nonStyleProps, baseConfiguration, };

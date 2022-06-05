@@ -1,7 +1,8 @@
 import React from 'react';
 import { DripsyProvider } from 'dripsy';
 import LaryProviderPropsType from '../types/provider/LaryProviderPropsType';
-import themeOverLoader from '../utils/helpers/themeOverLoader';
+import { ThemeConfigurationProvider } from './ThemeConfigurationProvider';
+import { ThemeProvider } from './ThemeProvider';
 
 /**
  * @function LaryProvider
@@ -152,7 +153,9 @@ import themeOverLoader from '../utils/helpers/themeOverLoader';
 
 const LaryProvider = (props: LaryProviderPropsType) => {
   return (
-    <DripsyProvider theme={themeOverLoader(props) as unknown}>{props.children}</DripsyProvider>
+    <ThemeConfigurationProvider {...props}>
+      <ThemeProvider>{props.children}</ThemeProvider>
+    </ThemeConfigurationProvider>
   );
 };
 export default LaryProvider;

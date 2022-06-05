@@ -1,12 +1,13 @@
 import theme from '../../style/theme/theme';
 import nonStyleProps from '../../const/nonStyleProps';
 import stylesPropsToInject from '../../const/stylesPropsToInject';
+import baseConfiguration from '../../const/baseConfiguration';
 
 const propsInjector = <PropsType, ComponentPropsType>(props: PropsType): ComponentPropsType => {
   const propsToInject = {} as ComponentPropsType;
 
   // @ts-expect-error - layout is not undefined in the theme
-  const themePropsNames = Object.keys(theme.layout)
+  const themePropsNames = Object.keys(theme(baseConfiguration).layout)
     .concat(nonStyleProps)
     .concat(stylesPropsToInject);
 

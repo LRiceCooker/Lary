@@ -1,4 +1,5 @@
-declare const typography: {
+import ThemeContextType from '../../../../types/provider/themeContextType';
+declare const typography: (TYPOGRAPHY_PALETTE: ThemeContextType["typography"]) => {
     bold: {
         fontWeight: string;
     };
@@ -9,28 +10,28 @@ declare const typography: {
         textDecorationLine: string;
     };
     textXs: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     textSm: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     textBase: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     textLg: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     textXl: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     text2xl: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     text3xl: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     text4xl: {
-        fontSize: string;
+        fontSize: string | number | undefined;
     };
     textCenter: {
         textAlign: string;
