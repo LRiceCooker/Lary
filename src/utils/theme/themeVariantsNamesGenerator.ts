@@ -1,16 +1,16 @@
 import { themePropsType } from '../../types/theme';
 import theme from '../../style/theme/theme';
 import { View } from 'dripsy';
-import consts from '../../const';
+import { nonStyleProps, baseConfiguration, stylesPropsToInject } from '../../const';
 
 const themeVariantsNamesGenerator = (
   props: themePropsType
 ): React.ComponentProps<typeof View>['variants'] => {
-  const themeKeys = Object.keys(theme);
+  const themeKeys = Object.keys(theme(baseConfiguration));
   return Object.keys(props)
     .filter(
       (prop) =>
-        [].concat(consts.nonStyleProps).concat(consts.stylesPropsToInject).indexOf(prop) === -1
+        ([] as string[]).concat(nonStyleProps).concat(stylesPropsToInject).indexOf(prop) === -1
     )
     .map((prop) =>
       themeKeys.indexOf(prop) !== -1 ? prop : `layout.${prop}`

@@ -1,123 +1,124 @@
-declare const spacing: {
+import ThemeContextType from '../../../../types/provider/themeContextType';
+declare const spacing: (SPACING_PALETTE: ThemeContextType["spacing"]) => {
     m1: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m2: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m3: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m4: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m5: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m6: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m7: {
-        margin: string;
+        margin: string | number | undefined;
     };
     m8: {
-        margin: string;
+        margin: string | number | undefined;
     };
     mr1: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr2: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr3: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr4: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr5: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr6: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr7: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     mr8: {
-        marginRight: string;
+        marginRight: string | number | undefined;
     };
     ml1: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml2: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml3: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml4: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml5: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml6: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml7: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     ml8: {
-        marginLeft: string;
+        marginLeft: string | number | undefined;
     };
     mt1: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt2: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt3: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt4: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt5: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt6: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt7: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mt8: {
-        marginTop: string;
+        marginTop: string | number | undefined;
     };
     mb1: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb2: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb3: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb4: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb5: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb6: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb7: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
     mb8: {
-        marginBottom: string;
+        marginBottom: string | number | undefined;
     };
 };
 export default spacing;

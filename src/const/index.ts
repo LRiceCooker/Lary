@@ -1,7 +1,5 @@
 import stylesPropsToInject from './stylesPropsToInject';
 import nonStyleProps from './nonStyleProps';
+import baseConfiguration from './baseConfiguration';
 
-export default {
-  stylesPropsToInject,
-  nonStyleProps
-};
+export { stylesPropsToInject, nonStyleProps, baseConfiguration };
