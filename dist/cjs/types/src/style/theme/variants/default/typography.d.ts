@@ -1,5 +1,5 @@
 import ThemeContextType from '../../../../types/provider/themeContextType';
-declare const typography: (TYPOGRAPHY_PALETTE: ThemeContextType["typography"]) => {
+declare const typography: (TYPOGRAPHY_PALETTE: ThemeContextType['typography']) => {
     bold: {
         fontWeight: string;
     };

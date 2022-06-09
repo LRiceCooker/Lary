@@ -1155,6 +1155,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
+"@types/javascript-color-gradient@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@types/javascript-color-gradient/-/javascript-color-gradient-2.4.0.tgz#8c7d7c7a270c9a0f6ffd5beb959e1c89f0e1f3c5"
+  integrity sha512-bDeTAgHvDRn40mlnGRE5nTVlfQ9KRqi9L0VC+zJwVY/XNgulIq9lZxTV9wIi6nfXu/eG4ehKmG3uCq49uYYqDA==
+
 "@types/jsdoc-to-markdown@^7.0.3":
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@types/jsdoc-to-markdown/-/jsdoc-to-markdown-7.0.3.tgz#30212d81ca8405e660ff51613b4d627be230c4e2"
@@ -2509,6 +2514,11 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+
+javascript-color-gradient@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/javascript-color-gradient/-/javascript-color-gradient-2.4.4.tgz#184dc176cd8f66d212299aa5826843b39229e299"
+  integrity sha512-kbt3Y1eltW4X789P1eQzCUEB5X7hFmLNpQT4bgDFMtj/cW2v+j8ms/rLSR7jndZUAP6yya4vyeZK6bRqh6yClA==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

@@ -1,5 +1,5 @@
 import ThemeContextType from '../../../../types/provider/themeContextType';
-declare const spacing: (SPACING_PALETTE: ThemeContextType["spacing"]) => {
+declare const spacing: (SPACING_PALETTE: ThemeContextType['spacing']) => {
     m1: {
         margin: string | number | undefined;
     };

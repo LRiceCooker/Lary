@@ -1,5 +1,5 @@
 import ThemeContextType from '../../../../types/provider/themeContextType';
-declare const color: (COLOR_PALETTE: ThemeContextType["color"]) => {
+declare const color: (COLOR_PALETTE: ThemeContextType['color']) => {
     bdInfo: {
         borderColor: string | undefined;
     };
