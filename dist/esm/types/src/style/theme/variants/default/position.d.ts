@@ -1,5 +1,5 @@
 import ThemeContextType from '../../../../types/provider/themeContextType';
-declare const position: (POSITION_PALETTE: ThemeContextType["position"]) => {
+declare const position: (POSITION_PALETTE: ThemeContextType['position']) => {
     relative: {
         position: string;
     };

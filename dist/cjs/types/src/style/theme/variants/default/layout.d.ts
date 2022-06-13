@@ -1,5 +1,5 @@
 import ThemeContextType from '../../../../types/provider/themeContextType';
-declare const layout: (LAYOUT_PALETTE: ThemeContextType["layout"]) => {
+declare const layout: (LAYOUT_PALETTE: ThemeContextType['layout']) => {
     alignCenter: {
         alignItems: string;
     };

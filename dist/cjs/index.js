@@ -19411,7 +19411,7 @@ var baseConfiguration = {
     position: position$1,
     shape: shape$1,
     typography: FONT_SIZE,
-    spacing: spacing$1,
+    spacing: spacing$1
 };
 
 var themeOverLoader = function (props) {
@@ -21759,6 +21759,80 @@ function laryfy(component) {
     return laryfiedComponent;
 }
 
+/* eslint-disable */
+var Gradient = require("javascript-color-gradient");
+/* eslint-enable */
+var usePrimary = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.PRIMARY;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.PRIMARY, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.PRIMARY;
+};
+var useSecondary = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.SECONDARY;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.SECONDARY, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.SECONDARY;
+};
+var useSuccess = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.SUCCESS;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.SUCCESS, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.SUCCESS;
+};
+var useDanger = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.DANGER;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.DANGER, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.DANGER;
+};
+var useWarning = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.WARNING;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.WARNING, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.WARNING;
+};
+var useInfo = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.INFO;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.INFO, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.INFO;
+};
+var useLight = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.LIGHT;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.LIGHT, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.SECONDARY;
+};
+var useDark = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.DARK;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.DARK, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.DARK;
+};
+var useWhite = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.WHITE;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.WHITE, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.WHITE;
+};
+var useMuted = function (gradientValue) {
+    var color = useThemeConfigurationContext().color;
+    if (gradientValue < 1)
+        return color.MUTED;
+    var gradient = (new Gradient()).setColorGradient("#ffffff", color.MUTED, "#000000").setMidpoint(900).getColor(gradientValue);
+    return gradient ? gradient : color.MUTED;
+};
+
 /**
  * @function Container
  *
@@ -21817,4 +21891,14 @@ exports.Container = Container;
 exports.Element = Element;
 exports.LaryProvider = LaryProvider;
 exports.laryfy = laryfy;
+exports.useDanger = useDanger;
+exports.useDark = useDark;
+exports.useInfo = useInfo;
+exports.useLight = useLight;
+exports.useMuted = useMuted;
+exports.usePrimary = usePrimary;
+exports.useSecondary = useSecondary;
+exports.useSuccess = useSuccess;
+exports.useWarning = useWarning;
+exports.useWhite = useWhite;
 //# sourceMappingURL=index.js.map

@@ -1,5 +1,5 @@
 import ThemeContextType from '../../../../types/provider/themeContextType';
-declare const shape: (SHAPE_PALETTE: ThemeContextType["shape"]) => {
+declare const shape: (SHAPE_PALETTE: ThemeContextType['shape']) => {
     r1: {
         borderRadius: number | undefined;
     };
