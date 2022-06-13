@@ -19384,14 +19384,19 @@ var shape$1 = {
 };
 
 var FONT_SIZE = {
-    xs: '0.75em',
-    sm: '0.875em',
-    base: '1em',
-    lg: '1.125em',
-    xl: '1.25em',
-    '2xl': '1.5em',
-    '3xl': '2em',
-    '4xl': '3em'
+    xs: 12,
+    sm: 14,
+    base: 16,
+    lg: 18,
+    xl: 20,
+    '2xl': 24,
+    '3xl': 30,
+    '4xl': 36,
+    '5xl': 48,
+    '6xl': 60,
+    '7xl': 72,
+    '8xl': 96,
+    '9xl': 128,
 };
 
 var spacing$1 = {
@@ -21306,6 +21311,21 @@ var typography = function (TYPOGRAPHY_PALETTE) {
         text4xl: {
             fontSize: TYPOGRAPHY_PALETTE['4xl']
         },
+        text5xl: {
+            fontSize: TYPOGRAPHY_PALETTE['5xl']
+        },
+        text6xl: {
+            fontSize: TYPOGRAPHY_PALETTE['6xl']
+        },
+        text7xl: {
+            fontSize: TYPOGRAPHY_PALETTE['7xl']
+        },
+        text8xl: {
+            fontSize: TYPOGRAPHY_PALETTE['8xl']
+        },
+        text9xl: {
+            fontSize: TYPOGRAPHY_PALETTE['9xl']
+        },
         textCenter: {
             textAlign: 'center'
         },
@@ -21742,7 +21762,7 @@ var Style = function (_a) {
  * @property text(Center-Right-Left) To set the textAlign property to the choosen one.
  * @property italic To set the fontStyle property to italic.
  * @property underline To set the textDecorationLine property to underline.
- * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl) To set the fontSize property to defined one.
+ * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl-5xl-6xl-7xl-8xl-9xl) To set the fontSize property to defined one.
  *
  * @returns {React.FunctionComponent}
  */
@@ -21760,76 +21780,106 @@ function laryfy(component) {
 }
 
 /* eslint-disable */
-var Gradient = require("javascript-color-gradient");
+var Gradient = require('javascript-color-gradient');
 /* eslint-enable */
 var usePrimary = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.PRIMARY;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.PRIMARY, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.PRIMARY, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.PRIMARY;
 };
 var useSecondary = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.SECONDARY;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.SECONDARY, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.SECONDARY, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.SECONDARY;
 };
 var useSuccess = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.SUCCESS;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.SUCCESS, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.SUCCESS, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.SUCCESS;
 };
 var useDanger = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.DANGER;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.DANGER, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.DANGER, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.DANGER;
 };
 var useWarning = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.WARNING;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.WARNING, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.WARNING, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.WARNING;
 };
 var useInfo = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.INFO;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.INFO, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.INFO, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.INFO;
 };
 var useLight = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.LIGHT;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.LIGHT, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.LIGHT, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.SECONDARY;
 };
 var useDark = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.DARK;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.DARK, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.DARK, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.DARK;
 };
 var useWhite = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.WHITE;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.WHITE, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.WHITE, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.WHITE;
 };
 var useMuted = function (gradientValue) {
     var color = useThemeConfigurationContext().color;
     if (gradientValue < 1)
         return color.MUTED;
-    var gradient = (new Gradient()).setColorGradient("#ffffff", color.MUTED, "#000000").setMidpoint(900).getColor(gradientValue);
+    var gradient = new Gradient()
+        .setColorGradient('#ffffff', color.MUTED, '#000000')
+        .setMidpoint(900)
+        .getColor(gradientValue);
     return gradient ? gradient : color.MUTED;
 };
 

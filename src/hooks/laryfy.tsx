@@ -110,7 +110,7 @@ import { themePropsType } from '../types/theme';
  * @property text(Center-Right-Left) To set the textAlign property to the choosen one.
  * @property italic To set the fontStyle property to italic.
  * @property underline To set the textDecorationLine property to underline.
- * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl) To set the fontSize property to defined one.
+ * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl-5xl-6xl-7xl-8xl-9xl) To set the fontSize property to defined one.
  *
  * @returns {React.FunctionComponent}
  */

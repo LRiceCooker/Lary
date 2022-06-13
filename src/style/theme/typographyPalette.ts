@@ -1,12 +1,17 @@
 const FONT_SIZE = {
-  xs: '0.75em',
-  sm: '0.875em',
-  base: '1em',
-  lg: '1.125em',
-  xl: '1.25em',
-  '2xl': '1.5em',
-  '3xl': '2em',
-  '4xl': '3em'
+  xs: 12,
+  sm: 14,
+  base: 16,
+  lg: 18,
+  xl: 20,
+  '2xl': 24,
+  '3xl': 30,
+  '4xl': 36,
+  '5xl': 48,
+  '6xl': 60,
+  '7xl': 72,
+  '8xl': 96,
+  '9xl': 128
 };
 
 export default FONT_SIZE;

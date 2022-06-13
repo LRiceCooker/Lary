@@ -10,28 +10,43 @@ declare const typography: (TYPOGRAPHY_PALETTE: ThemeContextType['typography']) =
         textDecorationLine: string;
     };
     textXs: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     textSm: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     textBase: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     textLg: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     textXl: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     text2xl: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     text3xl: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
     };
     text4xl: {
-        fontSize: string | number | undefined;
+        fontSize: number | undefined;
+    };
+    text5xl: {
+        fontSize: number;
+    };
+    text6xl: {
+        fontSize: number;
+    };
+    text7xl: {
+        fontSize: number;
+    };
+    text8xl: {
+        fontSize: number;
+    };
+    text9xl: {
+        fontSize: number;
     };
     textCenter: {
         textAlign: string;
