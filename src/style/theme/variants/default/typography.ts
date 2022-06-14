@@ -36,6 +36,21 @@ const typography = (TYPOGRAPHY_PALETTE: ThemeContextType['typography']) => {
     text4xl: {
       fontSize: TYPOGRAPHY_PALETTE['4xl']
     },
+    text5xl: {
+      fontSize: TYPOGRAPHY_PALETTE['5xl']
+    },
+    text6xl: {
+      fontSize: TYPOGRAPHY_PALETTE['6xl']
+    },
+    text7xl: {
+      fontSize: TYPOGRAPHY_PALETTE['7xl']
+    },
+    text8xl: {
+      fontSize: TYPOGRAPHY_PALETTE['8xl']
+    },
+    text9xl: {
+      fontSize: TYPOGRAPHY_PALETTE['9xl']
+    },
     textCenter: {
       textAlign: 'center'
     },

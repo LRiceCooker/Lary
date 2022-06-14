@@ -1,11 +1,16 @@
 declare const FONT_SIZE: {
-    xs: string;
-    sm: string;
-    base: string;
-    lg: string;
-    xl: string;
-    '2xl': string;
-    '3xl': string;
-    '4xl': string;
+    xs: number;
+    sm: number;
+    base: number;
+    lg: number;
+    xl: number;
+    '2xl': number;
+    '3xl': number;
+    '4xl': number;
+    '5xl': number;
+    '6xl': number;
+    '7xl': number;
+    '8xl': number;
+    '9xl': number;
 };
 export default FONT_SIZE;
