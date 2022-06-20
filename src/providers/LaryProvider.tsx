@@ -1,5 +1,4 @@
 import React from 'react';
-import { DripsyProvider } from 'dripsy';
 import LaryProviderPropsType from '../types/provider/LaryProviderPropsType';
 import { ThemeConfigurationProvider } from './ThemeConfigurationProvider';
 import { ThemeProvider } from './ThemeProvider';

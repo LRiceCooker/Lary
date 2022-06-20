@@ -1,4 +1,3 @@
-import FONT_SIZE from '../../typographyPalette';
 import ThemeContextType from '../../../../types/provider/themeContextType';
 
 const typography = (TYPOGRAPHY_PALETTE: ThemeContextType['typography']) => {
