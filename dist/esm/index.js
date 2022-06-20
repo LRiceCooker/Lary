@@ -19388,7 +19388,7 @@ var FONT_SIZE = {
     '6xl': 60,
     '7xl': 72,
     '8xl': 96,
-    '9xl': 128,
+    '9xl': 128
 };
 
 var spacing$1 = {
@@ -21761,9 +21761,9 @@ var Style = function (_a) {
 function laryfy(component) {
     var RawComponent = styled(component)();
     var laryfiedComponent = function (props) {
-        props = props ? props : {};
+        props = props ? props : { children: null };
         var styles = themeVariantsNamesGenerator(props);
-        var children = (props === null || props === void 0 ? void 0 : props.children) || null;
+        var children = props.children || null;
         return (React.createElement(Media, { passedProps: props },
             React.createElement(Style, { style: styleSheetCompiler(props) },
                 React.createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children))));

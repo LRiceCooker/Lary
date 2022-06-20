@@ -6,6 +6,7 @@ import propsInjector from '../utils/helpers/propsInjector';
 import Media from '../components/media/Media';
 import Style from '../components/style/Style';
 import { themePropsType } from '../types/theme';
+import { laryComponentPassedChildrenType } from '../types/utils';
 
 /**
  * @function laryfy
@@ -120,12 +121,14 @@ function laryfy<componentPropsType>(
 ): (props?: componentPropsType & themePropsType) => JSX.Element {
   const RawComponent = styled(component)();
 
-  const laryfiedComponent = (props?: componentPropsType & themePropsType) => {
-    props = props ? props : ({} as componentPropsType & themePropsType);
+  const laryfiedComponent = (
+    props?: componentPropsType & themePropsType & laryComponentPassedChildrenType
+  ) => {
+    props = props ? props : ({ children: null } as unknown as componentPropsType & themePropsType);
 
     const styles: React.ComponentProps<typeof RawComponent>['variants'] =
       themeVariantsNamesGenerator(props);
-    const children = (props as any)?.children || null;
+    const children = props!.children || null;
     return (
       <Media passedProps={props}>
         <Style style={styleSheetCompiler(props)}>

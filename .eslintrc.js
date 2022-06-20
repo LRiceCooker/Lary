@@ -19,7 +19,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off'
   },
   ignorePatterns: ['dist', '.eslintrc.js', 'playground.js']
 };
