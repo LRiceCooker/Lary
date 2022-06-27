@@ -1,7 +1,14 @@
 import React from 'react';
+import { laryComponentPassedPropsType } from '../../types/utils';
 import useBreakPoints from '../../hooks/useBreakPoints';
 
-const Media = ({ passedProps, children }: { passedProps: any; children: JSX.Element }) => {
+const Media = ({
+  passedProps,
+  children
+}: {
+  passedProps: laryComponentPassedPropsType;
+  children: JSX.Element;
+}) => {
   const [isXl, isLg, isMd, isSm] = useBreakPoints();
 
   return !passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm ? (

@@ -2,104 +2,118 @@
 import { ComponentType } from 'react';
 import { Sx, SxProp } from 'dripsy';
 
-interface LaryProviderPropsType {
-    children: JSX.Element;
-    shape?: {
-        BORDER_RADIUS: {
-            '1': number;
-            '2': number;
-            '3': number;
-            '4': number;
-            '5': number;
-            '6': number;
-            '7': number;
-            '8': number;
-        };
-        BORDER_WIDTH: {
-            '1': number;
-            '2': number;
-            '3': number;
-            '4': number;
-            '5': number;
-            '6': number;
-            '7': number;
-            '8': number;
-        };
-        PADDING: {
-            '1': number | string;
-            '2': number | string;
-            '3': number | string;
-            '4': number | string;
-            '5': number | string;
-            '6': number | string;
-            '7': number | string;
-            '8': number | string;
-        };
+interface ThemeContextType {
+    color: {
+        PRIMARY?: string;
+        SECONDARY?: string;
+        SUCCESS?: string;
+        DANGER?: string;
+        WARNING?: string;
+        INFO?: string;
+        LIGHT?: string;
+        DARK?: string;
+        WHITE?: string;
+        MUTED?: string;
     };
-    layout?: {
+    layout: {
         FLEX: {
-            '1': number;
-            '2': number;
-            '3': number;
-            '4': number;
-            '5': number;
-            '6': number;
-            '7': number;
-            '8': number;
+            '1'?: number;
+            '2'?: number;
+            '3'?: number;
+            '4'?: number;
+            '5'?: number;
+            '6'?: number;
+            '7'?: number;
+            '8'?: number;
         };
         FLEX_BASIS: {
-            '1': string | number;
-            '2': string | number;
-            '3': string | number;
-            '4': string | number;
-            '5': string | number;
-            '6': string | number;
-            '7': string | number;
-            '8': string | number;
+            '1'?: string | number;
+            '2'?: string | number;
+            '3'?: string | number;
+            '4'?: string | number;
+            '5'?: string | number;
+            '6'?: string | number;
+            '7'?: string | number;
+            '8'?: string | number;
         };
     };
-    position?: {
-        '1': string | number;
-        '2': string | number;
-        '3': string | number;
-        '4': string | number;
-        '5': string | number;
-        '6': string | number;
-        '7': string | number;
-        '8': string | number;
+    position: {
+        '1'?: string | number;
+        '2'?: string | number;
+        '3'?: string | number;
+        '4'?: string | number;
+        '5'?: string | number;
+        '6'?: string | number;
+        '7'?: string | number;
+        '8'?: string | number;
     };
-    spacing?: {
-        '1': string | number;
-        '2': string | number;
-        '3': string | number;
-        '4': string | number;
-        '5': string | number;
-        '6': string | number;
-        '7': string | number;
-        '8': string | number;
+    shape: {
+        BORDER_RADIUS?: {
+            '1'?: number;
+            '2'?: number;
+            '3'?: number;
+            '4'?: number;
+            '5'?: number;
+            '6'?: number;
+            '7'?: number;
+            '8'?: number;
+        };
+        BORDER_WIDTH?: {
+            '1'?: number;
+            '2'?: number;
+            '3'?: number;
+            '4'?: number;
+            '5'?: number;
+            '6'?: number;
+            '7'?: number;
+            '8'?: number;
+        };
+        PADDING?: {
+            '1'?: number | string;
+            '2'?: number | string;
+            '3'?: number | string;
+            '4'?: number | string;
+            '5'?: number | string;
+            '6'?: number | string;
+            '7'?: number | string;
+            '8'?: number | string;
+        };
     };
-    color?: {
-        PRIMARY: string;
-        SECONDARY: string;
-        SUCCESS: string;
-        DANGER: string;
-        WARNING: string;
-        INFO: string;
-        LIGHT: string;
-        DARK: string;
-        WHITE: string;
-        MUTED: string;
+    spacing: {
+        '1'?: string | number;
+        '2'?: string | number;
+        '3'?: string | number;
+        '4'?: string | number;
+        '5'?: string | number;
+        '6'?: string | number;
+        '7'?: string | number;
+        '8'?: string | number;
     };
-    typography?: {
-        xs: string | number;
-        sm: string | number;
-        base: string | number;
-        lg: string | number;
-        xl: string | number;
-        '2xl': string | number;
-        '3xl': string | number;
-        '4xl': string | number;
+    typography: {
+        xs?: number;
+        sm?: number;
+        base?: number;
+        lg?: number;
+        xl?: number;
+        '2xl'?: number;
+        '3xl'?: number;
+        '4xl'?: number;
+        '5xl': number;
+        '6xl': number;
+        '7xl': number;
+        '8xl': number;
+        '9xl': number;
     };
+}
+
+interface LaryProviderPropsType {
+    children: JSX.Element;
+    color?: ThemeContextType['color'];
+    layout?: ThemeContextType['layout'];
+    position?: ThemeContextType['position'];
+    shape?: ThemeContextType['shape'];
+    typography?: ThemeContextType['typography'];
+    spacing?: ThemeContextType['spacing'];
 }
 
 /**
@@ -509,6 +523,11 @@ interface typographyPropsType {
     text2xl?: boolean;
     text3xl?: boolean;
     text4xl?: boolean;
+    text5xl?: boolean;
+    text6xl?: boolean;
+    text7xl?: boolean;
+    text8xl?: boolean;
+    text9xl?: boolean;
     textCenter?: boolean;
     textLeft?: boolean;
     textRight?: boolean;
@@ -621,7 +640,7 @@ interface themePropsType extends colorPropsType, spacingPropsType, shapePropsTyp
  * @property text(Center-Right-Left) To set the textAlign property to the choosen one.
  * @property italic To set the fontStyle property to italic.
  * @property underline To set the textDecorationLine property to underline.
- * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl) To set the fontSize property to defined one.
+ * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl-5xl-6xl-7xl-8xl-9xl) To set the fontSize property to defined one.
  *
  * @returns {React.FunctionComponent}
  */

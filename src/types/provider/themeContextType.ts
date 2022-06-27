@@ -88,13 +88,18 @@ export default interface ThemeContextType {
     '8'?: string | number;
   };
   typography: {
-    xs?: string | number;
-    sm?: string | number;
-    base?: string | number;
-    lg?: string | number;
-    xl?: string | number;
-    '2xl'?: string | number;
-    '3xl'?: string | number;
-    '4xl'?: string | number;
+    xs?: number;
+    sm?: number;
+    base?: number;
+    lg?: number;
+    xl?: number;
+    '2xl'?: number;
+    '3xl'?: number;
+    '4xl'?: number;
+    '5xl': number;
+    '6xl': number;
+    '7xl': number;
+    '8xl': number;
+    '9xl': number;
   };
 }
