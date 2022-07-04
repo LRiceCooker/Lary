@@ -34,4 +34,5 @@ export default interface layoutPropsType {
   fbFull?: boolean;
   flexBasis?: Sx['flexBasis'];
   flex?: Sx['flex'];
+  avoiding?: boolean;
 }
