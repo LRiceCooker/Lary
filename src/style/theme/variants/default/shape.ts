@@ -1,4 +1,4 @@
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import ThemeContextType from '../../../../types/provider/themeContextType';
 
 const shape = (SHAPE_PALETTE: ThemeContextType['shape']) => {
