@@ -178,10 +178,10 @@ const shape = (SHAPE_PALETTE: ThemeContextType['shape']) => {
       height: '100%'
     },
     widthScreen: {
-      width: Dimensions.get('window').width
+      width: Dimensions.get('screen').width
     },
     heightScreen: {
-      height: Dimensions.get('window').height
+      height: Dimensions.get('screen').height
     }
   };
 };
