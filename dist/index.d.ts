@@ -448,6 +448,9 @@ interface layoutPropsType {
     lg?: boolean;
     md?: boolean;
     sm?: boolean;
+    android?: boolean;
+    ios?: boolean;
+    web?: boolean;
     f1?: boolean;
     f2?: boolean;
     f3?: boolean;
