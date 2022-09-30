@@ -1,4 +1,4 @@
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import ThemeContextType from '../../../../types/provider/themeContextType';
 
 const shape = (SHAPE_PALETTE: ThemeContextType['shape']) => {
@@ -178,10 +178,11 @@ const shape = (SHAPE_PALETTE: ThemeContextType['shape']) => {
       height: '100%'
     },
     widthScreen: {
-      width: Dimensions.get('screen').width
+      width: Platform.OS == 'web' ? Dimensions.get('window').width : Dimensions.get('screen').width
     },
     heightScreen: {
-      height: Dimensions.get('screen').height
+      height:
+        Platform.OS == 'web' ? Dimensions.get('window').height : Dimensions.get('screen').height
     }
   };
 };
