@@ -6,6 +6,7 @@ import themeVariantsNamesGenerator from '../../utils/theme/themeVariantsNamesGen
 import Media from '../media/Media';
 import Style from '../style/Style';
 import Avoiding from '../style/Avoiding';
+import Plateform from '../media/Platform';
 
 /**
  * @function Container
@@ -37,11 +38,13 @@ const Container = (props: containerPropsType) => {
 
   return (
     <Media passedProps={props}>
-      <Avoiding passedProps={props}>
-        <Style style={props.style}>
-          <View variants={styles}>{props.children}</View>
-        </Style>
-      </Avoiding>
+      <Plateform passedProps={props}>
+        <Avoiding passedProps={props}>
+          <Style style={props.style}>
+            <View variants={styles}>{props.children}</View>
+          </Style>
+        </Avoiding>
+      </Plateform>
     </Media>
   );
 };

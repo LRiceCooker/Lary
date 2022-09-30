@@ -21585,7 +21585,7 @@ var stylesPropsToInject = [
     'color'
 ];
 
-var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding'];
+var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding', 'android', 'ios', 'web'];
 
 var themeVariantsNamesGenerator = function (props) {
     var themeKeys = Object.keys(genereateTheme(baseConfiguration));
@@ -21663,6 +21663,22 @@ var KeyboardAvoidingView = laryfy(reactNative.KeyboardAvoidingView);
 var Avoiding = function (_a) {
     var passedProps = _a.passedProps, children = _a.children;
     return passedProps.avoiding ? (React__default["default"].createElement(KeyboardAvoidingView, _assign({}, _assign(_assign({}, passedProps), { avoiding: undefined }), { behavior: reactNative.Platform.OS === 'ios' ? 'padding' : 'height' }), children.props.children)) : (children);
+};
+
+var usePlateform = function () {
+    var isWeb = reactNative.Platform.OS == 'web';
+    var isAndroid = reactNative.Platform.OS == 'android';
+    var isIos = reactNative.Platform.OS == 'ios';
+    return [isWeb, isAndroid, isIos];
+};
+
+var Plateform = function (_a) {
+    var passedProps = _a.passedProps, children = _a.children;
+    var _b = usePlateform(), isWeb = _b[0], isAndroid = _b[1], isIos = _b[2];
+    return !passedProps.android && !passedProps.web && !passedProps.ios ? (children) : (React__default["default"].createElement(React__default["default"].Fragment, null,
+        passedProps.android ? (isAndroid ? children : null) : null,
+        passedProps.ios ? (isIos ? children : null) : null,
+        passedProps.web ? (isWeb ? children : null) : null));
 };
 
 /**
@@ -21779,9 +21795,10 @@ function laryfy(component) {
         var styles = themeVariantsNamesGenerator(props);
         var children = props.children || null;
         return (React__default["default"].createElement(Media, { passedProps: props },
-            React__default["default"].createElement(Avoiding, { passedProps: props },
-                React__default["default"].createElement(Style, { style: styleSheetCompiler(props) },
-                    React__default["default"].createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children)))));
+            React__default["default"].createElement(Plateform, { passedProps: props },
+                React__default["default"].createElement(Avoiding, { passedProps: props },
+                    React__default["default"].createElement(Style, { style: styleSheetCompiler(props) },
+                        React__default["default"].createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children))))));
     };
     return laryfiedComponent;
 }
@@ -21917,9 +21934,10 @@ var useMuted = function (gradientValue) {
 var Container = function (props) {
     var styles = themeVariantsNamesGenerator(props);
     return (React__default["default"].createElement(Media, { passedProps: props },
-        React__default["default"].createElement(Avoiding, { passedProps: props },
-            React__default["default"].createElement(Style, { style: props.style },
-                React__default["default"].createElement(View$1, { variants: styles }, props.children)))));
+        React__default["default"].createElement(Plateform, { passedProps: props },
+            React__default["default"].createElement(Avoiding, { passedProps: props },
+                React__default["default"].createElement(Style, { style: props.style },
+                    React__default["default"].createElement(View$1, { variants: styles }, props.children))))));
 };
 
 /**
@@ -21941,9 +21959,10 @@ var Container = function (props) {
 var Element = function (props) {
     var styles = themeVariantsNamesGenerator(props);
     return (React__default["default"].createElement(Media, { passedProps: props },
-        React__default["default"].createElement(Avoiding, { passedProps: props },
-            React__default["default"].createElement(Style, { style: styleSheetCompiler(props) },
-                React__default["default"].createElement(View$1, { variants: styles }, props.children)))));
+        React__default["default"].createElement(Plateform, { passedProps: props },
+            React__default["default"].createElement(Avoiding, { passedProps: props },
+                React__default["default"].createElement(Style, { style: styleSheetCompiler(props) },
+                    React__default["default"].createElement(View$1, { variants: styles }, props.children))))));
 };
 
 exports.Container = Container;

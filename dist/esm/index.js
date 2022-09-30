@@ -21577,7 +21577,7 @@ var stylesPropsToInject = [
     'color'
 ];
 
-var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding'];
+var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding', 'android', 'ios', 'web'];
 
 var themeVariantsNamesGenerator = function (props) {
     var themeKeys = Object.keys(genereateTheme(baseConfiguration));
@@ -21655,6 +21655,22 @@ var KeyboardAvoidingView = laryfy(KeyboardAvoidingView$1);
 var Avoiding = function (_a) {
     var passedProps = _a.passedProps, children = _a.children;
     return passedProps.avoiding ? (React.createElement(KeyboardAvoidingView, _assign({}, _assign(_assign({}, passedProps), { avoiding: undefined }), { behavior: Platform.OS === 'ios' ? 'padding' : 'height' }), children.props.children)) : (children);
+};
+
+var usePlateform = function () {
+    var isWeb = Platform.OS == 'web';
+    var isAndroid = Platform.OS == 'android';
+    var isIos = Platform.OS == 'ios';
+    return [isWeb, isAndroid, isIos];
+};
+
+var Plateform = function (_a) {
+    var passedProps = _a.passedProps, children = _a.children;
+    var _b = usePlateform(), isWeb = _b[0], isAndroid = _b[1], isIos = _b[2];
+    return !passedProps.android && !passedProps.web && !passedProps.ios ? (children) : (React.createElement(React.Fragment, null,
+        passedProps.android ? (isAndroid ? children : null) : null,
+        passedProps.ios ? (isIos ? children : null) : null,
+        passedProps.web ? (isWeb ? children : null) : null));
 };
 
 /**
@@ -21771,9 +21787,10 @@ function laryfy(component) {
         var styles = themeVariantsNamesGenerator(props);
         var children = props.children || null;
         return (React.createElement(Media, { passedProps: props },
-            React.createElement(Avoiding, { passedProps: props },
-                React.createElement(Style, { style: styleSheetCompiler(props) },
-                    React.createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children)))));
+            React.createElement(Plateform, { passedProps: props },
+                React.createElement(Avoiding, { passedProps: props },
+                    React.createElement(Style, { style: styleSheetCompiler(props) },
+                        React.createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children))))));
     };
     return laryfiedComponent;
 }
@@ -21909,9 +21926,10 @@ var useMuted = function (gradientValue) {
 var Container = function (props) {
     var styles = themeVariantsNamesGenerator(props);
     return (React.createElement(Media, { passedProps: props },
-        React.createElement(Avoiding, { passedProps: props },
-            React.createElement(Style, { style: props.style },
-                React.createElement(View$1, { variants: styles }, props.children)))));
+        React.createElement(Plateform, { passedProps: props },
+            React.createElement(Avoiding, { passedProps: props },
+                React.createElement(Style, { style: props.style },
+                    React.createElement(View$1, { variants: styles }, props.children))))));
 };
 
 /**
@@ -21933,9 +21951,10 @@ var Container = function (props) {
 var Element = function (props) {
     var styles = themeVariantsNamesGenerator(props);
     return (React.createElement(Media, { passedProps: props },
-        React.createElement(Avoiding, { passedProps: props },
-            React.createElement(Style, { style: styleSheetCompiler(props) },
-                React.createElement(View$1, { variants: styles }, props.children)))));
+        React.createElement(Plateform, { passedProps: props },
+            React.createElement(Avoiding, { passedProps: props },
+                React.createElement(Style, { style: styleSheetCompiler(props) },
+                    React.createElement(View$1, { variants: styles }, props.children))))));
 };
 
 export { Container, Element, LaryProvider, laryfy, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };

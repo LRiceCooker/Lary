@@ -6,6 +6,7 @@ import Style from '../style/Style';
 import elementPropsType from '../../types/layout/elementPropsType';
 import styleSheetCompiler from '../../utils/helpers/styleSheetCompiler';
 import Avoiding from '../style/Avoiding';
+import Plateform from '../media/Platform';
 
 /**
  * @function Element
@@ -29,11 +30,13 @@ const Element = (props: elementPropsType) => {
 
   return (
     <Media passedProps={props}>
-      <Avoiding passedProps={props}>
-        <Style style={styleSheetCompiler(props)}>
-          <View variants={styles}>{props.children}</View>
-        </Style>
-      </Avoiding>
+      <Plateform passedProps={props}>
+        <Avoiding passedProps={props}>
+          <Style style={styleSheetCompiler(props)}>
+            <View variants={styles}>{props.children}</View>
+          </Style>
+        </Avoiding>
+      </Plateform>
     </Media>
   );
 };

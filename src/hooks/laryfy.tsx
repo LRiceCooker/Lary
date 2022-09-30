@@ -8,6 +8,7 @@ import Style from '../components/style/Style';
 import { themePropsType } from '../types/theme';
 import { laryComponentPassedChildrenType } from '../types/utils';
 import Avoiding from '../components/style/Avoiding';
+import Plateform from '../components/media/Platform';
 
 /**
  * @function laryfy
@@ -132,16 +133,20 @@ function laryfy<componentPropsType>(
     const children = props!.children || null;
     return (
       <Media passedProps={props}>
-        <Avoiding passedProps={props}>
-          <Style style={styleSheetCompiler(props)}>
-            <RawComponent
-              variants={styles}
-              {...propsInjector<componentPropsType, React.ComponentProps<typeof component>>(props)}
-            >
-              {children}
-            </RawComponent>
-          </Style>
-        </Avoiding>
+        <Plateform passedProps={props}>
+          <Avoiding passedProps={props}>
+            <Style style={styleSheetCompiler(props)}>
+              <RawComponent
+                variants={styles}
+                {...propsInjector<componentPropsType, React.ComponentProps<typeof component>>(
+                  props
+                )}
+              >
+                {children}
+              </RawComponent>
+            </Style>
+          </Avoiding>
+        </Plateform>
       </Media>
     );
   };
