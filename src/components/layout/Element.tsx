@@ -5,6 +5,7 @@ import Media from '../media/Media';
 import Style from '../style/Style';
 import elementPropsType from '../../types/layout/elementPropsType';
 import styleSheetCompiler from '../../utils/helpers/styleSheetCompiler';
+import Avoiding from '../style/Avoiding';
 
 /**
  * @function Element
@@ -28,9 +29,11 @@ const Element = (props: elementPropsType) => {
 
   return (
     <Media passedProps={props}>
-      <Style style={styleSheetCompiler(props)}>
-        <View variants={styles}>{props.children}</View>
-      </Style>
+      <Avoiding passedProps={props}>
+        <Style style={styleSheetCompiler(props)}>
+          <View variants={styles}>{props.children}</View>
+        </Style>
+      </Avoiding>
     </Media>
   );
 };
