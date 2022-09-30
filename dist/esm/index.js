@@ -20942,10 +20942,10 @@ var shape = function (SHAPE_PALETTE) {
             height: '100%'
         },
         widthScreen: {
-            width: Dimensions.get('window').width
+            width: Dimensions.get('screen').width
         },
         heightScreen: {
-            height: Dimensions.get('window').height
+            height: Dimensions.get('screen').height
         }
     };
 };

@@ -20950,10 +20950,10 @@ var shape = function (SHAPE_PALETTE) {
             height: '100%'
         },
         widthScreen: {
-            width: reactNative.Dimensions.get('window').width
+            width: reactNative.Dimensions.get('screen').width
         },
         heightScreen: {
-            height: reactNative.Dimensions.get('window').height
+            height: reactNative.Dimensions.get('screen').height
         }
     };
 };
