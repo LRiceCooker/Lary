@@ -1,6 +1,11 @@
 import React from 'react';
 import { laryComponentPassedPropsType } from '../../types/utils';
-import { KeyboardAvoidingView, Platform } from 'react-native';
+import { KeyboardAvoidingView as NativeKeyboardAvoidingView, Platform } from 'react-native';
+import laryfy from '../../hooks/laryfy';
+
+const KeyboardAvoidingView = laryfy<React.ComponentProps<typeof NativeKeyboardAvoidingView>>(
+  NativeKeyboardAvoidingView as React.ComponentType<unknown>
+);
 
 const Avoiding = ({
   passedProps,
@@ -10,8 +15,11 @@ const Avoiding = ({
   children: JSX.Element;
 }) => {
   return passedProps.avoiding ? (
-    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-      {children}
+    <KeyboardAvoidingView
+      {...{ ...passedProps, avoiding: undefined }}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
+      {children.props.children}
     </KeyboardAvoidingView>
   ) : (
     children
