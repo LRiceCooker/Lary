@@ -21659,10 +21659,9 @@ var Style = function (_a) {
     return style ? React__default["default"].cloneElement(children, { style: sx(style) }) : children;
 };
 
-var KeyboardAvoidingView = laryfy(reactNative.KeyboardAvoidingView);
 var Avoiding = function (_a) {
     var passedProps = _a.passedProps, children = _a.children;
-    return passedProps.avoiding ? (React__default["default"].createElement(KeyboardAvoidingView, { widthFull: true, heightFull: true, behavior: reactNative.Platform.OS === 'ios' ? 'padding' : 'height' }, children)) : (children);
+    return passedProps.avoiding ? (React__default["default"].createElement(reactNative.KeyboardAvoidingView, { behavior: reactNative.Platform.OS === 'ios' ? 'padding' : 'height' }, children)) : (children);
 };
 
 /**

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useMemo, useState, useRef, useEffect, forwardRef, useCallback } from 'react';
-import { Dimensions, Platform, StyleSheet, View as View$2, Pressable, Text as Text$1, Image, PixelRatio, Linking, ScrollView, TextInput, FlatList, ActivityIndicator, SafeAreaView, useWindowDimensions, KeyboardAvoidingView as KeyboardAvoidingView$1 } from 'react-native';
+import { Dimensions, Platform, StyleSheet, View as View$2, Pressable, Text as Text$1, Image, PixelRatio, Linking, ScrollView, TextInput, FlatList, ActivityIndicator, SafeAreaView, useWindowDimensions, KeyboardAvoidingView } from 'react-native';
 
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
@@ -21651,10 +21651,9 @@ var Style = function (_a) {
     return style ? React.cloneElement(children, { style: sx(style) }) : children;
 };
 
-var KeyboardAvoidingView = laryfy(KeyboardAvoidingView$1);
 var Avoiding = function (_a) {
     var passedProps = _a.passedProps, children = _a.children;
-    return passedProps.avoiding ? (React.createElement(KeyboardAvoidingView, { widthFull: true, heightFull: true, behavior: Platform.OS === 'ios' ? 'padding' : 'height' }, children)) : (children);
+    return passedProps.avoiding ? (React.createElement(KeyboardAvoidingView, { behavior: Platform.OS === 'ios' ? 'padding' : 'height' }, children)) : (children);
 };
 
 /**
