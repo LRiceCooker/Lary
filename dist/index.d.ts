@@ -650,6 +650,9 @@ interface themePropsType extends colorPropsType, spacingPropsType, shapePropsTyp
  */
 declare function laryfy<componentPropsType>(component: ComponentType<unknown>): (props?: componentPropsType & themePropsType) => JSX.Element;
 
+declare const responsiveHeight: (nbr: number) => number;
+declare const responsiveWidth: (nbr: number) => number;
+
 declare const usePrimary: (gradientValue: number) => any;
 declare const useSecondary: (gradientValue: number) => any;
 declare const useSuccess: (gradientValue: number) => any;
@@ -723,4 +726,4 @@ interface elementPropsType extends themePropsType {
  */
 declare const Element: (props: elementPropsType) => JSX.Element;
 
-export { Container, Element, LaryProvider, laryfy, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
+export { Container, Element, LaryProvider, laryfy, responsiveHeight, responsiveWidth, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
