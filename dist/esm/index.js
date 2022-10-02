@@ -21616,7 +21616,15 @@ var propsInjector = function (props) {
 };
 
 var width = Dimensions.get('screen').width;
-Dimensions.get('screen').height;
+var height = Dimensions.get('screen').height;
+var responsiveHeight = function (nbr) {
+    return Platform.OS === 'web'
+        ? (nbr *
+            Math.max(Dimensions.get('window').width, Dimensions.get('window').height) *
+            PixelRatio.get()) /
+            height
+        : nbr;
+};
 var responsiveWidth = function (nbr) {
     return Platform.OS === 'web'
         ? (nbr *
@@ -21957,5 +21965,5 @@ var Element = function (props) {
                     React.createElement(View$1, { variants: styles }, props.children))))));
 };
 
-export { Container, Element, LaryProvider, laryfy, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
+export { Container, Element, LaryProvider, laryfy, responsiveHeight, responsiveWidth, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
 //# sourceMappingURL=index.js.map

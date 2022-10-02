@@ -21624,7 +21624,15 @@ var propsInjector = function (props) {
 };
 
 var width = reactNative.Dimensions.get('screen').width;
-reactNative.Dimensions.get('screen').height;
+var height = reactNative.Dimensions.get('screen').height;
+var responsiveHeight = function (nbr) {
+    return reactNative.Platform.OS === 'web'
+        ? (nbr *
+            Math.max(reactNative.Dimensions.get('window').width, reactNative.Dimensions.get('window').height) *
+            reactNative.PixelRatio.get()) /
+            height
+        : nbr;
+};
 var responsiveWidth = function (nbr) {
     return reactNative.Platform.OS === 'web'
         ? (nbr *
@@ -21969,6 +21977,8 @@ exports.Container = Container;
 exports.Element = Element;
 exports.LaryProvider = LaryProvider;
 exports.laryfy = laryfy;
+exports.responsiveHeight = responsiveHeight;
+exports.responsiveWidth = responsiveWidth;
 exports.useDanger = useDanger;
 exports.useDark = useDark;
 exports.useInfo = useInfo;
