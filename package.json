@@ -5,7 +5,7 @@
   "scripts": {
     "doc": "jsdoc2md --files ./src/**/*.tsx ./src/**/**/*.tsx --configure ./jsdoc2md.json > ./doc/doc.md",
     "rollup": "rollup -c",
-    "prepare": "husky install",
+    "prepare": "npx husky install",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
