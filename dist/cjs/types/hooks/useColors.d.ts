@@ -1,0 +1,10 @@
+export declare const usePrimary: (gradientValue: number) => any;
+export declare const useSecondary: (gradientValue: number) => any;
+export declare const useSuccess: (gradientValue: number) => any;
+export declare const useDanger: (gradientValue: number) => any;
+export declare const useWarning: (gradientValue: number) => any;
+export declare const useInfo: (gradientValue: number) => any;
+export declare const useLight: (gradientValue: number) => any;
+export declare const useDark: (gradientValue: number) => any;
+export declare const useWhite: (gradientValue: number) => any;
+export declare const useMuted: (gradientValue: number) => any;
