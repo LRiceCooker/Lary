@@ -1,6 +1,6 @@
 {
   "name": "lary",
-  "version": "0.0.12-0",
+  "version": "0.1.0-0",
   "description": "A utility-first style library for React Native on top of Dripsy.",
   "scripts": {
     "doc": "jsdoc2md --files ./src/**/*.tsx ./src/**/**/*.tsx --configure ./jsdoc2md.json > ./doc/doc.md",
