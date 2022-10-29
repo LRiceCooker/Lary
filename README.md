@@ -42,7 +42,7 @@ const Card = (): JSX.Element => {
 };
 ```
 
-<img src="https://i.ibb.co/NZh1HZ9/result.png"/>
+<img src="https://i.postimg.cc/5N3fHmhf/exemple.png"/>
 
 <h2>🧐 Features</h2>
 
