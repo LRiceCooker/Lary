@@ -13,9 +13,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2.1.1
       - name: node
-        uses: actions/setup-node@1.4.2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
           registry-url: https://registry.npmjs.org
       - name: publish
         run: npm publish --access public
