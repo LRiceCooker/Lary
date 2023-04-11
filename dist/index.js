@@ -18128,102 +18128,74 @@ if (symIterator) {
 }
 
 var COLOR = {
-    PRIMARY: '#407AA8',
-    SECONDARY: '#51ACF5',
-    SUCCESS: '#8AF494',
-    DANGER: '#A83B38',
-    WARNING: '#F46E6A',
-    INFO: '#BAA4F5',
-    LIGHT: '#F3F0C7',
-    DARK: '#131313',
-    WHITE: '#FFFFFF',
-    MUTED: '#303136'
+  PRIMARY: '#407AA8',
+  SECONDARY: '#51ACF5',
+  SUCCESS: '#8AF494',
+  DANGER: '#A83B38',
+  WARNING: '#F46E6A',
+  INFO: '#BAA4F5',
+  LIGHT: '#F3F0C7',
+  DARK: '#131313',
+  WHITE: '#FFFFFF',
+  MUTED: '#303136'
 };
 
 var layout$1 = {
-    FLEX: {
-        '1': 1,
-        '2': 2,
-        '3': 3,
-        '4': 4,
-        '5': 5,
-        '6': 6,
-        '7': 7,
-        '8': 8
-    },
-    FLEX_BASIS: {
-        '1': '1%',
-        '2': '2%',
-        '3': '3%',
-        '4': '4%',
-        '5': '5%',
-        '6': '6%',
-        '7': '7%',
-        '8': '8%'
-    }
+  FLEX: {
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8
+  },
+  FLEX_BASIS: {
+    '1': '1%',
+    '2': '2%',
+    '3': '3%',
+    '4': '4%',
+    '5': '5%',
+    '6': '6%',
+    '7': '7%',
+    '8': '8%'
+  }
 };
 
 var position$1 = {
-    '1': 4,
-    '2': 8,
-    '3': 12,
-    '4': 16,
-    '5': 20,
-    '6': 24,
-    '7': 28,
-    '8': 32
+  '1': 4,
+  '2': 8,
+  '3': 12,
+  '4': 16,
+  '5': 20,
+  '6': 24,
+  '7': 28,
+  '8': 32
 };
 
 var shape$1 = {
-    BORDER_RADIUS: {
-        '1': 5,
-        '2': 10,
-        '3': 15,
-        '4': 20,
-        '5': 25,
-        '6': 30,
-        '7': 35,
-        '8': 40
-    },
-    BORDER_WIDTH: {
-        '1': 1,
-        '2': 2,
-        '3': 4,
-        '4': 5,
-        '5': 8,
-        '6': 10,
-        '7': 12,
-        '8': 14
-    },
-    PADDING: {
-        '1': 9,
-        '2': 10,
-        '3': 12,
-        '4': 16,
-        '5': 20,
-        '6': 24,
-        '7': 28,
-        '8': 32
-    }
-};
-
-var FONT_SIZE = {
-    xs: 12,
-    sm: 14,
-    base: 16,
-    lg: 18,
-    xl: 20,
-    '2xl': 24,
-    '3xl': 30,
-    '4xl': 36,
-    '5xl': 48,
-    '6xl': 60,
-    '7xl': 72,
-    '8xl': 96,
-    '9xl': 128
-};
-
-var spacing$1 = {
+  BORDER_RADIUS: {
+    '1': 5,
+    '2': 10,
+    '3': 15,
+    '4': 20,
+    '5': 25,
+    '6': 30,
+    '7': 35,
+    '8': 40
+  },
+  BORDER_WIDTH: {
+    '1': 1,
+    '2': 2,
+    '3': 4,
+    '4': 5,
+    '5': 8,
+    '6': 10,
+    '7': 12,
+    '8': 14
+  },
+  PADDING: {
     '1': 9,
     '2': 10,
     '3': 12,
@@ -18232,28 +18204,60 @@ var spacing$1 = {
     '6': 24,
     '7': 28,
     '8': 32
+  }
+};
+
+var FONT_SIZE = {
+  xs: 12,
+  sm: 14,
+  base: 16,
+  lg: 18,
+  xl: 20,
+  '2xl': 24,
+  '3xl': 30,
+  '4xl': 36,
+  '5xl': 48,
+  '6xl': 60,
+  '7xl': 72,
+  '8xl': 96,
+  '9xl': 128
+};
+
+var spacing$1 = {
+  '1': 9,
+  '2': 10,
+  '3': 12,
+  '4': 16,
+  '5': 20,
+  '6': 24,
+  '7': 28,
+  '8': 32
 };
 
 var baseConfiguration = {
-    color: COLOR,
-    layout: layout$1,
-    position: position$1,
-    shape: shape$1,
-    typography: FONT_SIZE,
-    spacing: spacing$1
+  color: COLOR,
+  layout: layout$1,
+  position: position$1,
+  shape: shape$1,
+  typography: FONT_SIZE,
+  spacing: spacing$1
 };
 
-var themeOverLoader = function (props) {
-    var baseTheme = _assign({ children: props.children }, baseConfiguration);
-    return lodash.merge(baseTheme, props);
+var themeOverLoader = function themeOverLoader(props) {
+  var baseTheme = _assign({
+    children: props.children
+  }, baseConfiguration);
+  return lodash.merge(baseTheme, props);
 };
 
-var ThemeConfigurationContext = React.createContext({});
-var ThemeConfigurationProvider = function (props) {
-    return (React.createElement(ThemeConfigurationContext.Provider, { value: themeOverLoader(props) }, props.children));
+var ThemeConfigurationContext = /*#__PURE__*/React.createContext({});
+var ThemeConfigurationProvider = function ThemeConfigurationProvider(props) {
+  return /*#__PURE__*/React.createElement(ThemeConfigurationContext.Provider, {
+    value: themeOverLoader(props)
+  }, props.children);
 };
-var useThemeConfigurationContext = function () {
-    return React.useContext(ThemeConfigurationContext);
+var useThemeConfigurationContext = function useThemeConfigurationContext() {
+  return React.useContext(ThemeConfigurationContext);
 };
 
 var DripsyThemeContext = /*#__PURE__*/React.createContext(null);
@@ -18812,28 +18816,7 @@ function mapPropsToStyledComponent(props, options) {
   };
 }
 
-var o = new WeakMap();
-var l = 0;
-function i(t) {
-  var c = _typeof(t),
-    s = t && t.constructor,
-    f = s == Date;
-  var e, n;
-  if (Object(t) === t && !f && s != RegExp) {
-    if (e = o.get(t), e) return e;
-    if (e = ++l + "~", o.set(t, e), s == Array) {
-      for (e = "@", n = 0; n < t.length; n++) e += i(t[n]) + ",";
-      o.set(t, e);
-    }
-    if (s == Object) {
-      e = "#";
-      var y = Object.keys(t).sort();
-      for (; typeof (n = y.pop()) != "undefined";) typeof t[n] != "undefined" && (e += n + ":" + i(t[n]) + ",");
-      o.set(t, e);
-    }
-  } else e = f ? t.toJSON() : c == "symbol" ? t.toString() : c == "string" ? JSON.stringify(t) : "" + t;
-  return e;
-}
+const o=new WeakMap;let l=0;function i(t){const c=typeof t,s=t&&t.constructor,f=s==Date;let e,n;if(Object(t)===t&&!f&&s!=RegExp){if(e=o.get(t),e)return e;if(e=++l+"~",o.set(t,e),s==Array){for(e="@",n=0;n<t.length;n++)e+=i(t[n])+",";o.set(t,e);}if(s==Object){e="#";const y=Object.keys(t).sort();for(;typeof(n=y.pop())!="undefined";)typeof t[n]!="undefined"&&(e+=n+":"+i(t[n])+",");o.set(t,e);}}else e=f?t.toJSON():c=="symbol"?t.toString():c=="string"?JSON.stringify(t):""+t;return e}
 
 function useStableMemo(factory, deps) {
   return React.useMemo(factory, [i(deps)]);
@@ -19077,724 +19060,729 @@ function makeTheme(theme) {
   return theme;
 }
 
-var color = function (COLOR_PALETTE) {
-    return {
-        bdInfo: {
-            borderColor: COLOR_PALETTE.INFO
-        },
-        bgInfo: {
-            backgroundColor: COLOR_PALETTE.INFO
-        },
-        inInfo: {
-            color: COLOR_PALETTE.INFO
-        },
-        bdWarning: {
-            borderColor: COLOR_PALETTE.WARNING
-        },
-        bgWarning: {
-            backgroundColor: COLOR_PALETTE.WARNING
-        },
-        inWarning: {
-            color: COLOR_PALETTE.WARNING
-        },
-        bdPrimary: {
-            borderColor: COLOR_PALETTE.PRIMARY
-        },
-        bgPrimary: {
-            backgroundColor: COLOR_PALETTE.PRIMARY
-        },
-        inPrimary: {
-            color: COLOR_PALETTE.PRIMARY
-        },
-        bdSecondary: {
-            borderColor: COLOR_PALETTE.SECONDARY
-        },
-        bgSecondary: {
-            backgroundColor: COLOR_PALETTE.SECONDARY
-        },
-        inSecondary: {
-            color: COLOR_PALETTE.SECONDARY
-        },
-        bdLight: {
-            borderColor: COLOR_PALETTE.LIGHT
-        },
-        bgLight: {
-            backgroundColor: COLOR_PALETTE.LIGHT
-        },
-        inLight: {
-            color: COLOR_PALETTE.LIGHT
-        },
-        bdDark: {
-            borderColor: COLOR_PALETTE.DARK
-        },
-        bgDark: {
-            backgroundColor: COLOR_PALETTE.DARK
-        },
-        inDark: {
-            color: COLOR_PALETTE.DARK
-        },
-        bdMuted: {
-            borderColor: COLOR_PALETTE.MUTED
-        },
-        bgMuted: {
-            backgroundColor: COLOR_PALETTE.MUTED
-        },
-        inMuted: {
-            color: COLOR_PALETTE.MUTED
-        },
-        bdDanger: {
-            borderColor: COLOR_PALETTE.DANGER
-        },
-        bgDanger: {
-            backgroundColor: COLOR_PALETTE.DANGER
-        },
-        inDanger: {
-            color: COLOR_PALETTE.DANGER
-        },
-        bdSuccess: {
-            borderColor: COLOR_PALETTE.SUCCESS
-        },
-        bgSuccess: {
-            backgroundColor: COLOR_PALETTE.SUCCESS
-        },
-        inSuccess: {
-            color: COLOR_PALETTE.SUCCESS
-        },
-        bdWhite: {
-            borderColor: COLOR_PALETTE.WHITE
-        },
-        bgWhite: {
-            backgroundColor: COLOR_PALETTE.WHITE
-        },
-        inWhite: {
-            color: COLOR_PALETTE.WHITE
-        }
-    };
+var color = function color(COLOR_PALETTE) {
+  return {
+    bdInfo: {
+      borderColor: COLOR_PALETTE.INFO
+    },
+    bgInfo: {
+      backgroundColor: COLOR_PALETTE.INFO
+    },
+    inInfo: {
+      color: COLOR_PALETTE.INFO
+    },
+    bdWarning: {
+      borderColor: COLOR_PALETTE.WARNING
+    },
+    bgWarning: {
+      backgroundColor: COLOR_PALETTE.WARNING
+    },
+    inWarning: {
+      color: COLOR_PALETTE.WARNING
+    },
+    bdPrimary: {
+      borderColor: COLOR_PALETTE.PRIMARY
+    },
+    bgPrimary: {
+      backgroundColor: COLOR_PALETTE.PRIMARY
+    },
+    inPrimary: {
+      color: COLOR_PALETTE.PRIMARY
+    },
+    bdSecondary: {
+      borderColor: COLOR_PALETTE.SECONDARY
+    },
+    bgSecondary: {
+      backgroundColor: COLOR_PALETTE.SECONDARY
+    },
+    inSecondary: {
+      color: COLOR_PALETTE.SECONDARY
+    },
+    bdLight: {
+      borderColor: COLOR_PALETTE.LIGHT
+    },
+    bgLight: {
+      backgroundColor: COLOR_PALETTE.LIGHT
+    },
+    inLight: {
+      color: COLOR_PALETTE.LIGHT
+    },
+    bdDark: {
+      borderColor: COLOR_PALETTE.DARK
+    },
+    bgDark: {
+      backgroundColor: COLOR_PALETTE.DARK
+    },
+    inDark: {
+      color: COLOR_PALETTE.DARK
+    },
+    bdMuted: {
+      borderColor: COLOR_PALETTE.MUTED
+    },
+    bgMuted: {
+      backgroundColor: COLOR_PALETTE.MUTED
+    },
+    inMuted: {
+      color: COLOR_PALETTE.MUTED
+    },
+    bdDanger: {
+      borderColor: COLOR_PALETTE.DANGER
+    },
+    bgDanger: {
+      backgroundColor: COLOR_PALETTE.DANGER
+    },
+    inDanger: {
+      color: COLOR_PALETTE.DANGER
+    },
+    bdSuccess: {
+      borderColor: COLOR_PALETTE.SUCCESS
+    },
+    bgSuccess: {
+      backgroundColor: COLOR_PALETTE.SUCCESS
+    },
+    inSuccess: {
+      color: COLOR_PALETTE.SUCCESS
+    },
+    bdWhite: {
+      borderColor: COLOR_PALETTE.WHITE
+    },
+    bgWhite: {
+      backgroundColor: COLOR_PALETTE.WHITE
+    },
+    inWhite: {
+      color: COLOR_PALETTE.WHITE
+    }
+  };
 };
 
-var shape = function (SHAPE_PALETTE) {
-    return {
-        r1: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[1]
-        },
-        r2: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[2]
-        },
-        r3: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[3]
-        },
-        r4: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[4]
-        },
-        r5: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[5]
-        },
-        r6: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[6]
-        },
-        r7: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[7]
-        },
-        r8: {
-            borderRadius: SHAPE_PALETTE.BORDER_RADIUS[8]
-        },
-        p1: {
-            padding: SHAPE_PALETTE.PADDING[1]
-        },
-        p2: {
-            padding: SHAPE_PALETTE.PADDING[2]
-        },
-        p3: {
-            padding: SHAPE_PALETTE.PADDING[3]
-        },
-        p4: {
-            padding: SHAPE_PALETTE.PADDING[4]
-        },
-        p5: {
-            padding: SHAPE_PALETTE.PADDING[5]
-        },
-        p6: {
-            padding: SHAPE_PALETTE.PADDING[6]
-        },
-        p7: {
-            padding: SHAPE_PALETTE.PADDING[7]
-        },
-        p8: {
-            padding: SHAPE_PALETTE.PADDING[8]
-        },
-        pr1: {
-            paddingRight: SHAPE_PALETTE.PADDING[1]
-        },
-        pr2: {
-            paddingRight: SHAPE_PALETTE.PADDING[2]
-        },
-        pr3: {
-            paddingRight: SHAPE_PALETTE.PADDING[3]
-        },
-        pr4: {
-            paddingRight: SHAPE_PALETTE.PADDING[4]
-        },
-        pr5: {
-            paddingRight: SHAPE_PALETTE.PADDING[5]
-        },
-        pr6: {
-            paddingRight: SHAPE_PALETTE.PADDING[6]
-        },
-        pr7: {
-            paddingRight: SHAPE_PALETTE.PADDING[7]
-        },
-        pr8: {
-            paddingRight: SHAPE_PALETTE.PADDING[8]
-        },
-        pl1: {
-            paddingLeft: SHAPE_PALETTE.PADDING[1]
-        },
-        pl2: {
-            paddingLeft: SHAPE_PALETTE.PADDING[2]
-        },
-        pl3: {
-            paddingLeft: SHAPE_PALETTE.PADDING[3]
-        },
-        pl4: {
-            paddingLeft: SHAPE_PALETTE.PADDING[4]
-        },
-        pl5: {
-            paddingLeft: SHAPE_PALETTE.PADDING[5]
-        },
-        pl6: {
-            paddingLeft: SHAPE_PALETTE.PADDING[6]
-        },
-        pl7: {
-            paddingLeft: SHAPE_PALETTE.PADDING[7]
-        },
-        pl8: {
-            paddingLeft: SHAPE_PALETTE.PADDING[8]
-        },
-        pt1: {
-            paddingTop: SHAPE_PALETTE.PADDING[1]
-        },
-        pt2: {
-            paddingTop: SHAPE_PALETTE.PADDING[2]
-        },
-        pt3: {
-            paddingTop: SHAPE_PALETTE.PADDING[3]
-        },
-        pt4: {
-            paddingTop: SHAPE_PALETTE.PADDING[4]
-        },
-        pt5: {
-            paddingTop: SHAPE_PALETTE.PADDING[5]
-        },
-        pt6: {
-            paddingTop: SHAPE_PALETTE.PADDING[6]
-        },
-        pt7: {
-            paddingTop: SHAPE_PALETTE.PADDING[7]
-        },
-        pt8: {
-            paddingTop: SHAPE_PALETTE.PADDING[8]
-        },
-        pb1: {
-            paddingBottom: SHAPE_PALETTE.PADDING[1]
-        },
-        pb2: {
-            paddingBottom: SHAPE_PALETTE.PADDING[2]
-        },
-        pb3: {
-            paddingBottom: SHAPE_PALETTE.PADDING[3]
-        },
-        pb4: {
-            paddingBottom: SHAPE_PALETTE.PADDING[4]
-        },
-        pb5: {
-            paddingBottom: SHAPE_PALETTE.PADDING[5]
-        },
-        pb6: {
-            paddingBottom: SHAPE_PALETTE.PADDING[6]
-        },
-        pb7: {
-            paddingBottom: SHAPE_PALETTE.PADDING[7]
-        },
-        pb8: {
-            paddingBottom: SHAPE_PALETTE.PADDING[8]
-        },
-        b1: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[1]
-        },
-        b2: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[2]
-        },
-        b3: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[3]
-        },
-        b4: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[4]
-        },
-        b5: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[5]
-        },
-        b6: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[6]
-        },
-        b7: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[7]
-        },
-        b8: {
-            borderWidth: SHAPE_PALETTE.BORDER_WIDTH[8]
-        },
-        widthFull: {
-            width: '100%'
-        },
-        heightFull: {
-            height: '100%'
-        },
-        widthScreen: {
-            width: reactNative.Dimensions.get('window').width
-        },
-        heightScreen: {
-            height: reactNative.Dimensions.get('window').height
-        }
-    };
+var shape = function shape(SHAPE_PALETTE) {
+  return {
+    r1: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[1]
+    },
+    r2: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[2]
+    },
+    r3: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[3]
+    },
+    r4: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[4]
+    },
+    r5: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[5]
+    },
+    r6: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[6]
+    },
+    r7: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[7]
+    },
+    r8: {
+      borderRadius: SHAPE_PALETTE.BORDER_RADIUS[8]
+    },
+    p1: {
+      padding: SHAPE_PALETTE.PADDING[1]
+    },
+    p2: {
+      padding: SHAPE_PALETTE.PADDING[2]
+    },
+    p3: {
+      padding: SHAPE_PALETTE.PADDING[3]
+    },
+    p4: {
+      padding: SHAPE_PALETTE.PADDING[4]
+    },
+    p5: {
+      padding: SHAPE_PALETTE.PADDING[5]
+    },
+    p6: {
+      padding: SHAPE_PALETTE.PADDING[6]
+    },
+    p7: {
+      padding: SHAPE_PALETTE.PADDING[7]
+    },
+    p8: {
+      padding: SHAPE_PALETTE.PADDING[8]
+    },
+    pr1: {
+      paddingRight: SHAPE_PALETTE.PADDING[1]
+    },
+    pr2: {
+      paddingRight: SHAPE_PALETTE.PADDING[2]
+    },
+    pr3: {
+      paddingRight: SHAPE_PALETTE.PADDING[3]
+    },
+    pr4: {
+      paddingRight: SHAPE_PALETTE.PADDING[4]
+    },
+    pr5: {
+      paddingRight: SHAPE_PALETTE.PADDING[5]
+    },
+    pr6: {
+      paddingRight: SHAPE_PALETTE.PADDING[6]
+    },
+    pr7: {
+      paddingRight: SHAPE_PALETTE.PADDING[7]
+    },
+    pr8: {
+      paddingRight: SHAPE_PALETTE.PADDING[8]
+    },
+    pl1: {
+      paddingLeft: SHAPE_PALETTE.PADDING[1]
+    },
+    pl2: {
+      paddingLeft: SHAPE_PALETTE.PADDING[2]
+    },
+    pl3: {
+      paddingLeft: SHAPE_PALETTE.PADDING[3]
+    },
+    pl4: {
+      paddingLeft: SHAPE_PALETTE.PADDING[4]
+    },
+    pl5: {
+      paddingLeft: SHAPE_PALETTE.PADDING[5]
+    },
+    pl6: {
+      paddingLeft: SHAPE_PALETTE.PADDING[6]
+    },
+    pl7: {
+      paddingLeft: SHAPE_PALETTE.PADDING[7]
+    },
+    pl8: {
+      paddingLeft: SHAPE_PALETTE.PADDING[8]
+    },
+    pt1: {
+      paddingTop: SHAPE_PALETTE.PADDING[1]
+    },
+    pt2: {
+      paddingTop: SHAPE_PALETTE.PADDING[2]
+    },
+    pt3: {
+      paddingTop: SHAPE_PALETTE.PADDING[3]
+    },
+    pt4: {
+      paddingTop: SHAPE_PALETTE.PADDING[4]
+    },
+    pt5: {
+      paddingTop: SHAPE_PALETTE.PADDING[5]
+    },
+    pt6: {
+      paddingTop: SHAPE_PALETTE.PADDING[6]
+    },
+    pt7: {
+      paddingTop: SHAPE_PALETTE.PADDING[7]
+    },
+    pt8: {
+      paddingTop: SHAPE_PALETTE.PADDING[8]
+    },
+    pb1: {
+      paddingBottom: SHAPE_PALETTE.PADDING[1]
+    },
+    pb2: {
+      paddingBottom: SHAPE_PALETTE.PADDING[2]
+    },
+    pb3: {
+      paddingBottom: SHAPE_PALETTE.PADDING[3]
+    },
+    pb4: {
+      paddingBottom: SHAPE_PALETTE.PADDING[4]
+    },
+    pb5: {
+      paddingBottom: SHAPE_PALETTE.PADDING[5]
+    },
+    pb6: {
+      paddingBottom: SHAPE_PALETTE.PADDING[6]
+    },
+    pb7: {
+      paddingBottom: SHAPE_PALETTE.PADDING[7]
+    },
+    pb8: {
+      paddingBottom: SHAPE_PALETTE.PADDING[8]
+    },
+    b1: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[1]
+    },
+    b2: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[2]
+    },
+    b3: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[3]
+    },
+    b4: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[4]
+    },
+    b5: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[5]
+    },
+    b6: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[6]
+    },
+    b7: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[7]
+    },
+    b8: {
+      borderWidth: SHAPE_PALETTE.BORDER_WIDTH[8]
+    },
+    widthFull: {
+      width: '100%'
+    },
+    heightFull: {
+      height: '100%'
+    },
+    widthScreen: {
+      width: reactNative.Dimensions.get('window').width
+    },
+    heightScreen: {
+      height: reactNative.Dimensions.get('window').height
+    }
+  };
 };
 
-var spacing = function (SPACING_PALETTE) {
-    return {
-        m1: {
-            margin: SPACING_PALETTE[1]
-        },
-        m2: {
-            margin: SPACING_PALETTE[2]
-        },
-        m3: {
-            margin: SPACING_PALETTE[3]
-        },
-        m4: {
-            margin: SPACING_PALETTE[4]
-        },
-        m5: {
-            margin: SPACING_PALETTE[5]
-        },
-        m6: {
-            margin: SPACING_PALETTE[6]
-        },
-        m7: {
-            margin: SPACING_PALETTE[7]
-        },
-        m8: {
-            margin: SPACING_PALETTE[8]
-        },
-        mr1: {
-            marginRight: SPACING_PALETTE[1]
-        },
-        mr2: {
-            marginRight: SPACING_PALETTE[2]
-        },
-        mr3: {
-            marginRight: SPACING_PALETTE[3]
-        },
-        mr4: {
-            marginRight: SPACING_PALETTE[4]
-        },
-        mr5: {
-            marginRight: SPACING_PALETTE[5]
-        },
-        mr6: {
-            marginRight: SPACING_PALETTE[6]
-        },
-        mr7: {
-            marginRight: SPACING_PALETTE[7]
-        },
-        mr8: {
-            marginRight: SPACING_PALETTE[8]
-        },
-        ml1: {
-            marginLeft: SPACING_PALETTE[1]
-        },
-        ml2: {
-            marginLeft: SPACING_PALETTE[2]
-        },
-        ml3: {
-            marginLeft: SPACING_PALETTE[3]
-        },
-        ml4: {
-            marginLeft: SPACING_PALETTE[4]
-        },
-        ml5: {
-            marginLeft: SPACING_PALETTE[5]
-        },
-        ml6: {
-            marginLeft: SPACING_PALETTE[6]
-        },
-        ml7: {
-            marginLeft: SPACING_PALETTE[7]
-        },
-        ml8: {
-            marginLeft: SPACING_PALETTE[8]
-        },
-        mt1: {
-            marginTop: SPACING_PALETTE[1]
-        },
-        mt2: {
-            marginTop: SPACING_PALETTE[2]
-        },
-        mt3: {
-            marginTop: SPACING_PALETTE[3]
-        },
-        mt4: {
-            marginTop: SPACING_PALETTE[4]
-        },
-        mt5: {
-            marginTop: SPACING_PALETTE[5]
-        },
-        mt6: {
-            marginTop: SPACING_PALETTE[6]
-        },
-        mt7: {
-            marginTop: SPACING_PALETTE[7]
-        },
-        mt8: {
-            marginTop: SPACING_PALETTE[8]
-        },
-        mb1: {
-            marginBottom: SPACING_PALETTE[1]
-        },
-        mb2: {
-            marginBottom: SPACING_PALETTE[2]
-        },
-        mb3: {
-            marginBottom: SPACING_PALETTE[3]
-        },
-        mb4: {
-            marginBottom: SPACING_PALETTE[4]
-        },
-        mb5: {
-            marginBottom: SPACING_PALETTE[5]
-        },
-        mb6: {
-            marginBottom: SPACING_PALETTE[6]
-        },
-        mb7: {
-            marginBottom: SPACING_PALETTE[7]
-        },
-        mb8: {
-            marginBottom: SPACING_PALETTE[8]
-        }
-    };
+var spacing = function spacing(SPACING_PALETTE) {
+  return {
+    m1: {
+      margin: SPACING_PALETTE[1]
+    },
+    m2: {
+      margin: SPACING_PALETTE[2]
+    },
+    m3: {
+      margin: SPACING_PALETTE[3]
+    },
+    m4: {
+      margin: SPACING_PALETTE[4]
+    },
+    m5: {
+      margin: SPACING_PALETTE[5]
+    },
+    m6: {
+      margin: SPACING_PALETTE[6]
+    },
+    m7: {
+      margin: SPACING_PALETTE[7]
+    },
+    m8: {
+      margin: SPACING_PALETTE[8]
+    },
+    mr1: {
+      marginRight: SPACING_PALETTE[1]
+    },
+    mr2: {
+      marginRight: SPACING_PALETTE[2]
+    },
+    mr3: {
+      marginRight: SPACING_PALETTE[3]
+    },
+    mr4: {
+      marginRight: SPACING_PALETTE[4]
+    },
+    mr5: {
+      marginRight: SPACING_PALETTE[5]
+    },
+    mr6: {
+      marginRight: SPACING_PALETTE[6]
+    },
+    mr7: {
+      marginRight: SPACING_PALETTE[7]
+    },
+    mr8: {
+      marginRight: SPACING_PALETTE[8]
+    },
+    ml1: {
+      marginLeft: SPACING_PALETTE[1]
+    },
+    ml2: {
+      marginLeft: SPACING_PALETTE[2]
+    },
+    ml3: {
+      marginLeft: SPACING_PALETTE[3]
+    },
+    ml4: {
+      marginLeft: SPACING_PALETTE[4]
+    },
+    ml5: {
+      marginLeft: SPACING_PALETTE[5]
+    },
+    ml6: {
+      marginLeft: SPACING_PALETTE[6]
+    },
+    ml7: {
+      marginLeft: SPACING_PALETTE[7]
+    },
+    ml8: {
+      marginLeft: SPACING_PALETTE[8]
+    },
+    mt1: {
+      marginTop: SPACING_PALETTE[1]
+    },
+    mt2: {
+      marginTop: SPACING_PALETTE[2]
+    },
+    mt3: {
+      marginTop: SPACING_PALETTE[3]
+    },
+    mt4: {
+      marginTop: SPACING_PALETTE[4]
+    },
+    mt5: {
+      marginTop: SPACING_PALETTE[5]
+    },
+    mt6: {
+      marginTop: SPACING_PALETTE[6]
+    },
+    mt7: {
+      marginTop: SPACING_PALETTE[7]
+    },
+    mt8: {
+      marginTop: SPACING_PALETTE[8]
+    },
+    mb1: {
+      marginBottom: SPACING_PALETTE[1]
+    },
+    mb2: {
+      marginBottom: SPACING_PALETTE[2]
+    },
+    mb3: {
+      marginBottom: SPACING_PALETTE[3]
+    },
+    mb4: {
+      marginBottom: SPACING_PALETTE[4]
+    },
+    mb5: {
+      marginBottom: SPACING_PALETTE[5]
+    },
+    mb6: {
+      marginBottom: SPACING_PALETTE[6]
+    },
+    mb7: {
+      marginBottom: SPACING_PALETTE[7]
+    },
+    mb8: {
+      marginBottom: SPACING_PALETTE[8]
+    }
+  };
 };
 
-var layout = function (LAYOUT_PALETTE) {
-    return {
-        alignCenter: {
-            alignItems: 'center'
-        },
-        alignEnd: {
-            alignItems: 'flex-end'
-        },
-        alignStart: {
-            alignItems: 'flex-start'
-        },
-        justifyCenter: {
-            justifyContent: 'center'
-        },
-        justifyEnd: {
-            justifyContent: 'flex-end'
-        },
-        justifyStart: {
-            justifyContent: 'flex-start'
-        },
-        justifyBetween: {
-            justifyContent: 'space-between'
-        },
-        justifyAround: {
-            justifyContent: 'space-around'
-        },
-        justifyEvenly: {
-            justifyContent: 'space-around'
-        },
-        f1: {
-            flex: LAYOUT_PALETTE.FLEX[1]
-        },
-        f2: {
-            flex: LAYOUT_PALETTE.FLEX[2]
-        },
-        f3: {
-            flex: LAYOUT_PALETTE.FLEX[3]
-        },
-        f4: {
-            flex: LAYOUT_PALETTE.FLEX[4]
-        },
-        f5: {
-            flex: LAYOUT_PALETTE.FLEX[5]
-        },
-        f6: {
-            flex: LAYOUT_PALETTE.FLEX[6]
-        },
-        f7: {
-            flex: LAYOUT_PALETTE.FLEX[7]
-        },
-        f8: {
-            flex: LAYOUT_PALETTE.FLEX[8]
-        },
-        fb1: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[1]
-        },
-        fb2: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[2]
-        },
-        fb3: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[3]
-        },
-        fb4: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[4]
-        },
-        fb5: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[5]
-        },
-        fb6: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[6]
-        },
-        fb7: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[7]
-        },
-        fb8: {
-            flexBasis: LAYOUT_PALETTE.FLEX_BASIS[8]
-        },
-        fbFull: {
-            flexBasis: '100%'
-        },
-        fn: {
-            flex: 0
-        }
-    };
+var layout = function layout(LAYOUT_PALETTE) {
+  return {
+    alignCenter: {
+      alignItems: 'center'
+    },
+    alignEnd: {
+      alignItems: 'flex-end'
+    },
+    alignStart: {
+      alignItems: 'flex-start'
+    },
+    justifyCenter: {
+      justifyContent: 'center'
+    },
+    justifyEnd: {
+      justifyContent: 'flex-end'
+    },
+    justifyStart: {
+      justifyContent: 'flex-start'
+    },
+    justifyBetween: {
+      justifyContent: 'space-between'
+    },
+    justifyAround: {
+      justifyContent: 'space-around'
+    },
+    justifyEvenly: {
+      justifyContent: 'space-around'
+    },
+    f1: {
+      flex: LAYOUT_PALETTE.FLEX[1]
+    },
+    f2: {
+      flex: LAYOUT_PALETTE.FLEX[2]
+    },
+    f3: {
+      flex: LAYOUT_PALETTE.FLEX[3]
+    },
+    f4: {
+      flex: LAYOUT_PALETTE.FLEX[4]
+    },
+    f5: {
+      flex: LAYOUT_PALETTE.FLEX[5]
+    },
+    f6: {
+      flex: LAYOUT_PALETTE.FLEX[6]
+    },
+    f7: {
+      flex: LAYOUT_PALETTE.FLEX[7]
+    },
+    f8: {
+      flex: LAYOUT_PALETTE.FLEX[8]
+    },
+    fb1: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[1]
+    },
+    fb2: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[2]
+    },
+    fb3: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[3]
+    },
+    fb4: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[4]
+    },
+    fb5: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[5]
+    },
+    fb6: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[6]
+    },
+    fb7: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[7]
+    },
+    fb8: {
+      flexBasis: LAYOUT_PALETTE.FLEX_BASIS[8]
+    },
+    fbFull: {
+      flexBasis: '100%'
+    },
+    fn: {
+      flex: 0
+    }
+  };
 };
 
-var position = function (POSITION_PALETTE) {
-    return {
-        relative: {
-            position: 'relative'
-        },
-        absolute: {
-            position: 'absolute'
-        },
-        top1: {
-            top: POSITION_PALETTE[1]
-        },
-        top2: {
-            top: POSITION_PALETTE[2]
-        },
-        top3: {
-            top: POSITION_PALETTE[3]
-        },
-        top4: {
-            top: POSITION_PALETTE[4]
-        },
-        top5: {
-            top: POSITION_PALETTE[5]
-        },
-        top6: {
-            top: POSITION_PALETTE[6]
-        },
-        top7: {
-            top: POSITION_PALETTE[7]
-        },
-        top8: {
-            top: POSITION_PALETTE[8]
-        },
-        bottom1: {
-            bottom: POSITION_PALETTE[1]
-        },
-        bottom2: {
-            bottom: POSITION_PALETTE[2]
-        },
-        bottom3: {
-            bottom: POSITION_PALETTE[3]
-        },
-        bottom4: {
-            bottom: POSITION_PALETTE[4]
-        },
-        bottom5: {
-            bottom: POSITION_PALETTE[5]
-        },
-        bottom6: {
-            bottom: POSITION_PALETTE[6]
-        },
-        bottom7: {
-            bottom: POSITION_PALETTE[7]
-        },
-        bottom8: {
-            bottom: POSITION_PALETTE[8]
-        },
-        left1: {
-            left: POSITION_PALETTE[1]
-        },
-        left2: {
-            left: POSITION_PALETTE[2]
-        },
-        left3: {
-            left: POSITION_PALETTE[3]
-        },
-        left4: {
-            left: POSITION_PALETTE[4]
-        },
-        left5: {
-            left: POSITION_PALETTE[5]
-        },
-        left6: {
-            left: POSITION_PALETTE[6]
-        },
-        left7: {
-            left: POSITION_PALETTE[7]
-        },
-        left8: {
-            left: POSITION_PALETTE[8]
-        },
-        right1: {
-            right: POSITION_PALETTE[1]
-        },
-        right2: {
-            right: POSITION_PALETTE[2]
-        },
-        right3: {
-            right: POSITION_PALETTE[3]
-        },
-        right4: {
-            right: POSITION_PALETTE[4]
-        },
-        right5: {
-            right: POSITION_PALETTE[5]
-        },
-        right6: {
-            right: POSITION_PALETTE[6]
-        },
-        right7: {
-            right: POSITION_PALETTE[7]
-        },
-        right8: {
-            right: POSITION_PALETTE[8]
-        }
-    };
+var position = function position(POSITION_PALETTE) {
+  return {
+    relative: {
+      position: 'relative'
+    },
+    absolute: {
+      position: 'absolute'
+    },
+    top1: {
+      top: POSITION_PALETTE[1]
+    },
+    top2: {
+      top: POSITION_PALETTE[2]
+    },
+    top3: {
+      top: POSITION_PALETTE[3]
+    },
+    top4: {
+      top: POSITION_PALETTE[4]
+    },
+    top5: {
+      top: POSITION_PALETTE[5]
+    },
+    top6: {
+      top: POSITION_PALETTE[6]
+    },
+    top7: {
+      top: POSITION_PALETTE[7]
+    },
+    top8: {
+      top: POSITION_PALETTE[8]
+    },
+    bottom1: {
+      bottom: POSITION_PALETTE[1]
+    },
+    bottom2: {
+      bottom: POSITION_PALETTE[2]
+    },
+    bottom3: {
+      bottom: POSITION_PALETTE[3]
+    },
+    bottom4: {
+      bottom: POSITION_PALETTE[4]
+    },
+    bottom5: {
+      bottom: POSITION_PALETTE[5]
+    },
+    bottom6: {
+      bottom: POSITION_PALETTE[6]
+    },
+    bottom7: {
+      bottom: POSITION_PALETTE[7]
+    },
+    bottom8: {
+      bottom: POSITION_PALETTE[8]
+    },
+    left1: {
+      left: POSITION_PALETTE[1]
+    },
+    left2: {
+      left: POSITION_PALETTE[2]
+    },
+    left3: {
+      left: POSITION_PALETTE[3]
+    },
+    left4: {
+      left: POSITION_PALETTE[4]
+    },
+    left5: {
+      left: POSITION_PALETTE[5]
+    },
+    left6: {
+      left: POSITION_PALETTE[6]
+    },
+    left7: {
+      left: POSITION_PALETTE[7]
+    },
+    left8: {
+      left: POSITION_PALETTE[8]
+    },
+    right1: {
+      right: POSITION_PALETTE[1]
+    },
+    right2: {
+      right: POSITION_PALETTE[2]
+    },
+    right3: {
+      right: POSITION_PALETTE[3]
+    },
+    right4: {
+      right: POSITION_PALETTE[4]
+    },
+    right5: {
+      right: POSITION_PALETTE[5]
+    },
+    right6: {
+      right: POSITION_PALETTE[6]
+    },
+    right7: {
+      right: POSITION_PALETTE[7]
+    },
+    right8: {
+      right: POSITION_PALETTE[8]
+    }
+  };
 };
 
-var typography = function (TYPOGRAPHY_PALETTE) {
-    return {
-        bold: {
-            fontWeight: 'bold'
-        },
-        italic: {
-            fontStyle: 'italic'
-        },
-        underline: {
-            textDecorationLine: 'underline'
-        },
-        textXs: {
-            fontSize: TYPOGRAPHY_PALETTE['xs']
-        },
-        textSm: {
-            fontSize: TYPOGRAPHY_PALETTE['sm']
-        },
-        textBase: {
-            fontSize: TYPOGRAPHY_PALETTE['base']
-        },
-        textLg: {
-            fontSize: TYPOGRAPHY_PALETTE['lg']
-        },
-        textXl: {
-            fontSize: TYPOGRAPHY_PALETTE['xl']
-        },
-        text2xl: {
-            fontSize: TYPOGRAPHY_PALETTE['2xl']
-        },
-        text3xl: {
-            fontSize: TYPOGRAPHY_PALETTE['3xl']
-        },
-        text4xl: {
-            fontSize: TYPOGRAPHY_PALETTE['4xl']
-        },
-        text5xl: {
-            fontSize: TYPOGRAPHY_PALETTE['5xl']
-        },
-        text6xl: {
-            fontSize: TYPOGRAPHY_PALETTE['6xl']
-        },
-        text7xl: {
-            fontSize: TYPOGRAPHY_PALETTE['7xl']
-        },
-        text8xl: {
-            fontSize: TYPOGRAPHY_PALETTE['8xl']
-        },
-        text9xl: {
-            fontSize: TYPOGRAPHY_PALETTE['9xl']
-        },
-        textCenter: {
-            textAlign: 'center'
-        },
-        textLeft: {
-            textAlign: 'left'
-        },
-        textRight: {
-            textAlign: 'right'
-        }
-    };
+var typography = function typography(TYPOGRAPHY_PALETTE) {
+  return {
+    bold: {
+      fontWeight: 'bold'
+    },
+    italic: {
+      fontStyle: 'italic'
+    },
+    underline: {
+      textDecorationLine: 'underline'
+    },
+    textXs: {
+      fontSize: TYPOGRAPHY_PALETTE['xs']
+    },
+    textSm: {
+      fontSize: TYPOGRAPHY_PALETTE['sm']
+    },
+    textBase: {
+      fontSize: TYPOGRAPHY_PALETTE['base']
+    },
+    textLg: {
+      fontSize: TYPOGRAPHY_PALETTE['lg']
+    },
+    textXl: {
+      fontSize: TYPOGRAPHY_PALETTE['xl']
+    },
+    text2xl: {
+      fontSize: TYPOGRAPHY_PALETTE['2xl']
+    },
+    text3xl: {
+      fontSize: TYPOGRAPHY_PALETTE['3xl']
+    },
+    text4xl: {
+      fontSize: TYPOGRAPHY_PALETTE['4xl']
+    },
+    text5xl: {
+      fontSize: TYPOGRAPHY_PALETTE['5xl']
+    },
+    text6xl: {
+      fontSize: TYPOGRAPHY_PALETTE['6xl']
+    },
+    text7xl: {
+      fontSize: TYPOGRAPHY_PALETTE['7xl']
+    },
+    text8xl: {
+      fontSize: TYPOGRAPHY_PALETTE['8xl']
+    },
+    text9xl: {
+      fontSize: TYPOGRAPHY_PALETTE['9xl']
+    },
+    textCenter: {
+      textAlign: 'center'
+    },
+    textLeft: {
+      textAlign: 'left'
+    },
+    textRight: {
+      textAlign: 'right'
+    }
+  };
 };
 
-var defaultStyles = function (baseConfuguration) {
-    return _assign(_assign(_assign(_assign(_assign(_assign({}, color(baseConfuguration.color)), shape(baseConfuguration.shape)), spacing(baseConfuguration.spacing)), layout(baseConfuguration.layout)), position(baseConfuguration.position)), typography(baseConfuguration.typography));
+var defaultStyles = function defaultStyles(baseConfuguration) {
+  return _assign(_assign(_assign(_assign(_assign(_assign({}, color(baseConfuguration.color)), shape(baseConfuguration.shape)), spacing(baseConfuguration.spacing)), layout(baseConfuguration.layout)), position(baseConfuguration.position)), typography(baseConfuguration.typography));
 };
 
 var container = {
-    container: {
-        display: 'flex'
-    },
-    fullHeight: {
-        height: 'auto'
-    },
-    scroll: {
-        flex: 1,
-        height: 'auto'
-    },
-    row: {
-        flexDirection: 'row'
-    },
-    column: {
-        flexDirection: 'column'
-    },
-    wrap: {
-        flexWrap: 'wrap'
-    },
-    nowrap: {
-        flexWrap: 'nowrap'
-    },
-    contentCenter: {
-        justifyContent: 'center'
-    },
-    contentLeft: {
-        justifyContent: 'flex-start'
-    },
-    contentRight: {
-        justifyContent: 'flex-end'
-    }
+  container: {
+    display: 'flex'
+  },
+  fullHeight: {
+    height: 'auto'
+  },
+  scroll: {
+    flex: 1,
+    height: 'auto'
+  },
+  row: {
+    flexDirection: 'row'
+  },
+  column: {
+    flexDirection: 'column'
+  },
+  wrap: {
+    flexWrap: 'wrap'
+  },
+  nowrap: {
+    flexWrap: 'nowrap'
+  },
+  contentCenter: {
+    justifyContent: 'center'
+  },
+  contentLeft: {
+    justifyContent: 'flex-start'
+  },
+  contentRight: {
+    justifyContent: 'flex-end'
+  }
 };
 
 var element = {
-    element: {}
+  element: {}
 };
 
 var components = _assign(_assign({}, container), element);
 
-var variants = function (baseConfuguration) {
-    return _assign({ layout: defaultStyles(baseConfuguration) }, components);
+var variants = function variants(baseConfuguration) {
+  return _assign({
+    layout: defaultStyles(baseConfuguration)
+  }, components);
 };
 
-var genereateTheme = function (baseConfuguration) {
-    return makeTheme(variants(baseConfuguration));
+var genereateTheme = function genereateTheme(baseConfuguration) {
+  return makeTheme(variants(baseConfuguration));
 };
 
-var ThemeContext = React.createContext({});
-var ThemeProvider = function (_a) {
-    var children = _a.children;
-    var configurationContext = useThemeConfigurationContext();
-    return (React.createElement(ThemeContext.Provider, { value: {} },
-        React.createElement(DripsyProvider, { theme: genereateTheme(configurationContext) }, children)));
+var ThemeContext = /*#__PURE__*/React.createContext({});
+var ThemeProvider = function ThemeProvider(_a) {
+  var children = _a.children;
+  var configurationContext = useThemeConfigurationContext();
+  return /*#__PURE__*/React.createElement(ThemeContext.Provider, {
+    value: {}
+  }, /*#__PURE__*/React.createElement(DripsyProvider, {
+    theme: genereateTheme(configurationContext)
+  }, children));
 };
 
 /**
@@ -19943,149 +19931,108 @@ var ThemeProvider = function (_a) {
  *
  * @returns {JSX.Element}
  */
-var LaryProvider = function (props) {
-    return (React.createElement(ThemeConfigurationProvider, _assign({}, props),
-        React.createElement(ThemeProvider, null, props.children)));
+var LaryProvider = function LaryProvider(props) {
+  return /*#__PURE__*/React.createElement(ThemeConfigurationProvider, _assign({}, props), /*#__PURE__*/React.createElement(ThemeProvider, null, props.children));
 };
 
-var stylesPropsToInject = [
-    'style',
-    'flexBasis',
-    'flex',
-    'top',
-    'bottom',
-    'right',
-    'left',
-    'width',
-    'height',
-    'marginRight',
-    'marginLeft',
-    'marginBottom',
-    'margin',
-    'marginTop',
-    'marginX',
-    'marginY',
-    'padding',
-    'paddingLeft',
-    'paddingRight',
-    'paddingX',
-    'paddingY',
-    'borderRadius',
-    'borderEndEndRadius',
-    'borderTopLeftRadius',
-    'borderEndStartRadius',
-    'borderStartEndRadius',
-    'borderTopRightRadius',
-    'borderBottomLeftRadius',
-    'borderStartStartRadius',
-    'borderBottomRightRadius',
-    'backgroundColor',
-    'borderColor',
-    'color'
-];
+var stylesPropsToInject = ['style', 'flexBasis', 'flex', 'top', 'bottom', 'right', 'left', 'width', 'height', 'marginRight', 'marginLeft', 'marginBottom', 'margin', 'marginTop', 'marginX', 'marginY', 'padding', 'paddingLeft', 'paddingRight', 'paddingX', 'paddingY', 'borderRadius', 'borderEndEndRadius', 'borderTopLeftRadius', 'borderEndStartRadius', 'borderStartEndRadius', 'borderTopRightRadius', 'borderBottomLeftRadius', 'borderStartStartRadius', 'borderBottomRightRadius', 'backgroundColor', 'borderColor', 'color'];
 
 var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding', 'android', 'ios', 'web'];
 
-var themeVariantsNamesGenerator = function (props) {
-    var themeKeys = Object.keys(genereateTheme(baseConfiguration));
-    return Object.keys(props)
-        .filter(function (prop) {
-        return [].concat(nonStyleProps).concat(stylesPropsToInject).indexOf(prop) === -1;
-    })
-        .map(function (prop) {
-        return themeKeys.indexOf(prop) !== -1 ? prop : "layout.".concat(prop);
-    });
+var themeVariantsNamesGenerator = function themeVariantsNamesGenerator(props) {
+  var themeKeys = Object.keys(genereateTheme(baseConfiguration));
+  return Object.keys(props).filter(function (prop) {
+    return [].concat(nonStyleProps).concat(stylesPropsToInject).indexOf(prop) === -1;
+  }).map(function (prop) {
+    return themeKeys.indexOf(prop) !== -1 ? prop : "layout.".concat(prop);
+  });
 };
 
-var styleSheetCompiler = function (props) {
-    var styles = _assign({}, props.style);
-    for (var _i = 0, stylesPropsToInject_1 = stylesPropsToInject; _i < stylesPropsToInject_1.length; _i++) {
-        var propsToInject = stylesPropsToInject_1[_i];
-        // @ts-expect-error - we know that key is a string and we are sure that it is in the theme
-        if (propsToInject !== 'style')
-            styles[propsToInject] = props[propsToInject];
-    }
-    return styles;
+var styleSheetCompiler = function styleSheetCompiler(props) {
+  var styles = _assign({}, props.style);
+  for (var _i = 0, stylesPropsToInject_1 = stylesPropsToInject; _i < stylesPropsToInject_1.length; _i++) {
+    var propsToInject = stylesPropsToInject_1[_i];
+    // @ts-expect-error - we know that key is a string and we are sure that it is in the theme
+    if (propsToInject !== 'style') styles[propsToInject] = props[propsToInject];
+  }
+  return styles;
 };
 
-var propsInjector = function (props) {
-    var propsToInject = {};
-    // @ts-expect-error - layout is not undefined in the theme
-    var themePropsNames = Object.keys(genereateTheme(baseConfiguration).layout)
-        .concat(nonStyleProps)
-        .concat(stylesPropsToInject);
-    Object.keys(props).forEach(function (key) {
-        // @ts-expect-error - we know that key is a string
-        if (themePropsNames.indexOf(key) === -1)
-            propsToInject[key] = props[key];
-    });
-    return propsToInject;
+var propsInjector = function propsInjector(props) {
+  var propsToInject = {};
+  // @ts-expect-error - layout is not undefined in the theme
+  var themePropsNames = Object.keys(genereateTheme(baseConfiguration).layout).concat(nonStyleProps).concat(stylesPropsToInject);
+  Object.keys(props).forEach(function (key) {
+    // @ts-expect-error - we know that key is a string
+    if (themePropsNames.indexOf(key) === -1) propsToInject[key] = props[key];
+  });
+  return propsToInject;
 };
 
 var width = reactNative.Dimensions.get('screen').width;
 var height = reactNative.Dimensions.get('screen').height;
-var responsiveHeight = function (nbr) {
-    return reactNative.Platform.OS === 'web'
-        ? (nbr *
-            Math.max(reactNative.Dimensions.get('window').width, reactNative.Dimensions.get('window').height) *
-            reactNative.PixelRatio.get()) /
-            height
-        : nbr;
+var responsiveHeight = function responsiveHeight(nbr) {
+  return reactNative.Platform.OS === 'web' ? nbr * Math.max(reactNative.Dimensions.get('window').width, reactNative.Dimensions.get('window').height) * reactNative.PixelRatio.get() / height : nbr;
 };
-var responsiveWidth = function (nbr) {
-    return reactNative.Platform.OS === 'web'
-        ? (nbr *
-            Math.min(reactNative.Dimensions.get('window').width, reactNative.Dimensions.get('window').height) *
-            reactNative.PixelRatio.get()) /
-            width
-        : nbr;
+var responsiveWidth = function responsiveWidth(nbr) {
+  return reactNative.Platform.OS === 'web' ? nbr * Math.min(reactNative.Dimensions.get('window').width, reactNative.Dimensions.get('window').height) * reactNative.PixelRatio.get() / width : nbr;
 };
 
-var useBreakPoints = function () {
-    var width = reactNative.useWindowDimensions().width;
-    var isXl = width >= responsiveWidth(1280);
-    var isLg = width >= responsiveWidth(1024) && width < responsiveWidth(1280);
-    var isMd = width >= responsiveWidth(768) && width < responsiveWidth(1024);
-    var isSm = width < responsiveWidth(768);
-    return [isXl, isLg, isMd, isSm];
+var useBreakPoints = function useBreakPoints() {
+  var width = reactNative.useWindowDimensions().width;
+  var isXl = width >= responsiveWidth(1280);
+  var isLg = width >= responsiveWidth(1024) && width < responsiveWidth(1280);
+  var isMd = width >= responsiveWidth(768) && width < responsiveWidth(1024);
+  var isSm = width < responsiveWidth(768);
+  return [isXl, isLg, isMd, isSm];
 };
 
-var Media = function (_a) {
-    var passedProps = _a.passedProps, children = _a.children;
-    var _b = useBreakPoints(), isXl = _b[0], isLg = _b[1], isMd = _b[2], isSm = _b[3];
-    return !passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm ? (children) : (React.createElement(React.Fragment, null,
-        passedProps.xl ? (isXl ? children : null) : null,
-        passedProps.lg ? (isLg ? children : null) : null,
-        passedProps.md ? (isMd ? children : null) : null,
-        passedProps.sm ? (isSm ? children : null) : null));
+var Media = function Media(_a) {
+  var passedProps = _a.passedProps,
+    children = _a.children;
+  var _b = useBreakPoints(),
+    isXl = _b[0],
+    isLg = _b[1],
+    isMd = _b[2],
+    isSm = _b[3];
+  return !passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm ? children : /*#__PURE__*/React.createElement(React.Fragment, null, passedProps.xl ? isXl ? children : null : null, passedProps.lg ? isLg ? children : null : null, passedProps.md ? isMd ? children : null : null, passedProps.sm ? isSm ? children : null : null);
 };
 
-var Style = function (_a) {
-    var style = _a.style, children = _a.children;
-    var sx = useSx();
-    return style ? React.cloneElement(children, { style: sx(style) }) : children;
+var Style = function Style(_a) {
+  var style = _a.style,
+    children = _a.children;
+  var sx = useSx();
+  return style ? /*#__PURE__*/React.cloneElement(children, {
+    style: sx(style)
+  }) : children;
 };
 
 var KeyboardAvoidingView = laryfy(reactNative.KeyboardAvoidingView);
-var Avoiding = function (_a) {
-    var passedProps = _a.passedProps, children = _a.children;
-    return passedProps.avoiding ? (React.createElement(KeyboardAvoidingView, _assign({}, _assign(_assign({}, passedProps), { avoiding: undefined }), { behavior: reactNative.Platform.OS === 'ios' ? 'padding' : 'height' }), children.props.children)) : (children);
+var Avoiding = function Avoiding(_a) {
+  var passedProps = _a.passedProps,
+    children = _a.children;
+  return passedProps.avoiding ? /*#__PURE__*/React.createElement(KeyboardAvoidingView, _assign({}, _assign(_assign({}, passedProps), {
+    avoiding: undefined
+  }), {
+    behavior: reactNative.Platform.OS === 'ios' ? 'padding' : 'height'
+  }), children.props.children) : children;
 };
 
-var usePlateform = function () {
-    var isWeb = reactNative.Platform.OS == 'web';
-    var isAndroid = reactNative.Platform.OS == 'android';
-    var isIos = reactNative.Platform.OS == 'ios';
-    return [isWeb, isAndroid, isIos];
+var usePlateform = function usePlateform() {
+  var isWeb = reactNative.Platform.OS == 'web';
+  var isAndroid = reactNative.Platform.OS == 'android';
+  var isIos = reactNative.Platform.OS == 'ios';
+  return [isWeb, isAndroid, isIos];
 };
 
-var Plateform = function (_a) {
-    var passedProps = _a.passedProps, children = _a.children;
-    var _b = usePlateform(), isWeb = _b[0], isAndroid = _b[1], isIos = _b[2];
-    return !passedProps.android && !passedProps.web && !passedProps.ios ? (children) : (React.createElement(React.Fragment, null,
-        passedProps.android ? (isAndroid ? children : null) : null,
-        passedProps.ios ? (isIos ? children : null) : null,
-        passedProps.web ? (isWeb ? children : null) : null));
+var Plateform = function Plateform(_a) {
+  var passedProps = _a.passedProps,
+    children = _a.children;
+  var _b = usePlateform(),
+    isWeb = _b[0],
+    isAndroid = _b[1],
+    isIos = _b[2];
+  return !passedProps.android && !passedProps.web && !passedProps.ios ? children : /*#__PURE__*/React.createElement(React.Fragment, null, passedProps.android ? isAndroid ? children : null : null, passedProps.ios ? isIos ? children : null : null, passedProps.web ? isWeb ? children : null : null);
 };
 
 /**
@@ -20196,122 +20143,90 @@ var Plateform = function (_a) {
  * @returns {React.FunctionComponent}
  */
 function laryfy(component) {
-    var RawComponent = styled(component)();
-    var laryfiedComponent = function (props) {
-        props = props ? props : { children: null };
-        var styles = themeVariantsNamesGenerator(props);
-        var children = props.children || null;
-        return (React.createElement(Media, { passedProps: props },
-            React.createElement(Plateform, { passedProps: props },
-                React.createElement(Avoiding, { passedProps: props },
-                    React.createElement(Style, { style: styleSheetCompiler(props) },
-                        React.createElement(RawComponent, _assign({ variants: styles }, propsInjector(props)), children))))));
+  var RawComponent = styled(component)();
+  var laryfiedComponent = function laryfiedComponent(props) {
+    props = props ? props : {
+      children: null
     };
-    return laryfiedComponent;
+    var styles = themeVariantsNamesGenerator(props);
+    var children = props.children || null;
+    return /*#__PURE__*/React.createElement(Media, {
+      passedProps: props
+    }, /*#__PURE__*/React.createElement(Plateform, {
+      passedProps: props
+    }, /*#__PURE__*/React.createElement(Avoiding, {
+      passedProps: props
+    }, /*#__PURE__*/React.createElement(Style, {
+      style: styleSheetCompiler(props)
+    }, /*#__PURE__*/React.createElement(RawComponent, _assign({
+      variants: styles
+    }, propsInjector(props)), children)))));
+  };
+  return laryfiedComponent;
 }
 
 /* eslint-disable */
 var Gradient = require('javascript-color-gradient');
 /* eslint-enable */
-var usePrimary = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.PRIMARY;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.PRIMARY, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.PRIMARY;
+var usePrimary = function usePrimary(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.PRIMARY;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.PRIMARY, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.PRIMARY;
 };
-var useSecondary = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.SECONDARY;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.SECONDARY, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.SECONDARY;
+var useSecondary = function useSecondary(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.SECONDARY;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.SECONDARY, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.SECONDARY;
 };
-var useSuccess = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.SUCCESS;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.SUCCESS, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.SUCCESS;
+var useSuccess = function useSuccess(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.SUCCESS;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.SUCCESS, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.SUCCESS;
 };
-var useDanger = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.DANGER;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.DANGER, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.DANGER;
+var useDanger = function useDanger(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.DANGER;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.DANGER, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.DANGER;
 };
-var useWarning = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.WARNING;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.WARNING, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.WARNING;
+var useWarning = function useWarning(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.WARNING;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.WARNING, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.WARNING;
 };
-var useInfo = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.INFO;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.INFO, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.INFO;
+var useInfo = function useInfo(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.INFO;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.INFO, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.INFO;
 };
-var useLight = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.LIGHT;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.LIGHT, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.SECONDARY;
+var useLight = function useLight(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.LIGHT;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.LIGHT, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.SECONDARY;
 };
-var useDark = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.DARK;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.DARK, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.DARK;
+var useDark = function useDark(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.DARK;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.DARK, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.DARK;
 };
-var useWhite = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.WHITE;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.WHITE, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.WHITE;
+var useWhite = function useWhite(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.WHITE;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.WHITE, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.WHITE;
 };
-var useMuted = function (gradientValue) {
-    var color = useThemeConfigurationContext().color;
-    if (gradientValue < 1)
-        return color.MUTED;
-    var gradient = new Gradient()
-        .setColorGradient('#ffffff', color.MUTED, '#000000')
-        .setMidpoint(900)
-        .getColor(gradientValue);
-    return gradient ? gradient : color.MUTED;
+var useMuted = function useMuted(gradientValue) {
+  var color = useThemeConfigurationContext().color;
+  if (gradientValue < 1) return color.MUTED;
+  var gradient = new Gradient().setColorGradient('#ffffff', color.MUTED, '#000000').setMidpoint(900).getColor(gradientValue);
+  return gradient ? gradient : color.MUTED;
 };
 
 /**
@@ -20338,13 +20253,19 @@ var useMuted = function (gradientValue) {
  *
  * @returns {JSX.Element}
  */
-var Container = function (props) {
-    var styles = themeVariantsNamesGenerator(props);
-    return (React.createElement(Media, { passedProps: props },
-        React.createElement(Plateform, { passedProps: props },
-            React.createElement(Avoiding, { passedProps: props },
-                React.createElement(Style, { style: props.style },
-                    React.createElement(View, { variants: styles }, props.children))))));
+var Container = function Container(props) {
+  var styles = themeVariantsNamesGenerator(props);
+  return /*#__PURE__*/React.createElement(Media, {
+    passedProps: props
+  }, /*#__PURE__*/React.createElement(Plateform, {
+    passedProps: props
+  }, /*#__PURE__*/React.createElement(Avoiding, {
+    passedProps: props
+  }, /*#__PURE__*/React.createElement(Style, {
+    style: props.style
+  }, /*#__PURE__*/React.createElement(View, {
+    variants: styles
+  }, props.children)))));
 };
 
 /**
@@ -20363,13 +20284,19 @@ var Container = function (props) {
  *
  * @returns {JSX.Element}
  */
-var Element = function (props) {
-    var styles = themeVariantsNamesGenerator(props);
-    return (React.createElement(Media, { passedProps: props },
-        React.createElement(Plateform, { passedProps: props },
-            React.createElement(Avoiding, { passedProps: props },
-                React.createElement(Style, { style: styleSheetCompiler(props) },
-                    React.createElement(View, { variants: styles }, props.children))))));
+var Element = function Element(props) {
+  var styles = themeVariantsNamesGenerator(props);
+  return /*#__PURE__*/React.createElement(Media, {
+    passedProps: props
+  }, /*#__PURE__*/React.createElement(Plateform, {
+    passedProps: props
+  }, /*#__PURE__*/React.createElement(Avoiding, {
+    passedProps: props
+  }, /*#__PURE__*/React.createElement(Style, {
+    style: styleSheetCompiler(props)
+  }, /*#__PURE__*/React.createElement(View, {
+    variants: styles
+  }, props.children)))));
 };
 
 exports.Container = Container;
