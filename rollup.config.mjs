@@ -23,7 +23,10 @@ export default {
       presets: ['@babel/preset-env', '@babel/preset-react'],
     }),
     commonjs(),
-    typescript(),
+    typescript({
+      declaration: true,
+      declarationDir: 'dist/types',
+    }),
   ],
   external: ['react', 'react-native'],
 };
