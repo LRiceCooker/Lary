@@ -20310,6 +20310,7 @@ exports.LaryProvider = LaryProvider;
 exports.laryfy = laryfy;
 exports.responsiveHeight = responsiveHeight;
 exports.responsiveWidth = responsiveWidth;
+exports.useBreakPoints = useBreakPoints;
 exports.useDanger = useDanger;
 exports.useDark = useDark;
 exports.useInfo = useInfo;

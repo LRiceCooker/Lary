@@ -11,4 +11,4 @@ export * from './hooks/useBreakPoints';
 
 export * from './components';
 
-export { LaryProvider, laryfy, responsiveHeight, responsiveWidth };
+export { LaryProvider, laryfy, responsiveHeight, responsiveWidth, useBreakPoints };

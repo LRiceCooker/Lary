@@ -20302,5 +20302,5 @@ var Element = function Element(props) {
   }, props.children)))));
 };
 
-export { Container, Element, LaryProvider, laryfy, responsiveHeight, responsiveWidth, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
+export { Container, Element, LaryProvider, laryfy, responsiveHeight, responsiveWidth, useBreakPoints, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
 //# sourceMappingURL=index.js.map
