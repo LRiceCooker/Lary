@@ -19982,17 +19982,22 @@ var useBreakPoints = function useBreakPoints() {
   var isLg = width >= responsiveWidth(1024) && width < responsiveWidth(1280);
   var isMd = width >= responsiveWidth(768) && width < responsiveWidth(1024);
   var isSm = width < responsiveWidth(768);
-  return [isXl, isLg, isMd, isSm];
+  return {
+    isXl: isXl,
+    isLg: isLg,
+    isMd: isMd,
+    isSm: isSm
+  };
 };
 
 var Media = function Media(_a) {
   var passedProps = _a.passedProps,
     children = _a.children;
   var _b = useBreakPoints(),
-    isXl = _b[0],
-    isLg = _b[1],
-    isMd = _b[2],
-    isSm = _b[3];
+    isXl = _b.isXl,
+    isLg = _b.isLg,
+    isMd = _b.isMd,
+    isSm = _b.isSm;
   return !passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm ? children : /*#__PURE__*/React.createElement(React.Fragment, null, passedProps.xl ? isXl ? children : null : null, passedProps.lg ? isLg ? children : null : null, passedProps.md ? isMd ? children : null : null, passedProps.sm ? isSm ? children : null : null);
 };
 

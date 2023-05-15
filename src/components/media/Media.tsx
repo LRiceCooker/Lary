@@ -9,7 +9,7 @@ const Media = ({
   passedProps: laryComponentPassedPropsType;
   children: JSX.Element;
 }) => {
-  const [isXl, isLg, isMd, isSm] = useBreakPoints();
+  const { isXl, isLg, isMd, isSm } = useBreakPoints();
 
   return !passedProps.xl && !passedProps.lg && !passedProps.md && !passedProps.sm ? (
     children
