@@ -1,6 +1,6 @@
 /// <reference types="react" />
-import { ComponentType } from 'react';
 import { Sx, SxProp } from 'dripsy';
+import { ComponentProps } from 'react';
 
 interface ThemeContextType {
     color: {
@@ -541,6 +541,8 @@ interface themePropsType extends colorPropsType, spacingPropsType, shapePropsTyp
     style?: SxProp;
 }
 
+type componentPropsType<componentType> = ComponentProps<componentType & keyof JSX.IntrinsicElements>;
+
 /**
  * @function laryfy
  * @param component : ComponentType<unknown>
@@ -648,7 +650,7 @@ interface themePropsType extends colorPropsType, spacingPropsType, shapePropsTyp
  *
  * @returns {React.FunctionComponent}
  */
-declare function laryfy<componentPropsType>(component: ComponentType<unknown>): (props?: componentPropsType & themePropsType) => JSX.Element;
+declare function laryfy<passedComponentType>(component: passedComponentType): (props?: componentPropsType<passedComponentType> & themePropsType) => JSX.Element;
 
 declare const responsiveHeight: (nbr: number) => number;
 declare const responsiveWidth: (nbr: number) => number;

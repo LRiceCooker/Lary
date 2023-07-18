@@ -9,6 +9,7 @@ import { themePropsType } from '../types/theme';
 import { laryComponentPassedChildrenType } from '../types/utils';
 import Avoiding from '../components/style/Avoiding';
 import Plateform from '../components/media/Platform';
+import type { componentPropsType } from '../types/utils';
 
 /**
  * @function laryfy
@@ -118,18 +119,21 @@ import Plateform from '../components/media/Platform';
  * @returns {React.FunctionComponent}
  */
 
-function laryfy<componentPropsType>(
-  component: ComponentType<unknown>
-): (props?: componentPropsType & themePropsType) => JSX.Element {
-  const RawComponent = styled(component)();
+function laryfy<passedComponentType>(
+  component: passedComponentType
+): (props?: componentPropsType<passedComponentType> & themePropsType) => JSX.Element {
+  const RawComponent: any = styled(component as ComponentType<passedComponentType>)();
 
   const laryfiedComponent = (
-    props?: componentPropsType & themePropsType & laryComponentPassedChildrenType
+    props?: componentPropsType<passedComponentType> &
+      themePropsType &
+      laryComponentPassedChildrenType
   ) => {
-    props = props ? props : ({ children: null } as unknown as componentPropsType & themePropsType);
+    props = props
+      ? props
+      : ({ children: null } as unknown as componentPropsType<passedComponentType> & themePropsType);
 
-    const styles: React.ComponentProps<typeof RawComponent>['variants'] =
-      themeVariantsNamesGenerator(props);
+    const styles = themeVariantsNamesGenerator(props);
     const children = props!.children || null;
     return (
       <Media passedProps={props}>
@@ -138,9 +142,7 @@ function laryfy<componentPropsType>(
             <Style style={styleSheetCompiler(props)}>
               <RawComponent
                 variants={styles}
-                {...propsInjector<componentPropsType, React.ComponentProps<typeof component>>(
-                  props
-                )}
+                {...propsInjector<componentPropsType<passedComponentType>>(props)}
               >
                 {children}
               </RawComponent>

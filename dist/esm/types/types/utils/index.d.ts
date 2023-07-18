@@ -1,3 +1,4 @@
 import laryComponentPassedPropsType from './laryComponentPassedPropsType';
 import laryComponentPassedChildrenType from './laryComponentPassedPropsType';
-export { laryComponentPassedPropsType, laryComponentPassedChildrenType };
+import componentPropsType from './componentPropsType';
+export { laryComponentPassedPropsType, laryComponentPassedChildrenType, componentPropsType };
