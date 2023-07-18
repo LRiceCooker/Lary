@@ -653,6 +653,13 @@ declare function laryfy<componentPropsType>(component: ComponentType<unknown>): 
 declare const responsiveHeight: (nbr: number) => number;
 declare const responsiveWidth: (nbr: number) => number;
 
+declare const useBreakPoints: () => {
+    isXl: boolean;
+    isLg: boolean;
+    isMd: boolean;
+    isSm: boolean;
+};
+
 declare const usePrimary: (gradientValue: number) => any;
 declare const useSecondary: (gradientValue: number) => any;
 declare const useSuccess: (gradientValue: number) => any;
@@ -726,4 +733,4 @@ interface elementPropsType extends themePropsType {
  */
 declare const Element: (props: elementPropsType) => JSX.Element;
 
-export { Container, Element, LaryProvider, laryfy, responsiveHeight, responsiveWidth, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
+export { Container, Element, LaryProvider, laryfy, responsiveHeight, responsiveWidth, useBreakPoints, useDanger, useDark, useInfo, useLight, useMuted, usePrimary, useSecondary, useSuccess, useWarning, useWhite };
