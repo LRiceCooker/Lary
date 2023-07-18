@@ -6,7 +6,7 @@
 > If you are too lazy, use lary ;)
 
 <br>
-Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a> ;)
+Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md">doc</a>
 <br><br>
 
 ```javascript
@@ -43,6 +43,20 @@ const Card = (): JSX.Element => {
 ```
 
 <img src="https://i.postimg.cc/5N3fHmhf/exemple.png"/>
+
+<h2>📥 Installation</h2>
+
+<h3>With npm</h3>
+
+```bash
+npm i @_ricecooker/lary
+```
+
+<h3>With yarn</h3>
+
+```bash
+yarn add @_ricecooker/lary
+```
 
 <h2>🧐 Features</h2>
 
