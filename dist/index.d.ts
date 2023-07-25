@@ -413,6 +413,10 @@ interface shapePropsType {
     heightScreen?: boolean;
     width?: Sx['width'];
     height?: Sx['height'];
+    maxWidth?: Sx['maxWidth'];
+    minWidth?: Sx['minWidth'];
+    maxHeight?: Sx['maxHeight'];
+    minHeight?: Sx['maxHeight'];
     padding?: Sx['padding'];
     paddingLeft?: Sx['paddingLeft'];
     paddingRight?: Sx['paddingRight'];
@@ -622,6 +626,10 @@ type componentPropsType<componentType> = ComponentProps<componentType & keyof JS
  * @property heightScreen To set the height property to 100vh.
  * @property width To set the width property.
  * @property height To set the height property.
+ * @property minWidth To set minimum width property.
+ * @property maxWidth To set maximum width property.
+ * @property minHeight To set minimum height property.
+ * @property maxHeight To set maximum height property.
  * @property paddingBottom To set the paddingBottom property.
  * @property paddingTop To set the paddingTop property.
  * @property paddingX To set the padding left and right property.

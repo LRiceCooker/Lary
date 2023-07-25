@@ -10,36 +10,50 @@ Read the <a href="https://github.com/RiceCooker-dev/Lary/blob/master/doc/doc.md"
 <br><br>
 
 ```javascript
-const Title = laryfy < React.ComponentProps < typeof PaperTitle >> PaperTitle;
-const Image = laryfy < React.ComponentProps < typeof NativeImage >> NativeImage;
-const Button = laryfy < React.ComponentProps < typeof PaperButton >> PaperButton;
+import { laryfy, Element, Container, useBreakPoints } from '@_ricecooker/lary';
+import { Text as NativeText } from 'react-native';
+import { Image as NativeImage } from 'react-native';
+import { TouchableOpacity as PaperButton } from 'react-native';
+
+const Text = laryfy < typeof NativeText > NativeText;
+const Image = laryfy < typeof NativeImage > NativeImage;
+const Button = laryfy < typeof PaperButton > PaperButton;
 
 const Card = (): JSX.Element => {
+  const { isSm } = useBreakPoints();
   return (
-    <Element m1 r4 bgWarning flexBasis={'30%'}>
-      <Container column widthFull>
-        <Image
-          height={400}
-          r4
-          source={{
-            uri: 'https://img.freepik.com/free-vector/animal-doing-dabbing-movement_23-2147851266.jpg'
-          }}
-        />
-        <Container row m6>
-          <Title f3 inWhite bold textCenter>
-            Dabbing Unicorn
-          </Title>
-          <Title f1 inWhite bold textCenter>
-            $5.6
-          </Title>
-          <Button f1 bgSecondary mode="contained" onPress={() => console.log('Pressed')}>
-            Buy
-          </Button>
+    <Container row justifyCenter>
+      <Element m1 r4 bgWarning maxWidth={500} widthFull>
+        <Container column widthFull>
+          <Image
+            height={400}
+            r4
+            source={{
+              uri: 'https://img.freepik.com/free-vector/animal-doing-dabbing-movement_23-2147851266.jpg'
+            }}
+          />
+          <Container row m6 alignCenter justifyCenter>
+            <Text f3 inWhite bold textCenter text2xl>
+              {isSm ? 'Unicorn' : 'Dabbing Unicorn'}
+            </Text>
+            <Text f1 inWhite bold textCenter text2xl>
+              $5.6
+            </Text>
+            <Button f1 bgSecondary onPress={() => console.log('Pressed')} r4>
+              <Container row m1>
+                <Text f3 inWhite bold textCenter>
+                  Buy
+                </Text>
+              </Container>
+            </Button>
+          </Container>
         </Container>
-      </Container>
-    </Element>
+      </Element>
+    </Container>
   );
 };
+
+export default Card;
 ```
 
 <img src="https://i.postimg.cc/5N3fHmhf/exemple.png"/>

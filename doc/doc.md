@@ -100,6 +100,10 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | heightScreen                                                       | <p>To set the height property to 100vh.</p>                      |
 | width                                                              | <p>To set the width property.</p>                                |
 | height                                                             | <p>To set the height property.</p>                               |
+| minWidth                                                           | <p>To set minimum width property.</p>                            |
+| maxWidth                                                           | <p>To set maximum width property.</p>                            |
+| minHeight                                                          | <p>To set minimum height property.</p>                           |
+| maxHeight                                                          | <p>To set maximum height property.</p>                           |
 | paddingBottom                                                      | <p>To set the paddingBottom property.</p>                        |
 | paddingTop                                                         | <p>To set the paddingTop property.</p>                           |
 | paddingX                                                           | <p>To set the padding left and right property.</p>               |
