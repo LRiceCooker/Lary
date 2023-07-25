@@ -63,6 +63,10 @@ export default interface shapePropsType {
   heightScreen?: boolean;
   width?: Sx['width'];
   height?: Sx['height'];
+  maxWidth?: Sx['maxWidth'];
+  minWidth?: Sx['minWidth'];
+  maxHeight?: Sx['maxHeight'];
+  minHeight?: Sx['maxHeight'];
   padding?: Sx['padding'];
   paddingLeft?: Sx['paddingLeft'];
   paddingRight?: Sx['paddingRight'];

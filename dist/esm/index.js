@@ -19933,7 +19933,7 @@ var LaryProvider = function LaryProvider(props) {
   return /*#__PURE__*/React.createElement(ThemeConfigurationProvider, _assign({}, props), /*#__PURE__*/React.createElement(ThemeProvider, null, props.children));
 };
 
-var stylesPropsToInject = ['style', 'flexBasis', 'flex', 'top', 'bottom', 'right', 'left', 'width', 'height', 'marginRight', 'marginLeft', 'marginBottom', 'margin', 'marginTop', 'marginX', 'marginY', 'padding', 'paddingLeft', 'paddingRight', 'paddingX', 'paddingY', 'borderRadius', 'borderEndEndRadius', 'borderTopLeftRadius', 'borderEndStartRadius', 'borderStartEndRadius', 'borderTopRightRadius', 'borderBottomLeftRadius', 'borderStartStartRadius', 'borderBottomRightRadius', 'backgroundColor', 'borderColor', 'color'];
+var stylesPropsToInject = ['style', 'flexBasis', 'flex', 'top', 'bottom', 'right', 'left', 'width', 'height', 'maxWidth', 'minWidth', 'maxHeight', 'minHeight', 'marginRight', 'marginLeft', 'marginBottom', 'margin', 'marginTop', 'marginX', 'marginY', 'padding', 'paddingLeft', 'paddingRight', 'paddingX', 'paddingY', 'borderRadius', 'borderEndEndRadius', 'borderTopLeftRadius', 'borderEndStartRadius', 'borderStartEndRadius', 'borderTopRightRadius', 'borderBottomLeftRadius', 'borderStartStartRadius', 'borderBottomRightRadius', 'backgroundColor', 'borderColor', 'color'];
 
 var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding', 'android', 'ios', 'web'];
 
@@ -20116,6 +20116,10 @@ var Plateform = function Plateform(_a) {
  * @property heightScreen To set the height property to 100vh.
  * @property width To set the width property.
  * @property height To set the height property.
+ * @property minWidth To set minimum width property.
+ * @property maxWidth To set maximum width property.
+ * @property minHeight To set minimum height property.
+ * @property maxHeight To set maximum height property.
  * @property paddingBottom To set the paddingBottom property.
  * @property paddingTop To set the paddingTop property.
  * @property paddingX To set the padding left and right property.
