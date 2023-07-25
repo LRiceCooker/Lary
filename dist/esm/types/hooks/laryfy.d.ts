@@ -1,5 +1,6 @@
-import { ComponentType } from 'react';
+/// <reference types="react" />
 import { themePropsType } from '../types/theme';
+import type { componentPropsType } from '../types/utils';
 /**
  * @function laryfy
  * @param component : ComponentType<unknown>
@@ -107,5 +108,5 @@ import { themePropsType } from '../types/theme';
  *
  * @returns {React.FunctionComponent}
  */
-declare function laryfy<componentPropsType>(component: ComponentType<unknown>): (props?: componentPropsType & themePropsType) => JSX.Element;
+declare function laryfy<passedComponentType>(component: passedComponentType): (props?: componentPropsType<passedComponentType> & themePropsType) => JSX.Element;
 export default laryfy;

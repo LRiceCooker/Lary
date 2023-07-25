@@ -19960,7 +19960,6 @@ var styleSheetCompiler = function styleSheetCompiler(props) {
 
 var propsInjector = function propsInjector(props) {
   var propsToInject = {};
-  // @ts-expect-error - layout is not undefined in the theme
   var themePropsNames = Object.keys(genereateTheme(baseConfiguration).layout).concat(nonStyleProps).concat(stylesPropsToInject);
   Object.keys(props).forEach(function (key) {
     // @ts-expect-error - we know that key is a string
