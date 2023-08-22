@@ -1,3 +1,4 @@
+import { Sx } from 'dripsy';
 export default interface typographyPropsType {
     bold?: boolean;
     italic?: boolean;
@@ -18,4 +19,5 @@ export default interface typographyPropsType {
     textCenter?: boolean;
     textLeft?: boolean;
     textRight?: boolean;
+    fontFamily?: Sx['fontFamily'];
 }
