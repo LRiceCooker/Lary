@@ -129,6 +129,7 @@ const LaryfiedTextInput = laryfy<React.ComponentProps<typeof TextInput>>(TextInp
 | italic                                                             | <p>To set the fontStyle property to italic.</p>                  |
 | underline                                                          | <p>To set the textDecorationLine property to underline.</p>      |
 | text(sm-xs-base-lg-xl-2xl-3xl-4xl-5xl-6xl-7xl-8xl-9xl)             | <p>To set the fontSize property to defined one.</p>              |
+| fontFamily                                                         | <p>To set the font.</p>                                          |
 
 <a name="LaryProvider"></a>
 

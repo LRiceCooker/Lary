@@ -539,6 +539,7 @@ interface typographyPropsType {
     textCenter?: boolean;
     textLeft?: boolean;
     textRight?: boolean;
+    fontFamily?: Sx["fontFamily"];
 }
 
 interface themePropsType extends colorPropsType, spacingPropsType, shapePropsType, layoutPropsType, positionPropsType, typographyPropsType {
@@ -655,6 +656,7 @@ type componentPropsType<componentType> = ComponentProps<componentType & keyof JS
  * @property italic To set the fontStyle property to italic.
  * @property underline To set the textDecorationLine property to underline.
  * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl-5xl-6xl-7xl-8xl-9xl) To set the fontSize property to defined one.
+ * @property fontFamily To set the font.
  *
  * @returns {React.FunctionComponent}
  */

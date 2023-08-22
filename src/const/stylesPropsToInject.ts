@@ -35,7 +35,8 @@ const stylesPropsToInject = [
   'borderBottomRightRadius',
   'backgroundColor',
   'borderColor',
-  'color'
+  'color',
+  'fontFamily'
 ];
 
 export default stylesPropsToInject;

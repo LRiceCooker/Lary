@@ -19935,7 +19935,7 @@ var LaryProvider = function LaryProvider(props) {
   return /*#__PURE__*/React.createElement(ThemeConfigurationProvider, _assign({}, props), /*#__PURE__*/React.createElement(ThemeProvider, null, props.children));
 };
 
-var stylesPropsToInject = ['style', 'flexBasis', 'flex', 'top', 'bottom', 'right', 'left', 'width', 'height', 'maxWidth', 'minWidth', 'maxHeight', 'minHeight', 'marginRight', 'marginLeft', 'marginBottom', 'margin', 'marginTop', 'marginX', 'marginY', 'padding', 'paddingLeft', 'paddingRight', 'paddingX', 'paddingY', 'borderRadius', 'borderEndEndRadius', 'borderTopLeftRadius', 'borderEndStartRadius', 'borderStartEndRadius', 'borderTopRightRadius', 'borderBottomLeftRadius', 'borderStartStartRadius', 'borderBottomRightRadius', 'backgroundColor', 'borderColor', 'color'];
+var stylesPropsToInject = ['style', 'flexBasis', 'flex', 'top', 'bottom', 'right', 'left', 'width', 'height', 'maxWidth', 'minWidth', 'maxHeight', 'minHeight', 'marginRight', 'marginLeft', 'marginBottom', 'margin', 'marginTop', 'marginX', 'marginY', 'padding', 'paddingLeft', 'paddingRight', 'paddingX', 'paddingY', 'borderRadius', 'borderEndEndRadius', 'borderTopLeftRadius', 'borderEndStartRadius', 'borderStartEndRadius', 'borderTopRightRadius', 'borderBottomLeftRadius', 'borderStartStartRadius', 'borderBottomRightRadius', 'backgroundColor', 'borderColor', 'color', 'fontFamily'];
 
 var nonStyleProps = ['children', 'sm', 'md', 'lg', 'xl', 'avoiding', 'android', 'ios', 'web'];
 
@@ -20147,6 +20147,7 @@ var Plateform = function Plateform(_a) {
  * @property italic To set the fontStyle property to italic.
  * @property underline To set the textDecorationLine property to underline.
  * @property text(sm-xs-base-lg-xl-2xl-3xl-4xl-5xl-6xl-7xl-8xl-9xl) To set the fontSize property to defined one.
+ * @property fontFamily To set the font.
  *
  * @returns {React.FunctionComponent}
  */
