@@ -539,7 +539,7 @@ interface typographyPropsType {
     textCenter?: boolean;
     textLeft?: boolean;
     textRight?: boolean;
-    fontFamily?: Sx["fontFamily"];
+    fontFamily?: Sx['fontFamily'];
 }
 
 interface themePropsType extends colorPropsType, spacingPropsType, shapePropsType, layoutPropsType, positionPropsType, typographyPropsType {
